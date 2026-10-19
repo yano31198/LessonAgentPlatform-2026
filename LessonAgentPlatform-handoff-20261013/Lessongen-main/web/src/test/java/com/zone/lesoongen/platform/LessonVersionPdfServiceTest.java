@@ -91,12 +91,37 @@ class LessonVersionPdfServiceTest {
         Files.writeString(control.resolve("mode"), mode);
         boolean windows = System.getProperty("os.name").toLowerCase().contains("win");
         Path script = control.resolve(windows ? "renderer.cmd" : "renderer.sh");
-        String java = Path.of(System.getProperty("java.home"), "bin", windows ? "java.exe" : "java").toString();
-        String classes = Path.of(Renderer.class.getProtectionDomain().getCodeSource().getLocation().toURI()).toString();
-        Files.writeString(script, (windows ? "@echo off\r\n" : "#!/bin/sh\nexec ")
-                + '"' + java + "\" -cp \"" + classes + "\" \"" + Renderer.class.getName() + "\" \"" + control
-                + (windows ? "\" %*\r\n" : "\" \"$@\"\n"));
-        if (!windows) assertTrue(script.toFile().setExecutable(true));
+        String java = Path.of(
+                System.getProperty("java.home"),
+                "bin",
+                windows ? "java.exe" : "java"
+        ).toString();
+        String classes = Path.of(
+                Renderer.class.getProtectionDomain()
+                        .getCodeSource()
+                        .getLocation()
+                        .toURI()
+        ).toString();
+        String rendererClass = Renderer.class.getName();
+        if (!windows) {
+            rendererClass = rendererClass.replace("$", "\\$");
+        }
+        Files.writeString(script, (windows
+        ? "@echo off\r\nchcp 65001 >nul\r\n"
+        : "#!/bin/sh\nexec ")
+                        + '"'
+                        + java
+                        + "\" -cp \""
+                        + classes
+                        + "\" \""
+                        + rendererClass
+                        + "\" \""
+                        + control
+                        + (windows ? "\" %*\r\n" : "\" \"$@\"\n")
+        );
+        if (!windows) {
+            assertTrue(script.toFile().setExecutable(true));
+        }
         return new LessonVersionPdfService(script.toString());
     }
 
