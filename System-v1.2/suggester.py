@@ -15,6 +15,10 @@ from knowledge_base import load_knowledge_base, search_knowledge_base
 from standards import search_standards
 from anchors import build_advice_anchor_block
 from usage_meter import metered_operation
+from external_knowledge import (
+    format_external_reference,
+    search_verified_external_knowledge,
+)
 
 
 # ============================================================
@@ -165,6 +169,10 @@ def _build_batch_prompt(
             prompt += f"- 依据来源：{ann['依据来源']}\n"
         if ann.get('教学法参考'):
             prompt += f"- 教学法参考：{ann['教学法参考']}\n"
+        if ann.get('经典教案参考'):
+            prompt += f"- 经典教案参考：{ann['经典教案参考']}\n"
+        if ann.get('研究依据'):
+            prompt += f"- 教学法论文依据：{ann['研究依据']}\n"
         if ann.get('档位参照'):
             prompt += f"- 档位参照（该维度的分数段特征）：\n{ann['档位参照']}\n"
         prompt += "\n"
@@ -268,7 +276,8 @@ def _match_sources(
 
     返回: {"来源类型": ..., "理论条目": ..., "课标原文": ..., "教学法参考": ...}
     """
-    sources = {"来源类型": "无", "理论条目": "", "课标原文": "", "教学法参考": ""}
+    sources = {"来源类型": "无", "理论条目": "", "课标原文": "", "教学法参考": "",
+               "经典教案参考": "", "研究依据": ""}
 
     # 1. 设计理论库
     kb = load_knowledge_base()
@@ -288,6 +297,16 @@ def _match_sources(
     m_methods = _match_primary_methods(query, subject, grade, top_k=1)
     if m_methods:
         sources["教学法参考"] = _format_method_ref(m_methods[0], subject)
+
+    # 4. 已经人工核验的经典教案与学科教学法论文
+    exemplars = search_verified_external_knowledge(
+        query, subject, grade, document_type="CLASSIC_LESSON", top_k=1)
+    papers = search_verified_external_knowledge(
+        query, subject, grade, document_type="METHODOLOGY_PAPER", top_k=1)
+    if exemplars:
+        sources["经典教案参考"] = format_external_reference(exemplars[0])
+    if papers:
+        sources["研究依据"] = format_external_reference(papers[0])
 
     # 判定来源类型
     has_theory = bool(theories)
@@ -359,7 +378,10 @@ def generate_suggestions(
 
             query = f"{dim_name} {ann.get('位置', '')} {ann.get('具体分析', '')}"
             sources = _match_sources(query, subject, grade)
-            if sources["来源类型"] == "无" and not sources["教学法参考"]:
+            if (sources["来源类型"] == "无"
+                    and not sources.get("教学法参考")
+                    and not sources.get("经典教案参考")
+                    and not sources.get("研究依据")):
                 continue
 
             # 组装依据来源描述
@@ -372,6 +394,10 @@ def generate_suggestions(
             ann["理论依据"] = sources["理论条目"] or sources["课标原文"]
             if sources["教学法参考"]:
                 ann["教学法参考"] = sources["教学法参考"]
+            if sources.get("经典教案参考"):
+                ann["经典教案参考"] = sources["经典教案参考"]
+            if sources.get("研究依据"):
+                ann["研究依据"] = sources["研究依据"]
             if dim_anchor:
                 ann["档位参照"] = dim_anchor
 

@@ -1,13 +1,11 @@
 # Windows 安装与启动
 
-本阶段按 Windows、每模块单实例完成开发验收。结果统一见 [验收总报告](ACCEPTANCE_RESULTS_20261017.md)；可选本机入口、功能开关、超时、升级与回退见 [Windows 开发运行与维护](WINDOWS_DEVELOPMENT_OPERATIONS.md)。本机入口不表示已开放互联网访问。
-
-2026-10-14 修复记录已并入上述总报告，迁移和 PDF 配置统一见运行维护文档。Node 固定为根目录 `.nvmrc` 中的 22.19.0。
+本说明适用于 `LessonAgentPlatform v1.1.2` 的 Windows 本地安装。Node 推荐使用根目录 `.nvmrc` 指定的版本。
 
 以下命令以项目位于：
 
 ```text
-C:\Users\你的用户名\Desktop\LessonAgentPlatform-Release
+C:\LessonAgentPlatform
 ```
 
 为例。项目不依赖 Docker。
@@ -25,7 +23,7 @@ git --version
 Get-Service MySQL80
 ```
 
-推荐 Python 3.11/3.12、Java 17+、Node 20/22 LTS、MySQL 8。
+推荐 Python 3.11/3.12、Java 17–22、Node 20/22 LTS、MySQL 8。建议使用不含中文、空格和特殊字符的短路径。
 
 ## 2. 创建 MySQL 数据库
 
@@ -121,6 +119,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m alembic -c alembic.ini upgrade head
+.\.venv\Scripts\python.exe .\tools\import_verified_knowledge.py
 .\.venv\Scripts\python.exe -c "import app.api; print('F4_IMPORT_OK')"
 cd ..\..
 ```
@@ -198,13 +197,9 @@ Get-Content .\.runtime\logs\spring.err.log -Tail 100
 
 不要通过删除 MySQL 数据库或 Flyway 历史表解决 migration 错误。
 
-## 12. 已有开发环境的维护
+## 12. 已有环境的维护
 
 首次安装后，不要再次复制 `.env.example` 覆盖已填写的 `.env`。四个 Python 模块使用各自虚拟环境；SOCKS 代理依赖已经写入模块依赖声明，无需依靠临时全局安装。Windows 日志需保留 `PYTHONUTF8=1`、`PYTHONIOENCODING=utf-8`、`PYTHONUNBUFFERED=1`。
 
-若 MySQL 运行于 Docker，先启动 Docker Desktop，再按 `.env` 中的数据库端口核对并启动对应容器。容器名和端口不是项目固定配置，不要误用其他已有数据库或删除数据卷。
-
-PDF 转换器通过 `platform.pdf.soffice` 配置本机 LibreOffice 路径。`.runtime` 可能包含转换工具、配置、日志、PID 和本机验收账号，不能整体删除或公开上传。迁移到其他目录/机器时重建 `.venv` 并更新本机绝对路径，不直接复制虚拟环境。
-
-10 月 17 日验收临时服务已清理；当前运行状态以健康检查和端口检查为准。历史环境与验收结果已合并到 [验收总报告](ACCEPTANCE_RESULTS_20261017.md)，日常操作统一见 [维护说明](WINDOWS_DEVELOPMENT_OPERATIONS.md)。
+PDF 转换器通过 `platform.pdf.soffice` 配置本机 LibreOffice 路径。`.runtime` 可能包含配置、日志和 PID，不能公开上传。迁移到其他目录或机器时应重建 `.venv` 并更新本机绝对路径，不要直接复制虚拟环境。
 

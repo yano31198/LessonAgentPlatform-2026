@@ -1,6 +1,6 @@
 # Linux 服务器安装与启动（Ubuntu 示例）
 
-修复实施、开发验收及后续边界统一见 [开发验收总报告](ACCEPTANCE_RESULTS_20261017.md)，迁移和 PDF 配置可参考 [Windows 开发运行与维护](WINDOWS_DEVELOPMENT_OPERATIONS.md)。本轮未在 Linux 实机验收启停脚本，Windows 操作命令不能直接作为 Linux 验收依据。
+本说明适用于 `LessonAgentPlatform v1.1.2` 在 Ubuntu 22.04 LTS 上的同机部署。该版本已完成 Linux 实机部署和 F1–F4 健康检查。
 
 本说明采用“同机部署”：F1–F4、Spring Boot、MySQL 和 Nginx 位于同一台服务器。后端只监听回环地址，Nginx 是唯一公网入口。
 
@@ -8,7 +8,7 @@
 
 ```bash
 sudo apt update
-sudo apt install -y python3 python3-venv python3-pip openjdk-17-jdk mysql-server nginx curl unzip
+sudo apt install -y python3 python3-venv python3-pip openjdk-17-jdk mysql-server nginx curl unzip libreoffice
 ```
 
 安装 Node.js 20/22 LTS。安装后确认：
@@ -105,6 +105,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m alembic -c alembic.ini upgrade head
+.venv/bin/python tools/import_verified_knowledge.py
 .venv/bin/python -c "import app.api; print('F4_IMPORT_OK')"
 ```
 

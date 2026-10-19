@@ -37,6 +37,7 @@ from standards import score_to_grade
 from comparison import generate_comparison
 from batch_reporting import build_comparison_payload, write_batch_quality_report
 from platform_task_store import TaskStore, atomic_json
+from external_knowledge import load_verified_external_knowledge
 
 ROOT = Path(__file__).resolve().parent
 RUN_ROOT = ROOT / "platform_runs"
@@ -404,6 +405,7 @@ def health():
         config.get("api_keys", {}).get(provider, ""),
         provider,
     )["configured"]
+    external_knowledge = load_verified_external_knowledge()
     return {
         "status": "up",
         "rubric": "F1-student-V3",
@@ -412,6 +414,15 @@ def health():
         "suggestDefault": DEFAULT_SUGGEST,
         "mode": "real",
         "model_configured": configured,
+        "verifiedExternalKnowledge": {
+            "totalChunks": len(external_knowledge),
+            "classicLessonChunks": sum(
+                item.get("documentType") == "CLASSIC_LESSON" for item in external_knowledge
+            ),
+            "methodologyPaperChunks": sum(
+                item.get("documentType") == "METHODOLOGY_PAPER" for item in external_knowledge
+            ),
+        },
         "capabilities": {
             "singleAnnotation": True,
             "batchAnnotation": True,
