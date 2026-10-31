@@ -148,7 +148,7 @@ class PlatformAuthApiTest {
 
         MockHttpSession bobSession = login(bob);
         mvc.perform(get("/api/v1/lesson-jobs/" + jobId).session(bobSession))
-                .andExpect(status().isNotFound());
+                .andExpect(status().isForbidden());
         mvc.perform(get("/api/v1/lesson-jobs").session(bobSession))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.items[?(@.jobId == '" + jobId + "')]").isEmpty());
@@ -241,6 +241,54 @@ class PlatformAuthApiTest {
                 SELECT COUNT(*) FROM platform_login_audit WHERE username_attempted = ?
                 """, Integer.class, username);
         org.assertj.core.api.Assertions.assertThat(attempts).isGreaterThanOrEqualTo(4);
+    }
+
+    @Test
+    // csrf() in other tests replaces the filter's repository. Use the real cookie repository here.
+    @org.springframework.test.annotation.DirtiesContext(
+            methodMode = org.springframework.test.annotation.DirtiesContext.MethodMode.BEFORE_METHOD)
+    void generateRequiresLoginAndRealCsrfTokenAndKeepsUserAndAdminJobsPrivate() throws Exception {
+        String endpoint = "/api/v1/lesson-jobs/generate";
+        String body = "{\"subject\":\"Math\",\"grade\":\"7\",\"topic\":\"Functions\"}";
+        mvc.perform(post(endpoint).contentType(MediaType.APPLICATION_JSON).content(body))
+                .andExpect(status().isUnauthorized());
+        String suffix = UUID.randomUUID().toString().substring(0, 8);
+        String member = "generate_" + suffix;
+        String admin = "generate_admin_" + suffix;
+        register(member, "Member");
+        register(admin, "Admin");
+        db.update("UPDATE platform_user SET role = 'ADMIN' WHERE username = ?", admin);
+        MockHttpSession memberSession = login(member);
+        MockHttpSession adminSession = login(admin);
+        for (MockHttpSession session : new MockHttpSession[] { memberSession, adminSession }) {
+            mvc.perform(post(endpoint).session(session).contentType(MediaType.APPLICATION_JSON)
+                            .header("Idempotency-Key", UUID.randomUUID().toString()).content(body))
+                    .andExpect(status().isForbidden());
+            MvcResult csrfResult = mvc.perform(get("/api/auth/csrf").session(session))
+                    .andExpect(status().isOk()).andReturn();
+            var token = mapper.readTree(csrfResult.getResponse().getContentAsString());
+            var cookie = org.springframework.mock.web.MockCookie.parse(
+                    csrfResult.getResponse().getHeader("Set-Cookie"));
+            org.assertj.core.api.Assertions.assertThat(cookie).isNotNull();
+            mvc.perform(post(endpoint).session(session).cookie(cookie)
+                            .header(token.get("headerName").asString(), "invalid-token")
+                            .header("Idempotency-Key", UUID.randomUUID().toString())
+                            .contentType(MediaType.APPLICATION_JSON).content(body))
+                    .andExpect(status().isForbidden());
+            MvcResult created = mvc.perform(post(endpoint).session(session).cookie(cookie)
+                            .header(token.get("headerName").asString(), token.get("token").asString())
+                            .header("Idempotency-Key", UUID.randomUUID().toString())
+                            .contentType(MediaType.APPLICATION_JSON).content(body))
+                    .andExpect(status().isAccepted()).andReturn();
+            String jobId = mapper.readTree(created.getResponse().getContentAsString()).get("jobId").asString();
+            mvc.perform(get("/api/v1/lesson-jobs/" + jobId).session(session))
+                    .andExpect(status().isOk());
+            MockHttpSession other = session == memberSession ? adminSession : memberSession;
+            for (String path : new String[] { "", "/result", "/artifacts", "/events" }) {
+                mvc.perform(get("/api/v1/lesson-jobs/" + jobId + path).session(other))
+                        .andExpect(status().isForbidden());
+            }
+        }
     }
 
     private void register(String username, String displayName) throws Exception {

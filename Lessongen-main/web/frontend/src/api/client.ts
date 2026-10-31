@@ -1,4 +1,5 @@
 import axios, { AxiosError } from "axios";
+import { csrfHeaders } from "./csrf";
 import type {
   Artifact,
   JobAccepted,
@@ -13,7 +14,21 @@ import type {
   ProblemDetail,
 } from "../types/api";
 
-const client = axios.create({ baseURL: "/api/v1", timeout: 20_000 });
+const client = axios.create({
+  baseURL: "/api/v1",
+  timeout: 20_000,
+  withCredentials: true,
+  withXSRFToken: false,
+});
+
+// Axios instances do not inherit interceptors or later default-header changes.
+// Read the current server-issued (masked) token for every request.
+client.interceptors.request.use((config) => {
+  Object.entries(csrfHeaders()).forEach(([name, value]) => {
+    config.headers.set(name, value);
+  });
+  return config;
+});
 
 export class ApiProblem extends Error {
   constructor(

@@ -33,7 +33,14 @@ public class PlatformAccessService {
     }
 
     public void requireOwnedJob(String jobId) {
-        requireCount("SELECT COUNT(*) FROM lesson_job WHERE id = ? AND owner_id = ?", jobId, "任务");
+        String ownerId = currentUserId();
+        String owner = db.query("SELECT owner_id FROM lesson_job WHERE id = ?",
+                (rs, row) -> rs.getString(1), jobId).stream()
+                .filter(java.util.Objects::nonNull).findFirst().orElse(null);
+        if (owner == null) notFound("任务");
+        if (!ownerId.equals(owner)) {
+            throw new AppException(HttpStatus.FORBIDDEN, "ACCESS_DENIED", "无权访问该资源");
+        }
     }
 
     public void requireOwnedNavigationSession(String sessionId) {

@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -62,8 +64,14 @@ public class PlatformSecurityConfig {
                 .exceptionHandling(errors -> errors
                         .authenticationEntryPoint((request, response, error) ->
                                 jsonError(response, 401, "AUTHENTICATION_REQUIRED", "请先登录"))
-                        .accessDeniedHandler((request, response, error) ->
-                                jsonError(response, 403, "ACCESS_DENIED", "无权访问该资源")))
+                        .accessDeniedHandler((request, response, error) -> {
+                            var authentication = SecurityContextHolder.getContext().getAuthentication();
+                            if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+                                jsonError(response, 401, "AUTHENTICATION_REQUIRED", "请先登录");
+                            } else {
+                                jsonError(response, 403, "ACCESS_DENIED", "无权访问该资源");
+                            }
+                        }))
                 .build();
     }
 
