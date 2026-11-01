@@ -166,7 +166,10 @@ async function load() {
       axios
         .get<F4Session[]>("/api/platform/f4/sessions")
         .then((r) => r.data)
-        .catch(() => []),
+        .catch((reason) => {
+          error.value = `协同共析任务暂时无法读取：${describe(reason)}`;
+          return [];
+        }),
       axios
         .get<SimulationLaunch[]>("/api/platform/simulation-launches")
         .then((r) => r.data)
@@ -210,16 +213,25 @@ async function load() {
       return {
         key: `F2:${job.jobId}`,
         title: binding?.lessonTitle || job.topic || "未命名教案",
-        version: versionLabel(
-          versionNumbers,
-          binding?.savedVersionId || binding?.sourceVersionId,
-        ),
+        version:
+          job.versionNumber != null
+            ? `V${job.versionNumber}`
+            : versionLabel(
+                versionNumbers,
+                job.versionId ??
+                  binding?.savedVersionId ??
+                  binding?.sourceVersionId,
+              ),
         kind: job.mode === "GENERATE" ? "教案生成" : "设计修改",
         createdAt: job.createdAt,
         status: binding?.savedVersionId ? "REVIEWED" : job.status,
         to: {
           path: `/jobs/${job.jobId}`,
-          query: binding ? { lessonId: binding.lessonId } : {},
+          query: job.lessonId
+            ? { lessonId: job.lessonId }
+            : binding
+              ? { lessonId: binding.lessonId }
+              : {},
         },
       };
     });

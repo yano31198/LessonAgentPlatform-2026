@@ -10,6 +10,8 @@ export interface LessonDocument {
     tableRows?: string[][];
     rowIds?: string[];
     teachingProcess?: { rows: { sourceRowIndex: number }[] };
+    semanticRole?: string;
+    layoutGroup?: string;
   }>;
 }
 export interface VersionDocument {

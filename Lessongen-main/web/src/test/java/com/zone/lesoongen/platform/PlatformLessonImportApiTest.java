@@ -219,6 +219,8 @@ class PlatformLessonImportApiTest {
         String lessonId = String.valueOf(lesson.get("id"));
         String versionId = String.valueOf(lesson.get("currentVersionId"));
 
+        mvc.perform(get("/api/platform/lessons/{lessonId}", lessonId))
+                .andExpect(status().isOk()).andExpect(jsonPath("$.hasSourceDocument").value(true));
         mvc.perform(get("/api/platform/lessons/{lessonId}/source-document", lessonId))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.lessonId").value(lessonId))

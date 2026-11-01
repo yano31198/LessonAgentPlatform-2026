@@ -53,14 +53,22 @@ public class PlatformF4WorkbenchController {
 
     @GetMapping("/sessions")
     public ResponseEntity<byte[]> sessions() {
+        var ownedIds = access.ownedNavigationSessionIds();
+        // Local bindings are the visibility authority. No bindings means no visible sessions,
+        // independent of the upstream database's availability or identity provisioning.
+        if (ownedIds.isEmpty()) return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON)
+                .header(HttpHeaders.CACHE_CONTROL, "no-store").body("[]".getBytes(StandardCharsets.UTF_8));
         ResponseEntity<byte[]> upstream = forward(HttpMethod.GET, "/sessions", null);
+        if (upstream.getStatusCode().value() == 500) return ResponseEntity.status(502)
+                .contentType(MediaType.APPLICATION_JSON).header(HttpHeaders.CACHE_CONTROL, "no-store")
+                .body("{\"code\":\"F4_UPSTREAM_ERROR\",\"detail\":\"协同共析服务异常，暂时无法读取会话；请联系维护者\"}".getBytes(StandardCharsets.UTF_8));
         if (!upstream.getStatusCode().is2xxSuccessful() || upstream.getBody() == null) return upstream;
         try {
             @SuppressWarnings("unchecked")
             List<Map<String, Object>> all = mapper.readValue(upstream.getBody(), List.class);
             List<Map<String, Object>> visible = all.stream()
                     .filter(item -> item.get("id") != null)
-                    .filter(item -> access.ownsNavigationSession(String.valueOf(item.get("id"))))
+                    .filter(item -> ownedIds.contains(String.valueOf(item.get("id"))))
                     .toList();
             return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON)
                     .header(HttpHeaders.CACHE_CONTROL, "no-store")

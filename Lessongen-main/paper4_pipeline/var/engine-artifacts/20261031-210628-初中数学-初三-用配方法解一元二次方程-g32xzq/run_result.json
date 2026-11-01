@@ -1,0 +1,2542 @@
+{
+  "artifacts": {
+    "artifacts": [
+      {
+        "artifact_id": "best-plan-json",
+        "error": "",
+        "format": "json",
+        "path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq\\best_lesson_plan.json",
+        "sha256": "ca888b40e2a0951c664aba9c8b592d5e3c96d3a477e94c3c3c238b7c06f02c7e",
+        "status": "ok"
+      },
+      {
+        "artifact_id": "best-plan-docx",
+        "error": "",
+        "format": "docx",
+        "path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq\\best_lesson_plan.docx",
+        "sha256": "859f2c435d3cea7822e175e93cc29188132723ed054e51a5e9b3c372023d3e80",
+        "status": "ok"
+      },
+      {
+        "artifact_id": "run-trace",
+        "error": "",
+        "format": "trace",
+        "path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq\\trace.jsonl",
+        "sha256": "ff6e660aebfbac2a54c392a88a06d7c55d54ff18137934960ef209d4f9449130",
+        "status": "ok"
+      }
+    ],
+    "best_version_id": "v1",
+    "last_version_id": "v1",
+    "lesson_plan_schema_version": "paper4-lesson-plan-v0.1",
+    "manifest_id": "manifest-20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq",
+    "run_id": "20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq",
+    "schema_version": "paper4-artifact-manifest-v0.1",
+    "template_id": "general_v0_1",
+    "template_version": "compact-reference-guide-v0.1"
+  },
+  "best_version_id": "v1",
+  "critiques": [
+    {
+      "actionable_suggestion": "在 res-1 与 art-1 中补充固定摆法图示或文字：两条长条分别贴在正方形相邻两边（如右侧与下侧），缺角为右下角边长3的正方形；并注明补块由9个1×1小方格拼成3×3。",
+      "canonical_critique_id": "",
+      "confidence": 0.85,
+      "critic_profile_id": "subject_critic_v0_1",
+      "critique_id": "critique-30d4124f7be4",
+      "dimension": "knowledge_accuracy",
+      "evidence": "res-1 ready_to_use_content：'一个边长为 x 的正方形卡片、两条 x×3 长条卡片、若干 1×1 小方格'；art-1 第1题：'取正方形卡（面积 x²）与两条长条卡（每条面积 3x），拼成一个缺一角 的图形'。未说明长条贴在正方形哪两条边、缺角位置如何确定。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "证据真实：res-1 与 art-1 第1题确实未固定长条摆放位置，缺角位置与补块边长推理依赖摆法。该问题直接影响 obj-1 的几何证据有效性，属学科模型自洽问题，建议补图示或文字固定摆法，可落到 res-1 与 art-1 字段。",
+          "round_index": 1,
+          "to_status": "accepted",
+          "version_id": ""
+        },
+        {
+          "from_status": "accepted",
+          "note": "res-1 明确固定摆法：两条长条分别贴正方形右侧边与下侧边，右下角形成边长3缺口，补块由9个1×1小方格拼成3×3；art-1 第1、2、5题与 step-1 教师/学生动作、成功标准、板书均同步写明摆法与缺口位置。",
+          "round_index": 1,
+          "to_status": "implemented",
+          "version_id": "v1"
+        }
+      ],
+      "implemented_in_version_id": "v1",
+      "introduced_in_round": 1,
+      "issue": "拼图材料与几何模型不自洽：记录单要求用'正方形卡（x²）+两条长条卡（每条3x）'拼成'缺一角'图形，但两条 x×3 长条若沿正方形两边摆放，缺角应为边长3的正方形，需补9；然而材料只给'1×1小方格9个'，学生需拼成3×3，操作可行但记录单未说明长条如何摆放（沿哪两边），且'缺一角'的图形描述与'长条宽3'的对应关系未在材料中固定，学生可能摆出非标准图形导致补块边长推理失效。",
+      "issue_code": "geometric_model_mismatch",
+      "knowledge_source_refs": [
+        "task_context"
+      ],
+      "lesson_location": "art-1 拼图记录单第1题与 res-1 材料说明",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "implemented",
+      "target_path": "/teaching_artifacts/0/content",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "将变式2、4的配方过程与答案改为分数形式：变式2 加 (5/2)²=25/4，得 (x+5/2)²=49/4，x=1 或 -6；变式4 得 (x+3/2)²=13/4，x=(-3±√13)/2。并在成功标准中注明'结果化为最简分数或根式'。",
+      "canonical_critique_id": "",
+      "confidence": 0.9,
+      "critic_profile_id": "subject_critic_v0_1",
+      "critique_id": "critique-4ba2ebd55117",
+      "dimension": "knowledge_accuracy",
+      "evidence": "art-2 answer_or_success_criteria：'变式2：x²+5x+6.25=12.25，(x+2.5)²=12.25，x=1 或 x=-6'；'变式4：x²+3x+2.25=3.25，(x+1.5)²=3.25，x=-1.5±√3.25'。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "art-2 变式4答案 x=-1.5±√3.25 根号内含小数，确属不规范表达；变式2、4改为分数形式并注明最简根式要求，是学科事实与规范表达问题，修改入口明确（art-2 答案与成功标准）。",
+          "round_index": 1,
+          "to_status": "accepted",
+          "version_id": ""
+        },
+        {
+          "from_status": "accepted",
+          "note": "变式2 改为两边同加 (5/2)²=25/4，得 (x+5/2)²=49/4，x=1 或 -6；变式4 改为 (x+3/2)²=13/4，x=(-3±√13)/2；题卡与自查清单注明结果化为最简分数或根式，相关步骤与难点同步改为分数表达。",
+          "round_index": 1,
+          "to_status": "implemented",
+          "version_id": "v1"
+        }
+      ],
+      "implemented_in_version_id": "v1",
+      "introduced_in_round": 1,
+      "issue": "奇数系数配方答案使用小数（6.25、2.25、3.25）而非分数，虽数值正确，但初三教材与课标通常要求结果以分数/根式规范表达；变式4答案 x=-1.5±√3.25 中根号内含小数，未化简为 x=(-3±√13)/2，属答案不规范，可能误导学生认为根号内可保留小数。",
+      "issue_code": "odd_coefficient_decimal_vs_fraction",
+      "knowledge_source_refs": [
+        "task_context"
+      ],
+      "lesson_location": "art-2 变式2与变式4答案",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "implemented",
+      "target_path": "/teaching_artifacts/1/content",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "将追问改为'x²-4x 配方时，b/2=-2，我们要加的是 (b/2)² 还是 b/2？加多少？'并在预期回答中明确'加的是 (-2)²=4，不是 -2'，与说明卡'两边同加 (b/2)²'一致。",
+      "canonical_critique_id": "",
+      "confidence": 0.8,
+      "critic_profile_id": "subject_critic_v0_1",
+      "critique_id": "critique-443c4aa7fffc",
+      "dimension": "knowledge_accuracy",
+      "evidence": "step-4 questions[0]：'x²-4x 配方时，一半是 -2，平方是多少？' expected_responses：'平方是 4，正数。' 未出现'加的是4不是-2'的对比。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "round_index": 1,
+          "to_status": "deferred",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "该追问表述'一半是 -2'在数学上正确（b=-4，b/2=-2），但预期回答只强调'平方是4，正数'，未点明配方时加的是 (b/2)²=4 而非 b/2=-2，学生易混淆'加一半'与'加一半的平方'；且后续板书与说明卡均写'加 (b/2)²'，此处追问未强化'加的是平方'这一关键区分。",
+      "issue_code": "negative_coefficient_half_sign",
+      "knowledge_source_refs": [
+        "task_context"
+      ],
+      "lesson_location": "step-4 追问'x²-4x 配方时，一半是 -2，平方是多少？'",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "low",
+      "source": "critic",
+      "status": "deferred",
+      "target_path": "/procedure_steps/3/questions/0",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "在 art-2 题卡或 art-4 清单中增加一条边界提示：'配方后若右边为负数，则方程无实数根，不能开方'；或在 step-5 追问中加一句'如果右边算出来是负数怎么办？'作为可选拓展。",
+      "canonical_critique_id": "",
+      "confidence": 0.75,
+      "critic_profile_id": "subject_critic_v0_1",
+      "critique_id": "critique-930da13dbe7b",
+      "dimension": "knowledge_accuracy",
+      "evidence": "art-2 例题依据：'若 y²=a(a≥0)，则 y=±√a'；变式1-4右边均为正数，未出现 a<0 的讨论或提示。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "本课主题限定为二次项系数为1、可配方为正数的方程求解，a<0 无实根属判别式/根的情况内容，超出本课时范围；作为可选拓展会稀释核心目标，不服务当前主题，故 reject。",
+          "round_index": 1,
+          "to_status": "rejected",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "开方依据写为'若 y²=a(a≥0)，则 y=±√a'，条件 a≥0 正确，但例题与变式中未讨论 a<0 时无实数根的情形；本课虽以可配方为正数的方程为主，但作为一般方法，缺少'右边为负则无实数解'的边界说明，学生可能误以为任何配方后都能开方得两根。",
+      "issue_code": "square_root_condition_missing",
+      "knowledge_source_refs": [
+        "task_context"
+      ],
+      "lesson_location": "art-2 例题依据行'若 y²=a(a≥0)，则 y=±√a'",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "low",
+      "source": "critic",
+      "status": "rejected",
+      "target_path": "/teaching_artifacts/1/content",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "请教师核验后补入北师大版九年级上册对应章节的具体页码与例题编号，并确认本课'二次项系数为1'的限定与教材一致；若教材先讲直接开平方法再讲配方，可在 learning_trajectory 中注明衔接。",
+      "canonical_critique_id": "",
+      "confidence": 0.6,
+      "critic_profile_id": "subject_critic_v0_1",
+      "critique_id": "critique-363e39d189a4",
+      "dimension": "knowledge_accuracy",
+      "evidence": "curriculum_standards[0]：'输入未提供课标原文，具体条目待教师依据《义务教育数学课程标准》及北师大版九年级上册教材核验'；references：'北师大版数学九年级上册（教材原文、页码与例题编号待教师核验）'。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "输入 curriculum_standards 为空，要求补写课标条款、教材页码与例题编号会诱发依据幻觉；按规则此类意见不可执行，需用户补充权威课标与教材原文后重新核验。当前稿已如实标注待核验，不构成事实错误。",
+          "round_index": 1,
+          "to_status": "rejected",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "输入未提供教材正文与课标原文，教案已如实标注'待核验'，但学习目标 standard_refs 与 references 仍以'待核验'占位，未给出可核验的具体条目；这不构成事实错误，但使教材边界与知识顺序无法被审稿确认，需教师对照北师大版九年级上册实际章节核验配方法引入顺序（是否先完全平方公式再配方、是否限于二次项系数为1）。",
+      "issue_code": "textbook_alignment_unverifiable",
+      "knowledge_source_refs": [
+        "textbook"
+      ],
+      "lesson_location": "curriculum_standards 与 references",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "low",
+      "source": "critic",
+      "status": "rejected",
+      "target_path": "/curriculum_standards/0",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "在 step-4 明确撤架规则：完成变式1后，若学生清单五项连续两次自查全勾，则变式2起不再提供半成品填空，只保留清单；step-5 说明卡改为先独立填写，小组互讲仅在个人填写完成后进行，并在教师巡视记录中标注“已撤架/仍需支架”的学生名单。",
+      "canonical_critique_id": "",
+      "confidence": 0.85,
+      "critic_profile_id": "pedagogy_critic_v0_1",
+      "critique_id": "critique-07898cb25b3c",
+      "dimension": "teaching_logic",
+      "evidence": "step-4 scaffolds 为“清单逐项提示”“对困难生提供半成品填空：x²+5x+____=6+____”，step-5 仍保留“说明卡留空待填”“小组互讲降低表达门槛”，全课未说明何时、依据什么观察撤去清单或填空。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "round_index": 1,
+          "to_status": "deferred",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "支架只增不减，缺少撤除时机与判断条件，学生可能依赖填空与清单而无法独立迁移。",
+      "issue_code": "scaffold_no_fading_plan",
+      "knowledge_source_refs": [
+        "pedagogy_reference",
+        "lesson_design_reference_v1_2"
+      ],
+      "lesson_location": "step-4 变式训练",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "deferred",
+      "target_path": "/procedure_steps/step-4/scaffolds",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "把 step-5 改为“先独立填写说明卡→每人用30秒向同桌口述三步依据→听者在说明卡背面记下对方一处具体依据或一个疑问→教师随机抽2名学生复述同伴的说法”，使个体思考先于协作且有可观察产出。",
+      "canonical_critique_id": "",
+      "confidence": 0.82,
+      "critic_profile_id": "pedagogy_critic_v0_1",
+      "critique_id": "critique-482d43d2be70",
+      "dimension": "student_engagement",
+      "evidence": "step-5 student_actions 写“小组内用'补正方形'语言互讲一遍”，但未规定先独立写、每人必须发言、听者记录或互评的具体动作；step-4 的“同桌互查两根是否齐全”也无记录载体。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "step-5 小组互讲未规定先独立写、每人发言与听者记录，存在少数学生主导风险。建议改为独立填写→30秒口述→听者记录→随机抽复述，有可观察产出，直接服务参与与个体问责。",
+          "round_index": 1,
+          "to_status": "accepted",
+          "version_id": ""
+        },
+        {
+          "from_status": "accepted",
+          "note": "step-5 改为先独立填写说明卡→每人30秒口述三步依据→听者在说明卡背面记录对方一处依据或疑问→教师随机抽2名学生复述同伴说法；art-5 增加背面同伴记录栏，step-4 同桌互查也要求记录一处依据或疑问，评价与反思同步纳入。",
+          "round_index": 1,
+          "to_status": "implemented",
+          "version_id": "v1"
+        }
+      ],
+      "implemented_in_version_id": "v1",
+      "introduced_in_round": 1,
+      "issue": "小组互讲缺少个体先思与可观察的参与机制，容易变成少数学生讲、其余学生听。",
+      "issue_code": "group_talk_without_individual_accountability",
+      "knowledge_source_refs": [
+        "pedagogy_reference",
+        "lesson_design_reference_v1_2"
+      ],
+      "lesson_location": "step-5 独立求解与三步说明卡",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "implemented",
+      "target_path": "/procedure_steps/step-5/student_actions",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "将 step-1 拆为“6分钟完成 x²+6x 拼图与记录单第1–4题，4分钟用已剪好的 x²+8x 材料快速验证第5题”，并预先将材料装袋按组摆放；明确若多数组未完成第二次拼图，则第二次拼图改为教师演示、学生只填等式，保证 step-2 按时开始。",
+      "canonical_critique_id": "",
+      "confidence": 0.8,
+      "critic_profile_id": "pedagogy_critic_v0_1",
+      "critique_id": "critique-671e241d6da5",
+      "dimension": "classroom_feasibility",
+      "evidence": "step-1 duration_minutes 为10，student_actions 含“动手拼图、画草图标注、完成 x²+8x 的第二次拼图”，resources 中 res-1 为每组一套需剪的卡片与小方格，但无分发、收拢或未完成时的处理安排。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "step-1 10分钟内完成两轮剪拼、画图、标注与填等式偏紧，且无材料分发收拢与未完成处理安排。建议拆为6+4分钟并预设降级方案，属课堂可行性真实风险，修改入口明确。",
+          "round_index": 1,
+          "to_status": "accepted",
+          "version_id": ""
+        },
+        {
+          "from_status": "accepted",
+          "note": "step-1 拆为前6分钟完成 x²+6x 拼图与记录单第1–4题、后4分钟用已剪好的 x²+8x 材料快速验证第5题；res-1 说明课前按组装袋摆放；新增'多数组未完成则教师演示、学生只填等式'的降级分支。",
+          "round_index": 1,
+          "to_status": "implemented",
+          "version_id": "v1"
+        }
+      ],
+      "implemented_in_version_id": "v1",
+      "introduced_in_round": 1,
+      "issue": "10分钟内完成两轮剪拼、画图、标注与填等式，对全班动手操作偏紧，且未说明材料分发与收拢方式。",
+      "issue_code": "manipulative_time_overrun_risk",
+      "knowledge_source_refs": [
+        "task_context",
+        "pedagogy_reference"
+      ],
+      "lesson_location": "step-1 拼图操作",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "implemented",
+      "target_path": "/procedure_steps/step-1",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "在 assessment_plan 增加当堂响应规则：例如 step-4 巡视时若发现超过三分之一学生在“开方写±”一项未勾，则暂停全班，用解答B做30秒集体诊断；若集中在“两边同加”，则回到天平比喻并追加一道只判断“是否合法”的口头题，再继续变式。",
+      "canonical_critique_id": "",
+      "confidence": 0.84,
+      "critic_profile_id": "pedagogy_critic_v0_1",
+      "critique_id": "critique-36011d73dbcd",
+      "dimension": "teaching_logic",
+      "evidence": "assessment_plan 写“形成性评价贯穿：拼图记录单……三步说明卡（出口证据）”，step-4 assessment 为“变式1、2答案正确且依据齐全，清单五项全勾”，但未规定若超过一定比例学生某项未勾时教师下一步做什么。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "round_index": 1,
+          "to_status": "deferred",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "形成性评价只说明收集什么证据，未说明不同证据结果如何触发教师当堂调整，反馈闭环不完整。",
+      "issue_code": "formative_data_no_response_rule",
+      "knowledge_source_refs": [
+        "pedagogy_reference",
+        "lesson_design_reference_v1_2"
+      ],
+      "lesson_location": "assessment_plan 与 step-4 自查清单",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "deferred",
+      "target_path": "/assessment_plan",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "为基础层保留“依据”这一核心要求，改为提供依据选项卡（等式性质/完全平方公式/开方取正负）供勾选并抄写一句，而非由同伴代写；半成品填空只用于数值计算部分，确保基础层学生仍独立产出每步依据。",
+      "canonical_critique_id": "",
+      "confidence": 0.83,
+      "critic_profile_id": "pedagogy_critic_v0_1",
+      "critique_id": "critique-e4223f214b7a",
+      "dimension": "differentiated_instruction",
+      "evidence": "differentiation 写“基础层：提供半成品填空（补块边长、平方数已给部分），允许用小数代替分数；表达困难者可用'补正方形'口头语言替代书面依据，再由同伴转写”，而 obj-2 的证据要求是“方程过程稿中每步附文字理由”。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "round_index": 1,
+          "to_status": "deferred",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "基础层支持以“半成品填空、小数替代分数、口头替代书面”为主，但未说明这些替代如何仍指向 obj-2 要求的“每步注明依据”，可能使基础层学生绕过核心目标。",
+      "issue_code": "support_layer_lacks_goal_level_access",
+      "knowledge_source_refs": [
+        "pedagogy_reference",
+        "lesson_design_reference_v1_2"
+      ],
+      "lesson_location": "differentiation 基础层",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "deferred",
+      "target_path": "/differentiation",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "将 step-6 改为出口条：每名学生在半张纸上写“补块面积=____，因为____；方程两边都要____，依据是____”，下课交回；教师据出口条中“依据”一栏的填写情况决定作业第1题是否增加依据提示。",
+      "canonical_critique_id": "critique-1a4b9b75aae3",
+      "confidence": 0.86,
+      "critic_profile_id": "pedagogy_critic_v0_1",
+      "critique_id": "critique-ab6b147ec1a0",
+      "dimension": "student_engagement",
+      "evidence": "step-6 student_product 为空，student_actions 为“对照板书复述'补块面积=一半的平方'与'两边同加'”，questions 为空，assessment 为“口头复述正确即巩固”。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "与 critique-1a4b9b75aae3 同一根因：step-6 无 student_product、仅口头复述，均要求补最小可观察产出。后者同时引用 rule_check_report 与 alignment 证据更完整，故合并到该 canonical。",
+          "round_index": 1,
+          "to_status": "merged",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "收束环节只有齐读与口头复述，缺少可观察的个人产出，难以判断全体学生是否建立三层对应。",
+      "issue_code": "closing_step_no_student_product",
+      "knowledge_source_refs": [
+        "lesson_design_reference_v1_2",
+        "pedagogy_reference"
+      ],
+      "lesson_location": "step-6 汇总与板书对应",
+      "lesson_section_id": "",
+      "procedure_step_id": "",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "low",
+      "source": "critic",
+      "status": "merged",
+      "target_path": "/procedure_steps/step-6",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "二选一：要么把 obj-1 的 evidence_of_achievement 收窄为'至少对 x²+6x 完整说明，x²+8x 作为可选迁移'；要么在 step-1 或 step-2 的 success_criteria 中增加'对 x²+8x 标出补块边长 4、面积 16，并写出 x²+8x+16=(x+4)²'，使成功标准与目标声明的证据范围一致。",
+      "canonical_critique_id": "",
+      "confidence": 0.85,
+      "critic_profile_id": "alignment_critic_v0_1",
+      "critique_id": "critique-e948b5b03e4c",
+      "dimension": "assessment_design",
+      "evidence": "obj-1 evidence_of_achievement：'对 x²+6x 与 x²+8x 均能说明'；step-1 success_criteria 仅列'补块画在缺角处，边长标为 3''补块面积标为 9''x²+6x+9=(x+3)² 书写正确'，x²+8x 只出现在 extensions；step-2 success_criteria 为'x²+6x+9=(x+3)² 与 x²+8x+16=(x+4)² 正确''能说出补块面积是一次项系数一半的平方'，未要求对 x²+8x 标注 b/2 与 (b/2)²。alignment_audit 将 step-1、step-2 均关联到 obj-1，但结构关联未覆盖证据范围差异。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "round_index": 1,
+          "to_status": "deferred",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "obj-1 要求对 x²+6x 与 x²+8x 均能说明补块面积等于(一次项系数一半)的平方，但 step-1 的成功标准只覆盖 x²+6x（边长 3、面积 9、等式），x²+8x 仅作为扩展任务；step-2 的成功标准虽含 x²+8x+16=(x+4)²，却未要求标注补块边长 b/2 与面积 (b/2)² 的几何说明。目标声明的达成证据与步骤实际采集的证据范围不一致，教师无法据现有成功标准判断 obj-1 是否完整达成。",
+      "issue_code": "obj1_evidence_scope_mismatch",
+      "knowledge_source_refs": [
+        "alignment_protocol_v0_1",
+        "task_context"
+      ],
+      "lesson_location": "学习目标 obj-1 与步骤 step-1、step-2 的成功标准",
+      "lesson_section_id": "learning_objectives",
+      "procedure_step_id": "step-1",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "deferred",
+      "target_path": "/learning_objectives/0/evidence_of_achievement",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "在 step-3 的 student_product 或 success_criteria 中增加'将解答 A 改写为含依据的规范解答（两边同加 9、开方取 ±、写出两根）'，或在 art-3 诊断卡中增设'规范改写'栏，使 obj-3 的'纠正并改写'有可检查的独立证据。",
+      "canonical_critique_id": "",
+      "confidence": 0.8,
+      "critic_profile_id": "alignment_critic_v0_1",
+      "critique_id": "critique-e585bed3f22b",
+      "dimension": "assessment_design",
+      "evidence": "obj-3 evidence_of_achievement：'能口头或书面指出错误步骤及依据，改写为规范解答'；step-3 assessment：'诊断表指出错误步骤并写出依据；例题过程稿依据齐全'，success_criteria 为'指出只在一边加违反等式性质''写出正确方程 x²+6x+9=16 并解出 x=1 或 -7'，未要求改写解答 A 全文；step-4、step-5 的 assessment 与 success_criteria 均无错例改写要求。alignment_audit 将 obj-3 关联到 step-3/4/5，但未显示独立的改写产出。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "round_index": 1,
+          "to_status": "deferred",
+          "version_id": ""
+        }
+      ],
+      "implemented_in_version_id": "",
+      "introduced_in_round": 1,
+      "issue": "obj-3 要求'识别并纠正典型错误，并说明错误违反了哪条依据，改写为规范解答'，但三个关联步骤的评价均未单独采集'改写为规范解答'这一证据：step-3 只要求诊断解答 A 并写出正确方程，未要求改写解答 A 的完整规范过程；step-4、step-5 的评价聚焦变式求解与说明卡，未针对错例改写。obj-3 的达成证据被 obj-2 的解题证据部分替代，无法区分学生是'会做题'还是'能诊断并纠正错误'。",
+      "issue_code": "obj3_no_standalone_evidence",
+      "knowledge_source_refs": [
+        "alignment_protocol_v0_1",
+        "task_context"
+      ],
+      "lesson_location": "学习目标 obj-3 与步骤 step-3、step-4、step-5 的评价",
+      "lesson_section_id": "learning_objectives",
+      "procedure_step_id": "step-3",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "deferred",
+      "target_path": "/learning_objectives/2/evidence_of_achievement",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    },
+    {
+      "actionable_suggestion": "为 step-6 指定一个最小可观察产出，例如'学生在说明卡背面补写一句三栏对应关系（几何补块—代数配方—方程求解）并交回'，或'口头复述时由同伴在自查清单上记录对应关系是否完整'，使该步骤的达成证据可被教师检查并纳入 assessment_plan。",
+      "canonical_critique_id": "",
+      "confidence": 0.9,
+      "critic_profile_id": "alignment_critic_v0_1",
+      "critique_id": "critique-1a4b9b75aae3",
+      "dimension": "curriculum_alignment",
+      "evidence": "alignment_audit warnings：'steps_without_student_product，affected_ids: [step-6]'；step-6 student_product 为空字符串，assessment 为'口头复述正确即巩固'，success_criteria 为'能说出三栏对应关系'，无 artifact_ids。rule_check_report 亦标记 step_without_student_product（medium）。",
+      "history": [
+        {
+          "from_status": "proposed",
+          "note": "step-6 student_product 为空、assessment 仅口头复述，rule_check_report 已标记 step_without_student_product（medium），alignment 证据完整。建议指定最小可观察产出（说明卡背面补写三栏对应并交回），使收束环节有证据锚点，可操作。",
+          "round_index": 1,
+          "to_status": "accepted",
+          "version_id": ""
+        },
+        {
+          "from_status": "accepted",
+          "note": "step-6 指定最小可观察产出：学生在说明卡背面补写一句三栏对应关系并交回；assessment 改为检查该句是否含补块面积、两边同加、开方取正负三层对应；artifact_ids 关联 art-5，art-5 背面增加三栏对应句式框架，assessment_plan 与反思同步纳入。",
+          "round_index": 1,
+          "to_status": "implemented",
+          "version_id": "v1"
+        }
+      ],
+      "implemented_in_version_id": "v1",
+      "introduced_in_round": 1,
+      "issue": "step-6 关联 obj-1 与 obj-2，但 student_product 为空，assessment 仅为'口头复述正确即巩固'，success_criteria 只有'能说出三栏对应关系'，没有可留存或可检查的学生产出。该步骤无法为 obj-1/obj-2 提供独立达成证据，也使全课 assessment_plan 的收束环节缺少证据锚点。",
+      "issue_code": "step6_no_observable_product",
+      "knowledge_source_refs": [
+        "alignment_protocol_v0_1",
+        "task_context"
+      ],
+      "lesson_location": "步骤 step-6 汇总与板书对应",
+      "lesson_section_id": "procedure_steps",
+      "procedure_step_id": "step-6",
+      "schema_version": "paper4-critique-v0.1",
+      "severity": "medium",
+      "source": "critic",
+      "status": "implemented",
+      "target_path": "/procedure_steps/5/student_product",
+      "validated_in_round": 1,
+      "verified_in_round": null
+    }
+  ],
+  "design_blueprint": {
+    "blueprint_id": "blueprint-e0aef2ef6250",
+    "candidates": [
+      {
+        "candidate_id": "cand-geometric-complete-square",
+        "concrete_materials": [
+          "含 x²+6x 与 x²+8x 两种矩形拼图的方格纸与可剪卡片",
+          "三组对照式：x²+6x+9 与 (x+3)²、x²-4x+4 与 (x-2)²、x²+5x 与 (x+2.5)² 的配对卡片",
+          "方程变式题卡 4 道（含负系数与奇数系数）"
+        ],
+        "design_thesis": "先让学生用面积拼图'看见'完全平方的来源，再把拼图操作翻译成代数步骤，使配方法成为'把一个不完整正方形补成完整正方形'的可解释过程，而非记忆口诀。",
+        "desired_conceptual_shift": "从'记住加某个数'转向'把二次式重写为完全平方式的等价变形'，理解配方的目的、依据与可逆性。",
+        "driving_question": "怎样把一个长不等的矩形补成一个正方形，并用代数式子记录这次'补'的过程？",
+        "learner_starting_point": "初三学生已会解形如 x²=a 的方程、会用完全平方公式展开，但多数把配方法当作机械加常数，对'为什么加(一次项系数一半)的平方'缺乏意义理解，也易忽略符号与等式两边同加。",
+        "learning_arc": [
+          "用矩形卡片拼图：给 x²+6x 的几何模型，学生尝试补成正方形并说出补了多大一块、为什么",
+          "把拼图操作逐步翻译为代数式，对照完全平方公式确认 x²+6x+9=(x+3)²",
+          "在具体数值与一般式之间比较：由 x²+6x=7 到 (x+3)²=16，讨论等式两边同加的依据",
+          "处理一次项系数为负、为奇数的变式，暴露'一半的平方'出现分数时的处理",
+          "学生独立完成 2 道方程并在小组内用'补正方形'语言解释每一步",
+          "汇总配方一般流程并写出自己的'三步说明卡'"
+        ],
+        "pivotal_moment": "学生发现拼图补上的小正方形面积恰好是一次项系数一半的平方时，自发把几何动作与代数式对应起来。",
+        "risks": [
+          "拼图耗时可能挤压方程求解练习",
+          "奇数系数时拼图出现半格，需提前说明或改用面积数值讨论"
+        ],
+        "student_products": [
+          "几何拼图操作记录单（画出补块并标注面积）",
+          "方程解答过程稿（含每步的文字理由）",
+          "小组'三步说明卡'"
+        ],
+        "subject_specific_value": "几何直观支撑代数恒等变形，帮助学生理解配方是等价变形而非技巧记忆，直击本课核心难点。",
+        "title": "从几何拼图到代数配方"
+      },
+      {
+        "candidate_id": "cand-error-diagnosis",
+        "concrete_materials": [
+          "4 份匿名解答卡（2 正 2 错，覆盖两边同加与负根遗漏）",
+          "诊断表模板：步骤/是否合法/依据",
+          "成功标准清单：等价变形、完全平方形式、两根齐全"
+        ],
+        "design_thesis": "以典型错解为学习对象，让学生在诊断、修正、说明理由中重建配方规则，把易错点转化为可检验的判断标准。",
+        "desired_conceptual_shift": "从'照着步骤做'转向'依据等式性质和完全平方结构判断每一步是否合法'。",
+        "driving_question": "这些看起来'差不多'的解法，哪一步在偷偷改变等式？我们凭什么判断它对错？",
+        "learner_starting_point": "学生可能已见过配方法但掌握不稳，常见错误包括只在左边加常数、一次项系数一半算错、忘记开方取正负、忽略等式两边同加。",
+        "learning_arc": [
+          "呈现 4 份匿名解答（含正确与错误），学生先独立标注'可疑步骤'",
+          "小组用等式性质与完全平方公式逐条给出判断依据",
+          "聚焦'只在一边加常数'与'开方漏负根'两类错误，重建正确流程",
+          "学生改写错解为规范解答，并给错误写一句'诊断结论'",
+          "用新题快速自测，对照成功标准自查"
+        ],
+        "pivotal_moment": "学生为'只在左边加 9'的错解争论时，被迫回到等式两边同加这一性质，明确配方的合法性来源。",
+        "risks": [
+          "错解可能被误记，需强调'诊断后必须改写正确版'",
+          "课堂易停留在挑错而缺少完整求解练习"
+        ],
+        "student_products": [
+          "错解诊断表（步骤—判断—依据）",
+          "改写后的规范解答",
+          "个人易错点清单"
+        ],
+        "subject_specific_value": "以数学推理与证据判断为核心，训练学生用等式性质审视变形，形成可迁移的检验习惯。",
+        "title": "错解诊断室：找出配方中的'隐形错误'"
+      },
+      {
+        "candidate_id": "cand-generalization-inquiry",
+        "concrete_materials": [
+          "3 道递进方程题卡（x²+6x=7、x²-4x=5、x²+5x=6）",
+          "过程对比表：题目/关键步骤/加的常数",
+          "一般式推导工作纸（留空待填）"
+        ],
+        "design_thesis": "让学生先解若干具体方程，再归纳出对一般式 x²+bx=c 的配方路径，体验从样例到一般方法的抽象过程。",
+        "desired_conceptual_shift": "从'逐题计算'转向'识别结构并概括一般方法'，理解配方对任意二次项系数为1的方程都适用。",
+        "driving_question": "解过的几道题有什么共同骨架，能不能写出一条对所有这类方程都管用的做法？",
+        "learner_starting_point": "学生能解简单具体方程，但缺少从多个样例中提炼一般步骤的经验，对含字母的一般式感到抽象。",
+        "learning_arc": [
+          "独立解 3 道具体方程（系数为正、负、奇数）并记录关键步骤",
+          "小组比较三份过程，找出共同动作并用一句话概括",
+          "把具体数换成字母，尝试写出 x²+bx 的配方结果",
+          "用一般式回代验证一个具体例子，检验概括是否正确",
+          "处理二次项系数不为1的引入问题（仅讨论方向，不展开）",
+          "学生写出'配方一般流程'并标注每步依据"
+        ],
+        "pivotal_moment": "小组发现自己写出的 (x+b/2)²=b²/4+c 能同时解释前面三道题时，抽象概括获得验证。",
+        "risks": [
+          "字母运算对部分学生偏难，需提供半成品支架",
+          "45 分钟内完成一般化并练习时间紧张"
+        ],
+        "student_products": [
+          "三题过程对比表",
+          "一般式配方推导稿",
+          "配方流程卡（含依据）"
+        ],
+        "subject_specific_value": "突出代数抽象与一般化推理，让学生理解方法的适用范围与结构不变性。",
+        "title": "从特殊到一般：配方公式是怎么被'逼'出来的"
+      }
+    ],
+    "quality_non_negotiables": [
+      "必须提供可实际剪拼的矩形/方格材料及对应方程题卡，而非仅口头描述",
+      "每个核心环节须写明学生具体产出（拼图记录、过程稿、说明卡）与成功标准",
+      "配方每一步须有等式性质或完全平方公式作为依据，不得只写步骤口诀",
+      "须包含至少 3 个追问，用于暴露'只在一边加常数''漏负根'等错误",
+      "须设计基础支架（半成品填空）与拓展任务（二次项系数不为1的方向性讨论）",
+      "板书须呈现'几何补正方形—代数配方—方程求解'的对应结构",
+      "课后反思只写观察点，不预设学生已达成效果",
+      "教材页码、课标条款未提供，成稿须标注待核验，不得杜撰"
+    ],
+    "schema_version": "paper4-design-blueprint-v0.1",
+    "selected_candidate_id": "cand-geometric-complete-square",
+    "selection_reason": "三条路线认知路径不同：几何拼图以直观支撑意义建构，错解诊断以推理判断为核心，一般化探究以抽象概括为核心。选择几何拼图路线，因为配方法的最大难点正是'为什么加一次项系数一半的平方'，几何模型能提供可操作、可解释的证据，且材料成本低、45分钟内可完成从操作到方程求解的闭环，最贴合初三学生由具体到抽象的认知特点；错解诊断依赖学生已有一定练习基础，一般化探究对字母运算要求偏高，均不如前者稳妥且学科指向明确。",
+    "task_id": "lesson-0d0669ed261a"
+  },
+  "errors": [],
+  "estimated_cost": 0.11096448000000002,
+  "experiment_id": "paper4_deepseek_v4_flash_three_critic_p1_reviewed",
+  "iterations": [
+    {
+      "critique_ids": [
+        "critique-30d4124f7be4",
+        "critique-4ba2ebd55117",
+        "critique-443c4aa7fffc",
+        "critique-930da13dbe7b",
+        "critique-363e39d189a4",
+        "critique-07898cb25b3c",
+        "critique-482d43d2be70",
+        "critique-671e241d6da5",
+        "critique-36011d73dbcd",
+        "critique-e4223f214b7a",
+        "critique-ab6b147ec1a0",
+        "critique-e948b5b03e4c",
+        "critique-e585bed3f22b",
+        "critique-1a4b9b75aae3"
+      ],
+      "duration_seconds": 111.685294,
+      "estimated_cost": 0.07640996000000003,
+      "evaluation_id": "evaluation-4ebaac281ff3",
+      "input_version_id": "v0",
+      "iteration_id": "iteration-7e8c5317cf30",
+      "output_version_id": "v1",
+      "regressions": [],
+      "rewrite_id": "rewrite-45b0f0f79b63",
+      "round_index": 1,
+      "route": "finalize",
+      "route_decision_id": "route-eval-1",
+      "schema_version": "paper4-iteration-v0.1",
+      "score_delta": 0.038000000000000256,
+      "token_usage": {
+        "input_tokens": 100483,
+        "output_tokens": 24392
+      },
+      "validation_decision_ids": [
+        "decision-f97a35fe68ad",
+        "decision-b5a6ce0107b3",
+        "decision-f8b022bd35ee",
+        "decision-f46202fc2f63",
+        "decision-fc51d931f574",
+        "decision-6ebb786b1117",
+        "decision-10b00d614376",
+        "decision-e61fed3c8b77",
+        "decision-9e1928b0e03b",
+        "decision-41358236ef27",
+        "decision-37ac40d26c8e",
+        "decision-88c002058a7d",
+        "decision-33ff6f948c87",
+        "decision-1f54a342126b"
+      ]
+    }
+  ],
+  "last_version_id": "v1",
+  "method_id": "design_architect_writer_three_critic_validator_rewriter_p1_reviewed",
+  "model_call_count": 11,
+  "model_calls": [
+    {
+      "attempt_id": "da38032ca5d54e108fe0685bdb200224",
+      "attempt_index": 1,
+      "call_id": "b707a0a411ce49e2917fbc4846188073",
+      "config_sha256": "5eaee812e2441745d5dad234f03dc60edf9dabcf5ce90de192e2d98d6300970e",
+      "duration_seconds": 15.91451179998694,
+      "error_type": "",
+      "estimated_cost": 0.0037496800000000005,
+      "finish_reason": "stop",
+      "input_tokens": 2975,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 1849,
+      "prompt_id": "design_architect_prompt",
+      "prompt_sha256": "a9d12ba308cba162bd776fed63dc368e21a9640ae45e0d8a15015d098cfbb184",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "design_architect",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "ca7370eac8314eb789b5b4832b114d67",
+      "attempt_index": 1,
+      "call_id": "d89d736e101448bbb11a7867ae5401ff",
+      "config_sha256": "2cda469d3120bb50d45bc4ea41e32c3af8a96b2595712f21de0eb461cd969f9e",
+      "duration_seconds": 38.016766700020526,
+      "error_type": "ValidationError",
+      "estimated_cost": 0.01132692,
+      "finish_reason": "",
+      "input_tokens": 6858,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 6295,
+      "prompt_id": "writer_prompt",
+      "prompt_sha256": "f8b0967f3171d7bdee37d87ca91111b39e83a59c229e3d9cf0460233f042014a",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "writer",
+      "status": "invalid_output",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "594876c35ed04f68b92d77b2986e4b2e",
+      "attempt_index": 2,
+      "call_id": "d89d736e101448bbb11a7867ae5401ff",
+      "config_sha256": "2cda469d3120bb50d45bc4ea41e32c3af8a96b2595712f21de0eb461cd969f9e",
+      "duration_seconds": 22.634154499974102,
+      "error_type": "",
+      "estimated_cost": 0.01414688,
+      "finish_reason": "stop",
+      "input_tokens": 13267,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 6295,
+      "prompt_id": "writer_prompt",
+      "prompt_sha256": "f8b0967f3171d7bdee37d87ca91111b39e83a59c229e3d9cf0460233f042014a",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "writer",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "b553b0cd83ab4f13b4e639ebdebc0a28",
+      "attempt_index": 1,
+      "call_id": "a601a7e058d44cb3a99dbef5d0289c53",
+      "config_sha256": "0a04bad1998bd413add63b83d861095c70f63f136637a83e25d3da4525b8c393",
+      "duration_seconds": 3.315539200033527,
+      "error_type": "",
+      "estimated_cost": 0.0053310399999999996,
+      "finish_reason": "stop",
+      "input_tokens": 11030,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 362,
+      "prompt_id": "judge_prompt",
+      "prompt_sha256": "9f5c079882e65b6906e5b907b73767cbd92f80e57a5257ffdaf2d063bb466725",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "judge",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "a30e8b287356489893b1d3e869801cf8",
+      "attempt_index": 1,
+      "call_id": "54fa6b5872374f16976a4baf37717525",
+      "config_sha256": "c546ea32327e8ee42e63065246864be48274049862879dcda9ba8ecc0f288bce",
+      "duration_seconds": 12.270280700002331,
+      "error_type": "",
+      "estimated_cost": 0.00672408,
+      "finish_reason": "stop",
+      "input_tokens": 9717,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 1855,
+      "prompt_id": "subject_critic_prompt",
+      "prompt_sha256": "50df91e2bbcd873b38260e043a612f76490693f5ce9a9b53f6380748dd37ee47",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "subject_critic",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "079019e6f5db4d3faf4c465976824725",
+      "attempt_index": 1,
+      "call_id": "88b231d19f684347bf379bb60f06de1e",
+      "config_sha256": "c9f58671e7f06ffa15486e58a425e9b71dcf545eb362864cf2a5c01861c7fe73",
+      "duration_seconds": 10.565691500029061,
+      "error_type": "",
+      "estimated_cost": 0.00666864,
+      "finish_reason": "stop",
+      "input_tokens": 10638,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 1506,
+      "prompt_id": "pedagogy_critic_prompt",
+      "prompt_sha256": "7bf54b579d2a6f868f34acb0efc5275f4af03a199cb87ff881ee9350dae87b67",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "pedagogy_critic",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "78e685b465ab46f09b30738329593ff3",
+      "attempt_index": 1,
+      "call_id": "b16c105b0f864657b5dc13d2df64e9f2",
+      "config_sha256": "e9953f9b8347d8d0b300ba215bc66073aeaf6589b7d465bcec4cb20eec1c5125",
+      "duration_seconds": 9.641556999995373,
+      "error_type": "",
+      "estimated_cost": 0.007402120000000001,
+      "finish_reason": "stop",
+      "input_tokens": 11999,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 1608,
+      "prompt_id": "alignment_critic_prompt",
+      "prompt_sha256": "b71eef61c34c133a3ba9d22d9eb2233b73e7ae3d22379edfd2ceeee0bbd81765",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "alignment_critic",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "f324550452504fc1be5fc535adce2142",
+      "attempt_index": 1,
+      "call_id": "929fea01e841413e9912a0b4d9b14caf",
+      "config_sha256": "295681ccea71dc16594e97808a5ec4f38a95576308ba679644a95d6a0496ae47",
+      "duration_seconds": 10.7382515000063,
+      "error_type": "",
+      "estimated_cost": 0.00974468,
+      "finish_reason": "stop",
+      "input_tokens": 16834,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 1771,
+      "prompt_id": "validator_prompt",
+      "prompt_sha256": "cb87aefae271a0fce1c72b37645f19941a824e1a86ec46c8dbc6c372e85b4967",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "validator",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "12d2d25ec42e484da6f4263c19b32884",
+      "attempt_index": 1,
+      "call_id": "aa8ae4edd76e440ea0d5a310c9b28d98",
+      "config_sha256": "d1ec08935643b664e78a264612731aa1583dfe3ba6bff4e4c31e46154368d599",
+      "duration_seconds": 35.2410834999755,
+      "error_type": "ValueError",
+      "estimated_cost": 0.01816848,
+      "finish_reason": "",
+      "input_tokens": 15342,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 8650,
+      "prompt_id": "rewriter_prompt",
+      "prompt_sha256": "93d8d6ccc7be3a6425547429ee04cfcffbfac362d6ecd9fa5af1570a0357da6d",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "rewriter",
+      "status": "invalid_output",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "b39db9cdaae84ca09f7d8506af9808c3",
+      "attempt_index": 2,
+      "call_id": "aa8ae4edd76e440ea0d5a310c9b28d98",
+      "config_sha256": "d1ec08935643b664e78a264612731aa1583dfe3ba6bff4e4c31e46154368d599",
+      "duration_seconds": 29.94052790000569,
+      "error_type": "",
+      "estimated_cost": 0.02199296,
+      "finish_reason": "stop",
+      "input_tokens": 24070,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 8638,
+      "prompt_id": "rewriter_prompt",
+      "prompt_sha256": "93d8d6ccc7be3a6425547429ee04cfcffbfac362d6ecd9fa5af1570a0357da6d",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "rewriter",
+      "status": "ok",
+      "usage_source": "provider_response"
+    },
+    {
+      "attempt_id": "0e9e28c3c6a44e139e6f70c7f25863f8",
+      "attempt_index": 1,
+      "call_id": "fcb88cc6c4584fa487c70a4865289436",
+      "config_sha256": "0a04bad1998bd413add63b83d861095c70f63f136637a83e25d3da4525b8c393",
+      "duration_seconds": 3.1930179999908432,
+      "error_type": "",
+      "estimated_cost": 0.005709,
+      "finish_reason": "stop",
+      "input_tokens": 11883,
+      "model_name": "deepseek-v4-flash",
+      "output_tokens": 364,
+      "prompt_id": "judge_prompt",
+      "prompt_sha256": "9f5c079882e65b6906e5b907b73767cbd92f80e57a5257ffdaf2d063bb466725",
+      "rate_id": "79096cbffdb83fe9",
+      "schema_version": "paper4-model-call-v0.1",
+      "stage": "judge",
+      "status": "ok",
+      "usage_source": "provider_response"
+    }
+  ],
+  "optimization_comparison": null,
+  "optimization_quality_gate": null,
+  "optimization_scope": null,
+  "rewrite_records": [
+    {
+      "accepted_critique_ids": [
+        "critique-30d4124f7be4",
+        "critique-4ba2ebd55117",
+        "critique-482d43d2be70",
+        "critique-671e241d6da5",
+        "critique-1a4b9b75aae3"
+      ],
+      "changes": [
+        {
+          "after_summary": "res-1 明确固定摆法：两条长条分别贴正方形右侧边与下侧边，右下角形成边长3缺口，补块由9个1×1小方格拼成3×3；art-1 第1、2、5题与 step-1 教师/学生动作、成功标准、板书均同步写明摆法与缺口位置。",
+          "before_summary": "res-1 与 art-1 未说明两条长条贴在正方形哪两条边、缺角位置如何确定，学生可能摆出非标准图形导致补块边长推理失效。",
+          "critique_id": "critique-30d4124f7be4",
+          "edited_paths": [
+            "/resources/0/ready_to_use_content",
+            "/teaching_artifacts/0/content",
+            "/procedure_steps/0/teacher_actions",
+            "/procedure_steps/0/student_actions",
+            "/procedure_steps/0/success_criteria",
+            "/board_design"
+          ],
+          "implementation_status": "implemented",
+          "lesson_location": "art-1 拼图记录单第1题与 res-1 材料说明",
+          "target_path": "/teaching_artifacts/0/content"
+        },
+        {
+          "after_summary": "变式2 改为两边同加 (5/2)²=25/4，得 (x+5/2)²=49/4，x=1 或 -6；变式4 改为 (x+3/2)²=13/4，x=(-3±√13)/2；题卡与自查清单注明结果化为最简分数或根式，相关步骤与难点同步改为分数表达。",
+          "before_summary": "变式2、4 答案用小数（6.25、2.25、3.25），变式4 写作 x=-1.5±√3.25，根号内含小数，未化简。",
+          "critique_id": "critique-4ba2ebd55117",
+          "edited_paths": [
+            "/teaching_artifacts/1/answer_or_success_criteria",
+            "/teaching_artifacts/1/content",
+            "/teaching_artifacts/3/content",
+            "/procedure_steps/1/teacher_actions",
+            "/procedure_steps/1/student_actions",
+            "/procedure_steps/3/teacher_actions",
+            "/procedure_steps/3/student_actions",
+            "/procedure_steps/4/student_actions",
+            "/procedure_steps/4/success_criteria",
+            "/procedure_steps/4/questions",
+            "/difficult_points",
+            "/homework"
+          ],
+          "implementation_status": "implemented",
+          "lesson_location": "art-2 变式2与变式4答案",
+          "target_path": "/teaching_artifacts/1/content"
+        },
+        {
+          "after_summary": "step-5 改为先独立填写说明卡→每人30秒口述三步依据→听者在说明卡背面记录对方一处依据或疑问→教师随机抽2名学生复述同伴说法；art-5 增加背面同伴记录栏，step-4 同桌互查也要求记录一处依据或疑问，评价与反思同步纳入。",
+          "before_summary": "step-5 仅写'小组内用补正方形语言互讲一遍'，未规定先独立写、每人发言与听者记录；step-4 同桌互查也无记录载体。",
+          "critique_id": "critique-482d43d2be70",
+          "edited_paths": [
+            "/procedure_steps/4/student_actions",
+            "/procedure_steps/4/teacher_actions",
+            "/procedure_steps/4/assessment",
+            "/procedure_steps/4/success_criteria",
+            "/procedure_steps/4/scaffolds",
+            "/procedure_steps/5/teacher_actions",
+            "/procedure_steps/5/student_actions",
+            "/procedure_steps/5/assessment",
+            "/procedure_steps/5/design_rationale",
+            "/procedure_steps/5/student_product",
+            "/procedure_steps/5/success_criteria",
+            "/procedure_steps/5/scaffolds",
+            "/teaching_artifacts/4/content",
+            "/teaching_artifacts/4/answer_or_success_criteria",
+            "/assessment_plan",
+            "/reflection"
+          ],
+          "implementation_status": "implemented",
+          "lesson_location": "step-5 独立求解与三步说明卡",
+          "target_path": "/procedure_steps/step-5/student_actions"
+        },
+        {
+          "after_summary": "step-1 拆为前6分钟完成 x²+6x 拼图与记录单第1–4题、后4分钟用已剪好的 x²+8x 材料快速验证第5题；res-1 说明课前按组装袋摆放；新增'多数组未完成则教师演示、学生只填等式'的降级分支。",
+          "before_summary": "step-1 10分钟内需完成两轮剪拼、画图、标注与填等式，且无材料分发收拢与未完成时的处理安排。",
+          "critique_id": "critique-671e241d6da5",
+          "edited_paths": [
+            "/procedure_steps/0/teacher_actions",
+            "/procedure_steps/0/student_actions",
+            "/procedure_steps/0/scaffolds",
+            "/procedure_steps/0/response_branches",
+            "/resources/0/ready_to_use_content"
+          ],
+          "implementation_status": "implemented",
+          "lesson_location": "step-1 拼图操作",
+          "target_path": "/procedure_steps/step-1"
+        },
+        {
+          "after_summary": "step-6 指定最小可观察产出：学生在说明卡背面补写一句三栏对应关系并交回；assessment 改为检查该句是否含补块面积、两边同加、开方取正负三层对应；artifact_ids 关联 art-5，art-5 背面增加三栏对应句式框架，assessment_plan 与反思同步纳入。",
+          "before_summary": "step-6 student_product 为空，assessment 仅'口头复述正确即巩固'，success_criteria 只有'能说出三栏对应关系'，无 artifact_ids。",
+          "critique_id": "critique-1a4b9b75aae3",
+          "edited_paths": [
+            "/procedure_steps/5/student_product",
+            "/procedure_steps/5/teacher_actions",
+            "/procedure_steps/5/student_actions",
+            "/procedure_steps/5/assessment",
+            "/procedure_steps/5/success_criteria",
+            "/procedure_steps/5/artifact_ids",
+            "/procedure_steps/5/scaffolds",
+            "/teaching_artifacts/4/content",
+            "/assessment_plan",
+            "/reflection"
+          ],
+          "implementation_status": "implemented",
+          "lesson_location": "步骤 step-6 汇总与板书对应",
+          "target_path": "/procedure_steps/5/student_product"
+        }
+      ],
+      "input_version_id": "v0",
+      "output_version_id": "v1",
+      "rewrite_id": "rewrite-45b0f0f79b63",
+      "schema_version": "paper4-rewrite-record-v0.1",
+      "strategy": "full_document",
+      "unresolved_critique_ids": [],
+      "unresolved_reasons": {}
+    }
+  ],
+  "route_decisions": [
+    {
+      "decision_id": "route-eval-0",
+      "explanation": "质量门槛尚未满足，且预算允许继续批评。",
+      "next_action": "continue_review",
+      "primary_reason": null,
+      "schema_version": "paper4-route-v0.1",
+      "triggered_reasons": []
+    },
+    {
+      "decision_id": "route-validation-1",
+      "explanation": "5 条已验证意见进入最小必要改写。",
+      "next_action": "rewrite",
+      "primary_reason": null,
+      "schema_version": "paper4-route-v0.1",
+      "triggered_reasons": []
+    },
+    {
+      "decision_id": "route-eval-1",
+      "explanation": "程序化停止条件触发：quality_passed",
+      "next_action": "finalize",
+      "primary_reason": "quality_passed",
+      "schema_version": "paper4-route-v0.1",
+      "triggered_reasons": [
+        "quality_passed"
+      ]
+    }
+  ],
+  "run_id": "20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq",
+  "schema_version": "paper4-run-result-v0.1",
+  "status": "completed",
+  "stop_reason": "quality_passed",
+  "task_id": "lesson-0d0669ed261a",
+  "task_mode": "generate",
+  "token_usage": {
+    "input_tokens": 134613,
+    "output_tokens": 39193
+  },
+  "trace_path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261031-210628-初中数学-初三-用配方法解一元二次方程-g32xzq\\trace.jsonl",
+  "validation_batches": [
+    {
+      "batch_id": "validation-4b5cfb3d3f75",
+      "critique_batch_id": "combined-a0540a16e8e3",
+      "decisions": [
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-30d4124f7be4",
+          "decision": "accept",
+          "decision_id": "decision-f97a35fe68ad",
+          "grounded": true,
+          "priority": 72,
+          "reason": "证据真实：res-1 与 art-1 第1题确实未固定长条摆放位置，缺角位置与补块边长推理依赖摆法。该问题直接影响 obj-1 的几何证据有效性，属学科模型自洽问题，建议补图示或文字固定摆法，可落到 res-1 与 art-1 字段。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-4ba2ebd55117",
+          "decision": "accept",
+          "decision_id": "decision-b5a6ce0107b3",
+          "grounded": true,
+          "priority": 80,
+          "reason": "art-2 变式4答案 x=-1.5±√3.25 根号内含小数，确属不规范表达；变式2、4改为分数形式并注明最简根式要求，是学科事实与规范表达问题，修改入口明确（art-2 答案与成功标准）。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-443c4aa7fffc",
+          "decision": "defer",
+          "decision_id": "decision-f8b022bd35ee",
+          "grounded": true,
+          "priority": 55,
+          "reason": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-930da13dbe7b",
+          "decision": "reject",
+          "decision_id": "decision-f46202fc2f63",
+          "grounded": true,
+          "priority": 20,
+          "reason": "本课主题限定为二次项系数为1、可配方为正数的方程求解，a<0 无实根属判别式/根的情况内容，超出本课时范围；作为可选拓展会稀释核心目标，不服务当前主题，故 reject。",
+          "relevant": false,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": false,
+          "canonical_critique_id": "",
+          "conflict": true,
+          "critique_id": "critique-363e39d189a4",
+          "decision": "reject",
+          "decision_id": "decision-fc51d931f574",
+          "grounded": true,
+          "priority": 10,
+          "reason": "输入 curriculum_standards 为空，要求补写课标条款、教材页码与例题编号会诱发依据幻觉；按规则此类意见不可执行，需用户补充权威课标与教材原文后重新核验。当前稿已如实标注待核验，不构成事实错误。",
+          "relevant": false,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-07898cb25b3c",
+          "decision": "defer",
+          "decision_id": "decision-6ebb786b1117",
+          "grounded": true,
+          "priority": 65,
+          "reason": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-482d43d2be70",
+          "decision": "accept",
+          "decision_id": "decision-10b00d614376",
+          "grounded": true,
+          "priority": 68,
+          "reason": "step-5 小组互讲未规定先独立写、每人发言与听者记录，存在少数学生主导风险。建议改为独立填写→30秒口述→听者记录→随机抽复述，有可观察产出，直接服务参与与个体问责。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-671e241d6da5",
+          "decision": "accept",
+          "decision_id": "decision-e61fed3c8b77",
+          "grounded": true,
+          "priority": 70,
+          "reason": "step-1 10分钟内完成两轮剪拼、画图、标注与填等式偏紧，且无材料分发收拢与未完成处理安排。建议拆为6+4分钟并预设降级方案，属课堂可行性真实风险，修改入口明确。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-36011d73dbcd",
+          "decision": "defer",
+          "decision_id": "decision-9e1928b0e03b",
+          "grounded": true,
+          "priority": 62,
+          "reason": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-e4223f214b7a",
+          "decision": "defer",
+          "decision_id": "decision-41358236ef27",
+          "grounded": true,
+          "priority": 66,
+          "reason": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "critique-1a4b9b75aae3",
+          "conflict": false,
+          "critique_id": "critique-ab6b147ec1a0",
+          "decision": "merge",
+          "decision_id": "decision-37ac40d26c8e",
+          "grounded": true,
+          "priority": 60,
+          "reason": "与 critique-1a4b9b75aae3 同一根因：step-6 无 student_product、仅口头复述，均要求补最小可观察产出。后者同时引用 rule_check_report 与 alignment 证据更完整，故合并到该 canonical。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-e948b5b03e4c",
+          "decision": "defer",
+          "decision_id": "decision-88c002058a7d",
+          "grounded": true,
+          "priority": 64,
+          "reason": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-e585bed3f22b",
+          "decision": "defer",
+          "decision_id": "decision-33ff6f948c87",
+          "grounded": true,
+          "priority": 63,
+          "reason": "每轮至多接受 5 条最高杠杆意见；其余经核验的真实意见顺延至后续轮次（defer），并非否定其价值。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        },
+        {
+          "actionable": true,
+          "canonical_critique_id": "",
+          "conflict": false,
+          "critique_id": "critique-1a4b9b75aae3",
+          "decision": "accept",
+          "decision_id": "decision-1f54a342126b",
+          "grounded": true,
+          "priority": 67,
+          "reason": "step-6 student_product 为空、assessment 仅口头复述，rule_check_report 已标记 step_without_student_product（medium），alignment 证据完整。建议指定最小可观察产出（说明卡背面补写三栏对应并交回），使收束环节有证据锚点，可操作。",
+          "relevant": true,
+          "schema_version": "paper4-validation-v0.1"
+        }
+      ],
+      "round_index": 1,
+      "schema_version": "paper4-validation-batch-v0.1"
+    }
+  ],
+  "version_selections": [
+    {
+      "ambiguous_candidate_ids": [],
+      "eligible_candidate_ids": [
+        "v0"
+      ],
+      "eliminated_candidates": {},
+      "requires_human": false,
+      "schema_version": "paper4-version-selection-v0.1",
+      "selected_version_id": "v0",
+      "selection_id": "selection-1",
+      "selection_policy_version": "best-version-v0.1",
+      "selection_reason": ""
+    },
+    {
+      "ambiguous_candidate_ids": [
+        "v1",
+        "v0"
+      ],
+      "eligible_candidate_ids": [
+        "v1",
+        "v0"
+      ],
+      "eliminated_candidates": {},
+      "requires_human": true,
+      "schema_version": "paper4-version-selection-v0.1",
+      "selected_version_id": "v1",
+      "selection_id": "selection-2",
+      "selection_policy_version": "best-version-v0.1",
+      "selection_reason": ""
+    }
+  ],
+  "versions": [
+    {
+      "addressed_critique_ids": [],
+      "branch_id": "main",
+      "change_count": 0,
+      "created_at": "2026-10-31T13:07:49.153338Z",
+      "created_by_profile_id": "writer_v0_1",
+      "diff_summary": "初始生成稿",
+      "document": {
+        "assessment_plan": "形成性评价贯穿：拼图记录单（obj-1 初步）、代数等式补全（obj-1）、错例诊断与例题依据（obj-2/3）、变式与自查清单（obj-2/3）、三步说明卡（出口证据）。成功标准见各步 success_criteria 与 art-4 清单。",
+        "board_design": "三栏并列：左栏【几何补正方形】画 x²+6x 缺角图，标补块边长 3、面积 9；中栏【代数配方】x²+6x+9=(x+3)²，旁注'一半的平方'；右栏【方程求解】x²+6x=7 → 两边同加9 → (x+3)²=16 → x+3=±4 → x=1 或 -7，每行右侧标依据。底部一行：补块面积=(一次项系数÷2)²；等式两边同加。",
+        "content_analysis": "本课核心是把二次三项式重写为完全平方式，并以此解一元二次方程。知识链条为：完全平方公式 (a±b)²=a²±2ab+b² → 二次三项式 x²+bx 补上 (b/2)² 成为 (x+b/2)² → 方程两边同加 (b/2)² 保持等价 → 开方得两根。难点不在步骤记忆，而在'为什么加的是(一次项系数一半)的平方'以及'为什么必须两边同加'。几何拼图提供直观证据：x² 是正方形，bx 是两条长条，补上的小正方形边长恰为 b/2，面积 (b/2)²。教材原文、页码与例题编号未提供，待教师依据北师大版九年级上册核验。",
+        "curriculum_standards": [
+          "输入未提供课标原文，具体条目待教师依据《义务教育数学课程标准》及北师大版九年级上册教材核验。本教案按'理解配方法、会用配方法解二次项系数为1的一元二次方程'的通行要求设计。"
+        ],
+        "design_thesis": "先让学生用面积拼图'看见'完全平方的来源，再把拼图操作翻译成代数步骤，使配方法成为'把一个不完整正方形补成完整正方形'的可解释的等价变形，而非记忆口诀。",
+        "differentiation": "基础层：提供半成品填空（补块边长、平方数已给部分），允许用小数代替分数；进阶层：独立完成变式 3、4 并讨论二次项系数不为1的方向；表达困难者可用'补正方形'口头语言替代书面依据，再由同伴转写。",
+        "difficult_points": [
+          "理解'为什么加(一次项系数一半)的平方'而非其他数",
+          "奇数系数时出现分数（如 b/2=2.5）的处理与自信",
+          "开方时两根齐全、符号正确"
+        ],
+        "driving_question": "怎样把一个长不等的矩形补成一个正方形，并用代数式子记录这次'补'的过程？",
+        "homework": "1. 用配方法解 x²-8x+7=0 与 x²+7x=8，每步写依据。2. 用一句话向家人解释'为什么配方要加一次项系数一半的平方'，可画图。3. 选做：思考 2x²+4x=6 第一步如何处理（只写思路）。",
+        "key_points": [
+          "配方的几何意义：补块面积是一次项系数一半的平方",
+          "配方是等式两边同加的等价变形，依据是等式性质",
+          "由完全平方式开方求两根，注意正负号"
+        ],
+        "learning_objectives": [
+          {
+            "description": "能借助面积拼图说明 x²+bx 补成完全正方形时补块面积等于(一次项系数一半)的平方，并写出对应的完全平方式。",
+            "evidence_of_achievement": "拼图记录单上正确画出补块、标注边长 b/2 与面积 (b/2)²，并写出 x²+bx+(b/2)²=(x+b/2)²；对 x²+6x 与 x²+8x 均能说明。",
+            "objective_id": "obj-1",
+            "standard_refs": [
+              "待核验：义务教育数学课程标准相关条目"
+            ]
+          },
+          {
+            "description": "能用配方法解二次项系数为1的一元二次方程，每一步注明依据（等式性质或完全平方公式）。",
+            "evidence_of_achievement": "方程过程稿中每步附文字理由，最终两根齐全，符号正确；能通过成功标准清单自查。",
+            "objective_id": "obj-2",
+            "standard_refs": [
+              "待核验：义务教育数学课程标准相关条目"
+            ]
+          },
+          {
+            "description": "能识别并纠正'只在一边加常数''开方漏负根'等典型错误，并说明错误违反了哪条依据。",
+            "evidence_of_achievement": "在变式与追问中能口头或书面指出错误步骤及依据，改写为规范解答。",
+            "objective_id": "obj-3",
+            "standard_refs": [
+              "待核验：义务教育数学课程标准相关条目"
+            ]
+          }
+        ],
+        "learning_trajectory": [
+          "用矩形卡片拼图：给 x²+6x 的几何模型，学生尝试补成正方形并说出补了多大一块、为什么",
+          "把拼图操作逐步翻译为代数式，对照完全平方公式确认 x²+6x+9=(x+3)²",
+          "在具体数值与一般式之间比较：由 x²+6x=7 到 (x+3)²=16，讨论等式两边同加的依据",
+          "处理一次项系数为负、为奇数的变式，暴露'一半的平方'出现分数时的处理",
+          "学生独立完成 2 道方程并在小组内用'补正方形'语言解释每一步",
+          "汇总配方一般流程并写出自己的'三步说明卡'"
+        ],
+        "metadata": {
+          "duration_minutes": 45,
+          "grade": "初三",
+          "subject": "初中数学",
+          "textbook_version": "北师大版数学九年级上册",
+          "topic": "用配方法解一元二次方程"
+        },
+        "plan_id": "plan-4aec5d9c75dd",
+        "procedure_steps": [
+          {
+            "artifact_ids": [
+              "art-1"
+            ],
+            "assessment": "观察记录单第 2、3 题，补块边长与面积标注正确即达成 obj-1 的初步证据。",
+            "design_rationale": "以可操作拼图产生直观证据，让'补多少'成为看得见的问题。",
+            "duration_minutes": 10,
+            "extensions": [
+              "尝试用 x²+8x 独立完成第二次拼图并写出等式"
+            ],
+            "objective_ids": [
+              "obj-1"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "学生是否把补块边长与长条宽（即 b/2）对应，而非与 b 对应。",
+                "expected_responses": [
+                  "边长是 3，因为长条宽是 3。",
+                  "边长是一次项系数 6 的一半。"
+                ],
+                "possible_misconceptions": [
+                  "补块边长等于一次项系数 6。",
+                  "补块面积等于 6。"
+                ],
+                "question": "补上的这一小块，边长是多少？你怎么知道的？",
+                "teacher_follow_ups": [
+                  "长条的宽是 3，补块要正好填满缺角，边长应该等于什么？",
+                  "如果把 6 直接当边长，补块会不会超出或缺一块？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-1"
+            ],
+            "response_branches": [
+              {
+                "purpose": "用实物纠正边长误判",
+                "teacher_move": "让学生用 1×1 小方格实际摆一摆，发现边长 6 会超出，回到长条宽 3。",
+                "trigger": "学生把补块边长写成 6"
+              },
+              {
+                "purpose": "防止退回机械记忆",
+                "teacher_move": "追问'9 是哪里来的？和 6 什么关系？'要求用拼图说明。",
+                "trigger": "学生很快完成，说'就是加 9'"
+              }
+            ],
+            "scaffolds": [
+              "记录单已给出草图轮廓与填空",
+              "对困难组提示'长条宽是几，补块边长就是几'"
+            ],
+            "stage": "拼图操作：把矩形补成正方形",
+            "step_id": "step-1",
+            "student_actions": [
+              "动手拼图，在记录单上画草图并标注各块面积。",
+              "测量或推理补块边长，填写补块面积与等式。",
+              "完成 x²+8x 的第二次拼图。"
+            ],
+            "student_product": "几何拼图操作记录单（含草图与面积标注）",
+            "success_criteria": [
+              "补块画在缺角处，边长标为 3",
+              "补块面积标为 9",
+              "x²+6x+9=(x+3)² 书写正确"
+            ],
+            "teacher_actions": [
+              "每组发 res-1 材料与 art-1 记录单，说明任务：用正方形卡和两条长条卡拼出'缺一角'图形，再补成完整正方形。",
+              "巡视，观察学生是否把补块放在缺角处、是否量出补块边长。",
+              "请一组上台展示拼法，追问补块边长为什么是 3。"
+            ],
+            "transition": "拼图让我们看见补块面积是 9，接下来把这次'补'翻译成代数式，看看它和完全平方公式是否一致。"
+          },
+          {
+            "artifact_ids": [
+              "art-1",
+              "art-2"
+            ],
+            "assessment": "记录单第 4、5、6 题正确，且能口头解释中间项来源。",
+            "design_rationale": "把几何动作逐项翻译为代数符号，建立直观与符号的双向对应。",
+            "duration_minutes": 8,
+            "extensions": [
+              "讨论 x²+5x 补 6.25 时拼图出现半格，改用面积数值说明"
+            ],
+            "objective_ids": [
+              "obj-1"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "学生能否把'两条长条 3x+3x'与中间项 6x 对应，说明理解结构。",
+                "expected_responses": [
+                  "展开是 x²+6x+9，一样。",
+                  "所以 x²+6x+9 可以写成 (x+3)²。"
+                ],
+                "possible_misconceptions": [
+                  "认为 (x+3)²=x²+9，漏中间项。"
+                ],
+                "question": "(x+3)² 展开是什么？和我们拼出的 x²+6x+9 一样吗？",
+                "teacher_follow_ups": [
+                  "完全平方公式中间项 2ab 在这里是 2·x·3=6x，和拼图里的两条长条对应吗？",
+                  "如果一次项系数是 5，一半是多少？平方是多少？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "修复完全平方公式误用",
+                "teacher_move": "让学生展开 (x+3)(x+3) 逐项相乘，标出中间两项。",
+                "trigger": "学生坚持 (x+3)²=x²+9"
+              }
+            ],
+            "scaffolds": [
+              "黑板保留三栏对应结构",
+              "配对式卡片供对照"
+            ],
+            "stage": "代数翻译：从拼图到完全平方式",
+            "step_id": "step-2",
+            "student_actions": [
+              "在记录单第 4、5 题旁补写代数等式。",
+              "用完全平方公式展开 (x+3)² 验证等于 x²+6x+9。",
+              "口答 x²+5x 的补块面积 6.25。"
+            ],
+            "student_product": "补全代数等式的记录单",
+            "success_criteria": [
+              "x²+6x+9=(x+3)² 与 x²+8x+16=(x+4)² 正确",
+              "能说出补块面积是一次项系数一半的平方"
+            ],
+            "teacher_actions": [
+              "在黑板三栏板书第一、二栏，把 x²+6x+9 与 (x+3)² 并排写出。",
+              "出示 art-2 中的配对式，让学生对照完全平方公式验证。",
+              "追问：x²+5x 要补多少？引导学生处理一半为 2.5 的情况。"
+            ],
+            "transition": "既然 x²+6x+9=(x+3)²，那么方程 x²+6x=7 怎样借助这个结构求解？关键是等式两边都要加 9。"
+          },
+          {
+            "artifact_ids": [
+              "art-2",
+              "art-3"
+            ],
+            "assessment": "诊断表指出错误步骤并写出依据；例题过程稿依据齐全。",
+            "design_rationale": "用错例把'等价变形'推到争论中心，使合法性来源显性化。",
+            "duration_minutes": 10,
+            "extensions": [
+              "诊断解答 B 的漏负根错误"
+            ],
+            "objective_ids": [
+              "obj-2",
+              "obj-3"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "学生诊断结论是否引用'等式两边同加'而非只说'算错了'。",
+                "expected_responses": [
+                  "不成立，左边变了右边没变。",
+                  "必须两边同加 9，右边变成 16。"
+                ],
+                "possible_misconceptions": [
+                  "认为只要左边配成完全平方就行。",
+                  "忽略右边也要加。"
+                ],
+                "question": "解答 A 只在左边加了 9，右边还是 7，这样等式还成立吗？",
+                "teacher_follow_ups": [
+                  "等式性质怎么说？两边同加同一个数会怎样？",
+                  "如果右边也加 9，方程变成什么？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "建立两边同加的直觉",
+                "teacher_move": "用天平比喻：一边加砝码另一边不加，还平衡吗？回到等式性质。",
+                "trigger": "学生说'加 9 就行，不用管右边'"
+              },
+              {
+                "purpose": "补齐两根",
+                "teacher_move": "追问开方时 ±4 的负号去哪了，补出 x=-7。",
+                "trigger": "学生解出 x=1 就停"
+              }
+            ],
+            "scaffolds": [
+              "过程稿预留'依据'横线",
+              "诊断表模板：步骤/是否合法/依据"
+            ],
+            "stage": "方程求解：两边同加的等价变形",
+            "step_id": "step-3",
+            "student_actions": [
+              "跟随例题在过程稿上抄写并补依据。",
+              "独立标注解答 A 的错误步骤，写出诊断结论。",
+              "小组核对：错在'只在一边加'与'漏负根'。"
+            ],
+            "student_product": "例题过程稿（含依据）与解答 A 诊断结论",
+            "success_criteria": [
+              "指出'只在一边加'违反等式性质",
+              "写出正确方程 x²+6x+9=16 并解出 x=1 或 -7"
+            ],
+            "teacher_actions": [
+              "板书 art-2 例题，逐行写出并标注依据。",
+              "出示 art-3 解答 A，让学生找可疑步骤。",
+              "追问：只在左边加 9 行不行？为什么？"
+            ],
+            "transition": "我们已经会解正系数方程，如果一次项系数是负的或是奇数，配方还成立吗？用变式题检验。"
+          },
+          {
+            "artifact_ids": [
+              "art-2",
+              "art-4"
+            ],
+            "assessment": "变式 1、2 答案正确且依据齐全，清单五项全勾。",
+            "design_rationale": "变式暴露符号与分数难点，清单提供自查闭环。",
+            "duration_minutes": 10,
+            "extensions": [
+              "尝试变式 3（先移项）"
+            ],
+            "objective_ids": [
+              "obj-2",
+              "obj-3"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "负系数平方符号是否正确；奇数系数是否敢用分数/小数并两边同加。",
+                "expected_responses": [
+                  "平方是 4，正数。",
+                  "(x-2)²=x²-4x+4。"
+                ],
+                "possible_misconceptions": [
+                  "把 (-2)² 写成 -4。",
+                  "奇数系数时不敢写 2.5。"
+                ],
+                "question": "x²-4x 配方时，一半是 -2，平方是多少？",
+                "teacher_follow_ups": [
+                  "负数平方为什么是正的？",
+                  "x²+5x 一半是 2.5，平方 6.25，右边也要加吗？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "纠正负数平方",
+                "teacher_move": "回到乘法：(-2)×(-2)=? 用数轴或口诀确认。",
+                "trigger": "学生把 (-2)² 算成 -4"
+              },
+              {
+                "purpose": "降低分数门槛",
+                "teacher_move": "提示'一半可以是小数'，给出 5÷2=2.5 的填空支架。",
+                "trigger": "学生奇数系数时卡住"
+              }
+            ],
+            "scaffolds": [
+              "清单逐项提示",
+              "对困难生提供半成品填空：x²+5x+____=6+____"
+            ],
+            "stage": "变式训练：负系数与奇数系数",
+            "step_id": "step-4",
+            "student_actions": [
+              "独立完成变式 1、2，写依据。",
+              "用 art-4 清单逐项自查并订正。",
+              "同桌互查两根是否齐全。"
+            ],
+            "student_product": "变式解答过程稿（含依据与自查清单）",
+            "success_criteria": [
+              "变式1得 x=5 或 -1",
+              "变式2得 x=1 或 -6",
+              "每步有依据，清单全勾"
+            ],
+            "teacher_actions": [
+              "发 art-2 变式 1、2，要求每步写依据。",
+              "巡视，重点看负系数时 (b/2)² 的符号与奇数系数的分数计算。",
+              "请两名学生板演，全班对照 art-4 清单自查。"
+            ],
+            "transition": "两道变式都通过了，现在独立完成一道新题，并用'补正方形'的话解释每一步，最后写成三步说明卡。"
+          },
+          {
+            "artifact_ids": [
+              "art-2",
+              "art-5"
+            ],
+            "assessment": "说明卡三步依据完整、变式 4 过程正确，作为本课出口证据。",
+            "design_rationale": "以说明卡固化流程与依据，形成可检验的个人产出。",
+            "duration_minutes": 6,
+            "extensions": [
+              "思考：如果二次项系数不是 1（如 2x²+4x=6），第一步该做什么？只讨论方向。"
+            ],
+            "objective_ids": [
+              "obj-2",
+              "obj-3"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "说明卡三步依据是否完整；能否用几何语言解释代数步骤。",
+                "expected_responses": [
+                  "补边长 1.5 的小正方形，面积 2.25。",
+                  "两边都加 2.25。"
+                ],
+                "possible_misconceptions": [
+                  "只补左边。",
+                  "把 3 的一半算成 1.5 但平方算错。"
+                ],
+                "question": "用'补正方形'的话说，x²+3x 补的是什么？",
+                "teacher_follow_ups": [
+                  "补块面积 2.25 加在哪边？",
+                  "开方后两根都写了吗？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "防止依据空泛",
+                "teacher_move": "追问是哪个公式、哪条等式性质，要求具体写出。",
+                "trigger": "学生说明卡依据写'就是公式'"
+              },
+              {
+                "purpose": "保护探究欲又不偏离本课",
+                "teacher_move": "肯定并指出先化系数为1，留作下节课方向，不展开。",
+                "trigger": "学生提出二次项系数不为1怎么办"
+              }
+            ],
+            "scaffolds": [
+              "说明卡留空待填",
+              "小组互讲降低表达门槛"
+            ],
+            "stage": "独立求解与三步说明卡",
+            "step_id": "step-5",
+            "student_actions": [
+              "独立解变式 4，写依据。",
+              "填写三步说明卡，写出自己易错点。",
+              "小组内用'补正方形'语言互讲一遍。"
+            ],
+            "student_product": "变式 4 过程稿与三步说明卡",
+            "success_criteria": [
+              "三步依据分别正确",
+              "变式4两根齐全",
+              "写出真实易错点"
+            ],
+            "teacher_actions": [
+              "发 art-5 说明卡，要求先独立解变式 4 再填卡。",
+              "巡视，记录典型错误用于讲评。",
+              "请一名学生用'补正方形'语言口述过程。"
+            ],
+            "transition": "最后用一分钟回看板书三栏，把几何补正方形、代数配方、方程求解对应起来。"
+          },
+          {
+            "artifact_ids": [],
+            "assessment": "口头复述正确即巩固。",
+            "design_rationale": "用结构化板书收束全课，强化几何—代数—方程三层对应。",
+            "duration_minutes": 1,
+            "extensions": [],
+            "objective_ids": [
+              "obj-1",
+              "obj-2"
+            ],
+            "questions": [],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [],
+            "scaffolds": [],
+            "stage": "汇总与板书对应",
+            "step_id": "step-6",
+            "student_actions": [
+              "对照板书复述'补块面积=一半的平方'与'两边同加'。"
+            ],
+            "student_product": "",
+            "success_criteria": [
+              "能说出三栏对应关系"
+            ],
+            "teacher_actions": [
+              "指向板书三栏，带学生齐读对应关系。",
+              "布置作业。"
+            ],
+            "transition": ""
+          }
+        ],
+        "references": [
+          "北师大版数学九年级上册（教材原文、页码与例题编号待教师核验）",
+          "义务教育数学课程标准（具体条目待核验）",
+          "web:user_input"
+        ],
+        "reflection": "课后重点观察：1. 学生在拼图环节是否自发把补块边长与'一次项系数一半'对应，还是仍依赖提示；2. 错例诊断时有多少学生能引用'等式两边同加'而非只说'算错了'；3. 奇数系数变式中分数/小数的使用是否成为新的卡点；4. 三步说明卡的依据是否具体，还是退回'公式'空话。记录典型原话与错误类型，供下一课时调整。",
+        "resources": [
+          {
+            "description": "用于面积拼图操作，每组一套：一个边长为 x 的正方形卡片、两条 x×3 长条卡片、若干 1×1 小方格（可剪）。",
+            "name": "方格纸与可剪矩形卡片",
+            "ready_to_use_content": "每组材料：正方形卡 1 张（标 x²）、长条卡 2 张（标 3x，长 x 宽 3）、1×1 小方格 9 个（可拼成 3×3 补块）。另备 x²+8x 变式材料：长条宽 4 的 2 张、1×1 小方格 16 个。",
+            "resource_id": "res-1"
+          },
+          {
+            "description": "用于板书'几何补正方形—代数配方—方程求解'三栏对应结构。",
+            "name": "黑板/白板与彩色粉笔",
+            "ready_to_use_content": "",
+            "resource_id": "res-2"
+          }
+        ],
+        "schema_version": "paper4-lesson-plan-v0.1",
+        "student_analysis": "初三学生已会解 x²=a 型方程、会用完全平方公式展开，具备面积与正方形的基本直观。多数学生可能把配方法当作机械加常数，对加多少、为什么加缺乏意义理解；常见困难包括：只在左边加常数、一次项系数一半算错、奇数系数时对分数不自信、开方漏负根。班级需保证学生动手活动，故以剪拼操作先行、代数翻译跟进，兼顾直观与规范。",
+        "task_id": "lesson-0d0669ed261a",
+        "teaching_artifacts": [
+          {
+            "answer_or_success_criteria": "补块为边长 3 的小正方形（面积 9），大正方形边长 x+3，面积 (x+3)²；等式 x²+6x+9=(x+3)²。x²+8x 补 16，得 (x+4)²。第 6 题填'一半的平方'。成功标准：草图正确、面积标注正确、等式书写规范。",
+            "artifact_id": "art-1",
+            "artifact_type": "任务单",
+            "content": "【拼图记录单】\n1. 取正方形卡（面积 x²）与两条长条卡（每条面积 3x），拼成一个'缺一角'的图形，画出草图并标注各块面积。\n2. 要补成完整正方形，需要补什么形状？边长是多少？面积是多少？把补块画在草图上并标注。\n3. 补完后整个大正方形的边长是______，面积是______。\n4. 用等式记录：x²+6x+______ = (______)²。\n5. 换 x²+8x 再做一次：补块面积______，等式 x²+8x+______=(______)²。\n6. 我发现：补块面积等于一次项系数______的______。",
+            "purpose": "让学生动手补正方形并记录补块面积，形成几何证据",
+            "title": "几何拼图操作记录单"
+          },
+          {
+            "answer_or_success_criteria": "变式1：x²-4x+4=9，(x-2)²=9，x=5 或 x=-1。变式2：x²+5x+6.25=12.25，(x+2.5)²=12.25，x=1 或 x=-6。变式3：x²-6x=-5，x²-6x+9=4，(x-3)²=4，x=5 或 x=1。变式4：x²+3x=1，x²+3x+2.25=3.25，(x+1.5)²=3.25，x=-1.5±√3.25。以上答案待教师依据教材核验。",
+            "artifact_id": "art-2",
+            "artifact_type": "例题与变式题卡",
+            "content": "【题卡】\n例：x²+6x=7。\n  解：两边同加 9：x²+6x+9=7+9（依据：等式两边同加同一个数，等式仍成立）\n      (x+3)²=16（依据：完全平方公式）\n      x+3=±4（依据：若 y²=a(a≥0)，则 y=±√a）\n      x₁=1，x₂=-7。\n变式 1：x²-4x=5\n变式 2：x²+5x=6\n变式 3：x²-6x+5=0（需先移项）\n变式 4：x²+3x-1=0",
+            "purpose": "把拼图翻译为方程求解，暴露符号与分数处理",
+            "title": "方程求解题卡（含负系数与奇数系数）"
+          },
+          {
+            "answer_or_success_criteria": "A 错在只在左边加 9，违反等式两边同加；且开方漏负根。正确：x²+6x+9=16，(x+3)²=16，x=1 或 -7。B 错在开方只取正根，漏 x-2=-3，应得 x=5 或 x=-1。诊断结论须指出违反的依据。",
+            "artifact_id": "art-3",
+            "artifact_type": "错例诊断卡",
+            "content": "【解答 A】解 x²+6x=7：\n  x²+6x+9=7（只在左边加 9）\n  (x+3)²=7\n  x+3=√7\n  x=-3+√7\n【解答 B】解 x²-4x=5：\n  x²-4x+4=9\n  (x-2)²=9\n  x-2=3\n  x=5",
+            "purpose": "暴露'只在一边加常数''漏负根'",
+            "title": "两份匿名解答（含典型错误）"
+          },
+          {
+            "answer_or_success_criteria": "五项全勾且过程稿与清单一致，视为达标；缺项须在小组内说明并订正。",
+            "artifact_id": "art-4",
+            "artifact_type": "评价清单",
+            "content": "【自查清单】逐项打勾：\n□ 1. 方程已化为 x²+bx=c 形式（二次项系数为1）。\n□ 2. 配方时两边同加 (b/2)²，并写出依据。\n□ 3. 左边写成完全平方式 (x+b/2)²，右边合并正确。\n□ 4. 开方时写出 ±，两根齐全。\n□ 5. 每步有文字理由，符号与分数计算正确。",
+            "purpose": "形成性评价闭环",
+            "title": "配方成功标准自查清单"
+          },
+          {
+            "answer_or_success_criteria": "三步依据分别填：等式性质（移项）、等式两边同加同一个数、完全平方公式与开方取正负。能结合自身写出易错点。",
+            "artifact_id": "art-5",
+            "artifact_type": "出口任务",
+            "content": "【我的三步说明卡】\n第一步：把方程整理成 x²+bx=c。依据：______\n第二步：两边同加______，即 (b/2)²，使左边成为完全平方式。依据：______\n第三步：写成 (x+____)²=____，开方得 x=______。依据：______\n我最容易错的地方是：______",
+            "purpose": "固化配方一般流程与依据",
+            "title": "三步说明卡模板"
+          }
+        ],
+        "teaching_strategy": "几何直观先行—代数翻译跟进—变式暴露错误—独立求解与说明卡固化。以拼图操作产生直观证据，再翻译为代数式，用追问与错例暴露'只在一边加''漏负根'，最后以独立练习与三步说明卡形成可检验的产出。",
+        "template_extensions": {},
+        "template_id": "general_v0_1"
+      },
+      "document_hash": "c6da478b250c96bc303766f196b2935165c45a120fbc994c625f7f07f9086270",
+      "estimated_cost": 0.02922348,
+      "internal_evaluation": {
+        "compared_version_ids": [],
+        "evaluated_version_id": "v0",
+        "evaluation_id": "evaluation-3f9e4367e793",
+        "high_risk_issue_ids": [],
+        "overall_score": 8.325,
+        "quality_signals": {
+          "design_coherence": 8.7,
+          "disciplinary_depth": 8.6,
+          "genericity_risk": 2.0,
+          "material_readiness": 8.5
+        },
+        "recommended_action": "continue",
+        "regressions": [],
+        "rubric_id": "paper4-eight-dimension-v0.1",
+        "rubric_scores": {
+          "assessment_design": 8.5,
+          "classroom_feasibility": 8.2,
+          "curriculum_alignment": 7.8,
+          "differentiated_instruction": 7.6,
+          "knowledge_accuracy": 8.6,
+          "language_and_format": 8.8,
+          "student_engagement": 8.4,
+          "teaching_logic": 8.7
+        },
+        "rule_checks_passed": true,
+        "schema_version": "paper4-evaluation-v0.1",
+        "summary": "本稿以面积拼图直观先行、代数翻译跟进为主线，几何—代数—方程三层对应清晰，配有拼图记录单、题卡（含答案）、错例诊断卡、自查清单与三步说明卡，材料可直接使用，问题链含预期回答、误概念与观察证据，内部目标—活动—产出—评价闭环较完整，学科深度与认知进阶明显优于通用活动清单。主要缺口：外部课程标准与教材原文均未提供，课标条目与教材页码、例题编号仅标注待核验，外部对齐无法核验；学情为空，差异化分层（半成品填空、小数替代分数、口头表达替代）属待教师确认的设计假设；step-6 汇总环节缺可观察学生产出（规则报告已标记 medium 违规），出口任务变式4答案含根式未化简，需教师复核。未发现学科事实错误或硬约束失败，故无高风险项。建议继续，进入教师复核与小幅修订。",
+        "unresolved_issue_count": 0
+      },
+      "iteration": 0,
+      "parent_version_id": "",
+      "rule_check_report": {
+        "checks": {
+          "curriculum_alignment_present": true,
+          "duration_within_tolerance": true,
+          "has_learning_objectives": true,
+          "has_procedure_steps": true,
+          "references_resolved": true,
+          "required_sections_present": true,
+          "task_document_consistent": true
+        },
+        "expected_duration_minutes": 45,
+        "passed": true,
+        "plan_id": "plan-4aec5d9c75dd",
+        "report_id": "rule-v0",
+        "schema_version": "paper4-rule-report-v0.1",
+        "total_duration_minutes": 45,
+        "violations": [
+          {
+            "code": "step_without_student_product",
+            "location": "procedure_steps.step-6.student_product",
+            "message": "步骤 step-6 未说明可观察的学生产出。",
+            "severity": "medium"
+          }
+        ]
+      },
+      "schema_version": "paper4-plan-version-v0.1",
+      "strategy_id": "general",
+      "unresolved_critique_ids": [],
+      "version_id": "v0"
+    },
+    {
+      "addressed_critique_ids": [
+        "critique-30d4124f7be4",
+        "critique-4ba2ebd55117",
+        "critique-482d43d2be70",
+        "critique-671e241d6da5",
+        "critique-1a4b9b75aae3"
+      ],
+      "branch_id": "main",
+      "change_count": 5,
+      "created_at": "2026-10-31T13:09:40.947200Z",
+      "created_by_profile_id": "rewriter_v0_1",
+      "diff_summary": "按 5 条已验证意见做局部修改",
+      "document": {
+        "assessment_plan": "形成性评价贯穿：拼图记录单（obj-1 初步）、代数等式补全（obj-1）、错例诊断与例题依据（obj-2/3）、变式与自查清单（obj-2/3）、三步说明卡含背面同伴记录（出口证据）、step-6 背面三栏对应句（收束证据）。成功标准见各步 success_criteria 与 art-4 清单。",
+        "board_design": "三栏并列：左栏【几何补正方形】画 x²+6x 缺角图（长条贴右侧与下侧，缺口在右下），标补块边长 3、面积 9；中栏【代数配方】x²+6x+9=(x+3)²，旁注'一半的平方'；右栏【方程求解】x²+6x=7 → 两边同加9 → (x+3)²=16 → x+3=±4 → x=1 或 -7，每行右侧标依据。底部一行：补块面积=(一次项系数÷2)²；等式两边同加。",
+        "content_analysis": "本课核心是把二次三项式重写为完全平方式，并以此解一元二次方程。知识链条为：完全平方公式 (a±b)²=a²±2ab+b² → 二次三项式 x²+bx 补上 (b/2)² 成为 (x+b/2)² → 方程两边同加 (b/2)² 保持等价 → 开方得两根。难点不在步骤记忆，而在'为什么加的是(一次项系数一半)的平方'以及'为什么必须两边同加'。几何拼图提供直观证据：x² 是正方形，bx 是两条长条，补上的小正方形边长恰为 b/2，面积 (b/2)²。教材原文、页码与例题编号未提供，待教师依据北师大版九年级上册核验。",
+        "curriculum_standards": [
+          "输入未提供课标原文，具体条目待教师依据《义务教育数学课程标准》及北师大版九年级上册教材核验。本教案按'理解配方法、会用配方法解二次项系数为1的一元二次方程'的通行要求设计。"
+        ],
+        "design_thesis": "先让学生用面积拼图'看见'完全平方的来源，再把拼图操作翻译成代数步骤，使配方法成为'把一个不完整正方形补成完整正方形'的可解释的等价变形，而非记忆口诀。",
+        "differentiation": "基础层：提供半成品填空（补块边长、平方数已给部分），允许先用小数理解再用分数书写；进阶层：独立完成变式 3、4 并讨论二次项系数不为1的方向；表达困难者可用'补正方形'口头语言替代书面依据，再由同伴转写并记入背面。",
+        "difficult_points": [
+          "理解'为什么加(一次项系数一半)的平方'而非其他数",
+          "奇数系数时出现分数（如 b/2=5/2）的处理与自信",
+          "开方时两根齐全、符号正确"
+        ],
+        "driving_question": "怎样把一个长不等的矩形补成一个正方形，并用代数式子记录这次'补'的过程？",
+        "homework": "1. 用配方法解 x²-8x+7=0 与 x²+7x=8，每步写依据，结果化为最简分数或根式。2. 用一句话向家人解释'为什么配方要加一次项系数一半的平方'，可画图。3. 选做：思考 2x²+4x=6 第一步如何处理（只写思路）。",
+        "key_points": [
+          "配方的几何意义：补块面积是一次项系数一半的平方",
+          "配方是等式两边同加的等价变形，依据是等式性质",
+          "由完全平方式开方求两根，注意正负号"
+        ],
+        "learning_objectives": [
+          {
+            "description": "能借助面积拼图说明 x²+bx 补成完全正方形时补块面积等于(一次项系数一半)的平方，并写出对应的完全平方式。",
+            "evidence_of_achievement": "拼图记录单上正确画出补块、标注边长 b/2 与面积 (b/2)²，并写出 x²+bx+(b/2)²=(x+b/2)²；对 x²+6x 与 x²+8x 均能说明。",
+            "objective_id": "obj-1",
+            "standard_refs": [
+              "待核验：义务教育数学课程标准相关条目"
+            ]
+          },
+          {
+            "description": "能用配方法解二次项系数为1的一元二次方程，每一步注明依据（等式性质或完全平方公式）。",
+            "evidence_of_achievement": "方程过程稿中每步附文字理由，最终两根齐全，符号正确；能通过成功标准清单自查。",
+            "objective_id": "obj-2",
+            "standard_refs": [
+              "待核验：义务教育数学课程标准相关条目"
+            ]
+          },
+          {
+            "description": "能识别并纠正'只在一边加常数''开方漏负根'等典型错误，并说明错误违反了哪条依据。",
+            "evidence_of_achievement": "在变式与追问中能口头或书面指出错误步骤及依据，改写为规范解答。",
+            "objective_id": "obj-3",
+            "standard_refs": [
+              "待核验：义务教育数学课程标准相关条目"
+            ]
+          }
+        ],
+        "learning_trajectory": [
+          "用矩形卡片拼图：给 x²+6x 的几何模型，学生尝试补成正方形并说出补了多大一块、为什么",
+          "把拼图操作逐步翻译为代数式，对照完全平方公式确认 x²+6x+9=(x+3)²",
+          "在具体数值与一般式之间比较：由 x²+6x=7 到 (x+3)²=16，讨论等式两边同加的依据",
+          "处理一次项系数为负、为奇数的变式，暴露'一半的平方'出现分数时的处理",
+          "学生独立完成 2 道方程并在小组内用'补正方形'语言解释每一步",
+          "汇总配方一般流程并写出自己的'三步说明卡'"
+        ],
+        "metadata": {
+          "duration_minutes": 45,
+          "grade": "初三",
+          "subject": "初中数学",
+          "textbook_version": "北师大版数学九年级上册",
+          "topic": "用配方法解一元二次方程"
+        },
+        "plan_id": "plan-4aec5d9c75dd",
+        "procedure_steps": [
+          {
+            "artifact_ids": [
+              "art-1"
+            ],
+            "assessment": "观察记录单第 2、3 题，补块边长与面积标注正确即达成 obj-1 的初步证据。",
+            "design_rationale": "以可操作拼图产生直观证据，让'补多少'成为看得见的问题；固定摆法保证几何模型自洽，时间分段与降级方案保证可行性。",
+            "duration_minutes": 10,
+            "extensions": [
+              "尝试用 x²+8x 独立完成第二次拼图并写出等式"
+            ],
+            "objective_ids": [
+              "obj-1"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "学生是否把补块边长与长条宽（即 b/2）对应，而非与 b 对应。",
+                "expected_responses": [
+                  "边长是 3，因为长条宽是 3。",
+                  "边长是一次项系数 6 的一半。"
+                ],
+                "possible_misconceptions": [
+                  "补块边长等于一次项系数 6。",
+                  "补块面积等于 6。"
+                ],
+                "question": "补上的这一小块，边长是多少？你怎么知道的？",
+                "teacher_follow_ups": [
+                  "长条的宽是 3，补块要正好填满右下缺口，边长应该等于什么？",
+                  "如果把 6 直接当边长，补块会不会超出或缺一块？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-1"
+            ],
+            "response_branches": [
+              {
+                "purpose": "用实物纠正边长误判",
+                "teacher_move": "让学生用 1×1 小方格实际摆一摆，发现边长 6 会超出，回到长条宽 3。",
+                "trigger": "学生把补块边长写成 6"
+              },
+              {
+                "purpose": "保证按时进入代数翻译环节",
+                "teacher_move": "改为教师演示 x²+8x 拼法，学生只填第 5 题等式。",
+                "trigger": "多数组未完成第二次拼图"
+              },
+              {
+                "purpose": "防止退回机械记忆",
+                "teacher_move": "追问'9 是哪里来的？和 6 什么关系？'要求用拼图说明。",
+                "trigger": "学生很快完成，说'就是加 9'"
+              }
+            ],
+            "scaffolds": [
+              "记录单已给出草图轮廓与填空",
+              "材料按固定摆法装袋，减少摆放歧义",
+              "对困难组提示'长条宽是几，补块边长就是几'"
+            ],
+            "stage": "拼图操作：把矩形补成正方形",
+            "step_id": "step-1",
+            "student_actions": [
+              "按固定摆法动手拼图，在记录单上画草图并标注各块面积（6 分钟内完成第 1–4 题）。",
+              "测量或推理补块边长，填写补块面积与等式。",
+              "用已剪好的材料快速完成 x²+8x 的第二次验证（第 5 题）。"
+            ],
+            "student_product": "几何拼图操作记录单（含草图与面积标注）",
+            "success_criteria": [
+              "补块画在右下缺口处，边长标为 3",
+              "补块面积标为 9",
+              "x²+6x+9=(x+3)² 书写正确"
+            ],
+            "teacher_actions": [
+              "课前将 res-1 材料按组装袋摆放；上课说明任务：按固定摆法（两条长条贴正方形右侧与下侧）拼出'缺一角'图形，再补成完整正方形。",
+              "前 6 分钟：巡视学生完成 x²+6x 拼图与记录单第 1–4 题，观察补块是否放在右下缺口、是否量出边长 3。",
+              "后 4 分钟：用已剪好的 x²+8x 材料快速验证第 5 题；若多数组未完成，改为教师演示第二次拼图、学生只填等式，保证按时进入 step-2。",
+              "请一组上台展示拼法，追问补块边长为什么是 3。"
+            ],
+            "transition": "拼图让我们看见补块面积是 9，接下来把这次'补'翻译成代数式，看看它和完全平方公式是否一致。"
+          },
+          {
+            "artifact_ids": [
+              "art-1",
+              "art-2"
+            ],
+            "assessment": "记录单第 4、5、6 题正确，且能口头解释中间项来源。",
+            "design_rationale": "把几何动作逐项翻译为代数符号，建立直观与符号的双向对应。",
+            "duration_minutes": 8,
+            "extensions": [
+              "讨论 x²+5x 补 25/4 时拼图出现半格，改用面积数值说明"
+            ],
+            "objective_ids": [
+              "obj-1"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "学生能否把'两条长条 3x+3x'与中间项 6x 对应，说明理解结构。",
+                "expected_responses": [
+                  "展开是 x²+6x+9，一样。",
+                  "所以 x²+6x+9 可以写成 (x+3)²。"
+                ],
+                "possible_misconceptions": [
+                  "认为 (x+3)²=x²+9，漏中间项。"
+                ],
+                "question": "(x+3)² 展开是什么？和我们拼出的 x²+6x+9 一样吗？",
+                "teacher_follow_ups": [
+                  "完全平方公式中间项 2ab 在这里是 2·x·3=6x，和拼图里的两条长条对应吗？",
+                  "如果一次项系数是 5，一半是多少？平方是多少？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "修复完全平方公式误用",
+                "teacher_move": "让学生展开 (x+3)(x+3) 逐项相乘，标出中间两项。",
+                "trigger": "学生坚持 (x+3)²=x²+9"
+              }
+            ],
+            "scaffolds": [
+              "黑板保留三栏对应结构",
+              "配对式卡片供对照"
+            ],
+            "stage": "代数翻译：从拼图到完全平方式",
+            "step_id": "step-2",
+            "student_actions": [
+              "在记录单第 4、5 题旁补写代数等式。",
+              "用完全平方公式展开 (x+3)² 验证等于 x²+6x+9。",
+              "口答 x²+5x 的补块面积为 25/4。"
+            ],
+            "student_product": "补全代数等式的记录单",
+            "success_criteria": [
+              "x²+6x+9=(x+3)² 与 x²+8x+16=(x+4)² 正确",
+              "能说出补块面积是一次项系数一半的平方"
+            ],
+            "teacher_actions": [
+              "在黑板三栏板书第一、二栏，把 x²+6x+9 与 (x+3)² 并排写出。",
+              "出示 art-2 中的配对式，让学生对照完全平方公式验证。",
+              "追问：x²+5x 要补多少？引导学生处理一半为 5/2 的情况。"
+            ],
+            "transition": "既然 x²+6x+9=(x+3)²，那么方程 x²+6x=7 怎样借助这个结构求解？关键是等式两边都要加 9。"
+          },
+          {
+            "artifact_ids": [
+              "art-2",
+              "art-3"
+            ],
+            "assessment": "诊断表指出错误步骤并写出依据；例题过程稿依据齐全。",
+            "design_rationale": "用错例把'等价变形'推到争论中心，使合法性来源显性化。",
+            "duration_minutes": 10,
+            "extensions": [
+              "诊断解答 B 的漏负根错误"
+            ],
+            "objective_ids": [
+              "obj-2",
+              "obj-3"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "学生诊断结论是否引用'等式两边同加'而非只说'算错了'。",
+                "expected_responses": [
+                  "不成立，左边变了右边没变。",
+                  "必须两边同加 9，右边变成 16。"
+                ],
+                "possible_misconceptions": [
+                  "认为只要左边配成完全平方就行。",
+                  "忽略右边也要加。"
+                ],
+                "question": "解答 A 只在左边加了 9，右边还是 7，这样等式还成立吗？",
+                "teacher_follow_ups": [
+                  "等式性质怎么说？两边同加同一个数会怎样？",
+                  "如果右边也加 9，方程变成什么？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "建立两边同加的直觉",
+                "teacher_move": "用天平比喻：一边加砝码另一边不加，还平衡吗？回到等式性质。",
+                "trigger": "学生说'加 9 就行，不用管右边'"
+              },
+              {
+                "purpose": "补齐两根",
+                "teacher_move": "追问开方时 ±4 的负号去哪了，补出 x=-7。",
+                "trigger": "学生解出 x=1 就停"
+              }
+            ],
+            "scaffolds": [
+              "过程稿预留'依据'横线",
+              "诊断表模板：步骤/是否合法/依据"
+            ],
+            "stage": "方程求解：两边同加的等价变形",
+            "step_id": "step-3",
+            "student_actions": [
+              "跟随例题在过程稿上抄写并补依据。",
+              "独立标注解答 A 的错误步骤，写出诊断结论。",
+              "小组核对：错在'只在一边加'与'漏负根'。"
+            ],
+            "student_product": "例题过程稿（含依据）与解答 A 诊断结论",
+            "success_criteria": [
+              "指出'只在一边加'违反等式性质",
+              "写出正确方程 x²+6x+9=16 并解出 x=1 或 -7"
+            ],
+            "teacher_actions": [
+              "板书 art-2 例题，逐行写出并标注依据。",
+              "出示 art-3 解答 A，让学生找可疑步骤。",
+              "追问：只在左边加 9 行不行？为什么？"
+            ],
+            "transition": "我们已经会解正系数方程，如果一次项系数是负的或是奇数，配方还成立吗？用变式题检验。"
+          },
+          {
+            "artifact_ids": [
+              "art-2",
+              "art-4"
+            ],
+            "assessment": "变式 1、2 答案正确且依据齐全，清单五项全勾。",
+            "design_rationale": "变式暴露符号与分数难点，清单提供自查闭环。",
+            "duration_minutes": 10,
+            "extensions": [
+              "尝试变式 3（先移项）"
+            ],
+            "objective_ids": [
+              "obj-2",
+              "obj-3"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "负系数平方符号是否正确；奇数系数是否敢用分数并两边同加。",
+                "expected_responses": [
+                  "平方是 4，正数。",
+                  "(x-2)²=x²-4x+4。"
+                ],
+                "possible_misconceptions": [
+                  "把 (-2)² 写成 -4。",
+                  "奇数系数时不敢写 5/2。"
+                ],
+                "question": "x²-4x 配方时，一半是 -2，平方是多少？",
+                "teacher_follow_ups": [
+                  "负数平方为什么是正的？",
+                  "x²+5x 一半是 5/2，平方 25/4，右边也要加吗？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "纠正负数平方",
+                "teacher_move": "回到乘法：(-2)×(-2)=? 用数轴或口诀确认。",
+                "trigger": "学生把 (-2)² 算成 -4"
+              },
+              {
+                "purpose": "降低分数门槛",
+                "teacher_move": "提示'一半可以写成分数 5/2'，给出 5÷2=5/2 的填空支架。",
+                "trigger": "学生奇数系数时卡住"
+              }
+            ],
+            "scaffolds": [
+              "清单逐项提示",
+              "对困难生提供半成品填空：x²+5x+____=6+____"
+            ],
+            "stage": "变式训练：负系数与奇数系数",
+            "step_id": "step-4",
+            "student_actions": [
+              "独立完成变式 1、2，写依据。",
+              "用 art-4 清单逐项自查并订正。",
+              "同桌互查两根是否齐全，并在自查清单旁记录对方一处依据或一个疑问。"
+            ],
+            "student_product": "变式解答过程稿（含依据与自查清单）",
+            "success_criteria": [
+              "变式1得 x=5 或 -1",
+              "变式2得 x=1 或 -6",
+              "每步有依据，清单全勾"
+            ],
+            "teacher_actions": [
+              "发 art-2 变式 1、2，要求每步写依据，结果用分数或最简根式。",
+              "巡视，重点看负系数时 (b/2)² 的符号与奇数系数的分数计算。",
+              "请两名学生板演，全班对照 art-4 清单自查。"
+            ],
+            "transition": "两道变式都通过了，现在独立完成一道新题，并用'补正方形'的话解释每一步，最后写成三步说明卡。"
+          },
+          {
+            "artifact_ids": [
+              "art-2",
+              "art-5"
+            ],
+            "assessment": "说明卡三步依据完整、背面有同伴记录、变式 4 过程正确，作为本课出口证据。",
+            "design_rationale": "以说明卡固化流程与依据，形成可检验的个人产出；先独立后互讲并设听者记录与随机抽复述，保证个体问责。",
+            "duration_minutes": 6,
+            "extensions": [
+              "思考：如果二次项系数不是 1（如 2x²+4x=6），第一步该做什么？只讨论方向。"
+            ],
+            "objective_ids": [
+              "obj-2",
+              "obj-3"
+            ],
+            "questions": [
+              {
+                "evidence_to_notice": "说明卡三步依据是否完整；背面同伴记录是否具体；能否用几何语言解释代数步骤。",
+                "expected_responses": [
+                  "补边长 3/2 的小正方形，面积 9/4。",
+                  "两边都加 9/4。"
+                ],
+                "possible_misconceptions": [
+                  "只补左边。",
+                  "把 3 的一半算成 3/2 但平方算错。"
+                ],
+                "question": "用'补正方形'的话说，x²+3x 补的是什么？",
+                "teacher_follow_ups": [
+                  "补块面积 9/4 加在哪边？",
+                  "开方后两根都写了吗？"
+                ]
+              }
+            ],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [
+              {
+                "purpose": "防止依据空泛",
+                "teacher_move": "追问是哪个公式、哪条等式性质，要求具体写出。",
+                "trigger": "学生说明卡依据写'就是公式'"
+              },
+              {
+                "purpose": "保护探究欲又不偏离本课",
+                "teacher_move": "肯定并指出先化系数为1，留作下节课方向，不展开。",
+                "trigger": "学生提出二次项系数不为1怎么办"
+              }
+            ],
+            "scaffolds": [
+              "说明卡留空待填",
+              "30 秒口述脚本提示：先说补什么，再说两边加什么，最后说开方取正负",
+              "同伴记录句式提示"
+            ],
+            "stage": "独立求解与三步说明卡",
+            "step_id": "step-5",
+            "student_actions": [
+              "独立解变式 4，写依据，结果化为最简根式。",
+              "独立填写三步说明卡，写出自己易错点。",
+              "每人用 30 秒向同桌口述三步依据；听者在说明卡背面记录对方一处依据或一个疑问。",
+              "被抽到的学生复述同伴的说法。"
+            ],
+            "student_product": "变式 4 过程稿、三步说明卡（含背面三栏对应句与同伴记录）",
+            "success_criteria": [
+              "三步依据分别正确",
+              "变式4两根齐全，结果为 (-3±√13)/2",
+              "写出真实易错点",
+              "背面有同伴的一处依据或疑问记录"
+            ],
+            "teacher_actions": [
+              "发 art-5 说明卡，要求先独立解变式 4 再独立填写说明卡（不先讨论）。",
+              "组织同桌互讲：每人用 30 秒口述三步依据，听者在说明卡背面记下对方一处具体依据或一个疑问。",
+              "随机抽 2 名学生复述同伴的说法，记录典型错误用于讲评。"
+            ],
+            "transition": "最后用一分钟回看板书三栏，把几何补正方形、代数配方、方程求解对应起来。"
+          },
+          {
+            "artifact_ids": [
+              "art-5"
+            ],
+            "assessment": "说明卡背面三栏对应句完整（含补块面积、两边同加、开方取正负三层对应）即视为巩固达成；教师课后抽查记录。",
+            "design_rationale": "用结构化板书收束全课，强化几何—代数—方程三层对应，并以书面产出为收束环节提供可检查证据。",
+            "duration_minutes": 1,
+            "extensions": [],
+            "objective_ids": [
+              "obj-1",
+              "obj-2"
+            ],
+            "questions": [],
+            "resource_ids": [
+              "res-2"
+            ],
+            "response_branches": [],
+            "scaffolds": [
+              "说明卡背面已给出三栏对应句式框架"
+            ],
+            "stage": "汇总与板书对应",
+            "step_id": "step-6",
+            "student_actions": [
+              "对照板书复述'补块面积=一半的平方'与'两边同加'。",
+              "在说明卡背面补写一句三栏对应关系并交回。"
+            ],
+            "student_product": "说明卡背面补写的三栏对应句（交回）",
+            "success_criteria": [
+              "三栏对应句同时提到补块面积、两边同加、开方取正负"
+            ],
+            "teacher_actions": [
+              "指向板书三栏，带学生齐读对应关系。",
+              "要求学生在说明卡背面补写一句三栏对应关系（几何补块—代数配方—方程求解）并交回。",
+              "布置作业。"
+            ],
+            "transition": ""
+          }
+        ],
+        "references": [
+          "北师大版数学九年级上册（教材原文、页码与例题编号待教师核验）",
+          "义务教育数学课程标准（具体条目待核验）",
+          "web:user_input"
+        ],
+        "reflection": "课后重点观察：1. 固定摆法下学生是否自发把补块边长与'一次项系数一半'对应，还是仍依赖提示；2. 错例诊断时有多少学生能引用'等式两边同加'而非只说'算错了'；3. 奇数系数变式中分数的使用是否成为新的卡点；4. 说明卡依据是否具体，背面同伴记录是否真实反映互讲；5. step-6 三栏对应句的完整度。记录典型原话与错误类型，供下一课时调整。",
+        "resources": [
+          {
+            "description": "用于面积拼图操作，每组一套：一个边长为 x 的正方形卡片、两条 x×3 长条卡片、若干 1×1 小方格（可剪）。",
+            "name": "方格纸与可剪矩形卡片",
+            "ready_to_use_content": "每组材料（课前装袋、按组摆放）：正方形卡 1 张（标 x²）、长条卡 2 张（标 3x，长 x 宽 3）、1×1 小方格 9 个（可拼成 3×3 补块）。固定摆法：把两条长条分别贴在正方形的右侧边与下侧边（相邻两边），使右下角形成一个边长 3 的正方形缺口；补块即由 9 个 1×1 小方格拼成的 3×3 正方形。另备已剪好的 x²+8x 变式材料：长条宽 4 的 2 张、1×1 小方格 16 个，摆法同上（贴右侧与下侧，缺口边长 4）。",
+            "resource_id": "res-1"
+          },
+          {
+            "description": "用于板书'几何补正方形—代数配方—方程求解'三栏对应结构。",
+            "name": "黑板/白板与彩色粉笔",
+            "ready_to_use_content": "",
+            "resource_id": "res-2"
+          }
+        ],
+        "schema_version": "paper4-lesson-plan-v0.1",
+        "student_analysis": "初三学生已会解 x²=a 型方程、会用完全平方公式展开，具备面积与正方形的基本直观。多数学生可能把配方法当作机械加常数，对加多少、为什么加缺乏意义理解；常见困难包括：只在左边加常数、一次项系数一半算错、奇数系数时对分数不自信、开方漏负根。班级需保证学生动手活动，故以剪拼操作先行、代数翻译跟进，兼顾直观与规范。",
+        "task_id": "lesson-0d0669ed261a",
+        "teaching_artifacts": [
+          {
+            "answer_or_success_criteria": "补块为边长 3 的小正方形（面积 9），大正方形边长 x+3，面积 (x+3)²；等式 x²+6x+9=(x+3)²。x²+8x 补 16，得 (x+4)²。第 6 题填'一半的平方'。成功标准：草图按固定摆法正确、面积标注正确、等式书写规范。",
+            "artifact_id": "art-1",
+            "artifact_type": "任务单",
+            "content": "【拼图记录单】\n1. 取正方形卡（面积 x²）与两条长条卡（每条面积 3x），按固定摆法拼图：两条长条分别贴在正方形的右侧边与下侧边，使右下角出现一个缺口。画出草图并标注各块面积。\n2. 要补成完整正方形，需要补什么形状？边长是多少？面积是多少？把补块画在草图上并标注（提示：用 9 个 1×1 小方格拼成 3×3）。\n3. 补完后整个大正方形的边长是______，面积是______。\n4. 用等式记录：x²+6x+______ = (______)²。\n5. 换 x²+8x 再做一次（长条宽 4，同样贴右侧与下侧）：补块面积______，等式 x²+8x+______=(______)²。\n6. 我发现：补块面积等于一次项系数______的______。",
+            "purpose": "让学生动手补正方形并记录补块面积，形成几何证据",
+            "title": "几何拼图操作记录单"
+          },
+          {
+            "answer_or_success_criteria": "变式1：x²-4x+4=9，(x-2)²=9，x=5 或 x=-1。变式2：两边同加 (5/2)²=25/4，x²+5x+25/4=6+25/4=49/4，(x+5/2)²=49/4，x+5/2=±7/2，x=1 或 x=-6。变式3：x²-6x=-5，x²-6x+9=4，(x-3)²=4，x=5 或 x=1。变式4：x²+3x=1，两边同加 (3/2)²=9/4，x²+3x+9/4=1+9/4=13/4，(x+3/2)²=13/4，x+3/2=±√13/2，x=(-3±√13)/2。以上答案待教师依据教材核验。",
+            "artifact_id": "art-2",
+            "artifact_type": "例题与变式题卡",
+            "content": "【题卡】\n例：x²+6x=7。\n  解：两边同加 9：x²+6x+9=7+9（依据：等式两边同加同一个数，等式仍成立）\n      (x+3)²=16（依据：完全平方公式）\n      x+3=±4（依据：若 y²=a(a≥0)，则 y=±√a）\n      x₁=1，x₂=-7。\n变式 1：x²-4x=5\n变式 2：x²+5x=6\n变式 3：x²-6x+5=0（需先移项）\n变式 4：x²+3x-1=0\n要求：配方过程与结果用分数或最简根式表达，不保留根号内小数。",
+            "purpose": "把拼图翻译为方程求解，暴露符号与分数处理",
+            "title": "方程求解题卡（含负系数与奇数系数）"
+          },
+          {
+            "answer_or_success_criteria": "A 错在只在左边加 9，违反等式两边同加；且开方漏负根。正确：x²+6x+9=16，(x+3)²=16，x=1 或 -7。B 错在开方只取正根，漏 x-2=-3，应得 x=5 或 x=-1。诊断结论须指出违反的依据。",
+            "artifact_id": "art-3",
+            "artifact_type": "错例诊断卡",
+            "content": "【解答 A】解 x²+6x=7：\n  x²+6x+9=7（只在左边加 9）\n  (x+3)²=7\n  x+3=√7\n  x=-3+√7\n【解答 B】解 x²-4x=5：\n  x²-4x+4=9\n  (x-2)²=9\n  x-2=3\n  x=5",
+            "purpose": "暴露'只在一边加常数''漏负根'",
+            "title": "两份匿名解答（含典型错误）"
+          },
+          {
+            "answer_or_success_criteria": "五项全勾且过程稿与清单一致，视为达标；缺项须在小组内说明并订正。",
+            "artifact_id": "art-4",
+            "artifact_type": "评价清单",
+            "content": "【自查清单】逐项打勾：\n□ 1. 方程已化为 x²+bx=c 形式（二次项系数为1）。\n□ 2. 配方时两边同加 (b/2)²，并写出依据。\n□ 3. 左边写成完全平方式 (x+b/2)²，右边合并正确。\n□ 4. 开方时写出 ±，两根齐全。\n□ 5. 每步有文字理由，符号与分数计算正确，结果化为最简分数或根式。",
+            "purpose": "形成性评价闭环",
+            "title": "配方成功标准自查清单"
+          },
+          {
+            "answer_or_success_criteria": "三步依据分别填：等式性质（移项）、等式两边同加同一个数、完全平方公式与开方取正负。背面三栏对应句须体现'补块面积=(一次项系数一半)的平方''两边同加''开方取正负'的对应。能结合自身写出易错点。",
+            "artifact_id": "art-5",
+            "artifact_type": "出口任务",
+            "content": "【我的三步说明卡】\n第一步：把方程整理成 x²+bx=c。依据：______\n第二步：两边同加______，即 (b/2)²，使左边成为完全平方式。依据：______\n第三步：写成 (x+____)²=____，开方得 x=______。依据：______\n我最容易错的地方是：______\n【背面·三栏对应】用一句话写出：几何补块______ ↔ 代数配方______ ↔ 方程求解______。\n【背面·同伴记录】同桌口述时，我记下他/她的一处具体依据或一个疑问：______",
+            "purpose": "固化配方一般流程与依据",
+            "title": "三步说明卡模板"
+          }
+        ],
+        "teaching_strategy": "几何直观先行—代数翻译跟进—变式暴露错误—独立求解与说明卡固化。以拼图操作产生直观证据，再翻译为代数式，用追问与错例暴露'只在一边加''漏负根'，最后以独立练习与三步说明卡形成可检验的产出。",
+        "template_extensions": {},
+        "template_id": "general_v0_1"
+      },
+      "document_hash": "61d10afd4cf9ed7192ff0ab2dd977dc20de6c36539184f692adac0e436e76d34",
+      "estimated_cost": 0.10525548000000001,
+      "internal_evaluation": {
+        "compared_version_ids": [],
+        "evaluated_version_id": "v1",
+        "evaluation_id": "evaluation-4ebaac281ff3",
+        "high_risk_issue_ids": [],
+        "overall_score": 8.363,
+        "quality_signals": {
+          "design_coherence": 8.7,
+          "disciplinary_depth": 8.6,
+          "genericity_risk": 2.0,
+          "material_readiness": 8.5
+        },
+        "recommended_action": "continue",
+        "regressions": [],
+        "rubric_id": "paper4-eight-dimension-v0.1",
+        "rubric_scores": {
+          "assessment_design": 8.5,
+          "classroom_feasibility": 8.3,
+          "curriculum_alignment": 8.2,
+          "differentiated_instruction": 7.6,
+          "knowledge_accuracy": 8.6,
+          "language_and_format": 8.6,
+          "student_engagement": 8.4,
+          "teaching_logic": 8.7
+        },
+        "rule_checks_passed": true,
+        "schema_version": "paper4-evaluation-v0.1",
+        "summary": "本版以'面积拼图—代数翻译—方程求解'三栏对应为主线，几何直观与符号操作形成清晰认知进阶；拼图记录单、题卡（含负系数与奇数系数变式及完整答案）、错例诊断卡、自查清单、三步说明卡均为可直接使用的材料，问题链含预期回答、误概念与观察证据，形成性评价闭环较完整，满足'必须包含学生活动'的硬约束，45分钟分配与降级分支合理。主要限制：外部课标条款、教材原文与页码、具体学情均未提供，课标对齐与教材版本一致性未核验，差异化仅以'基础层/进阶层/表达困难者'的通用分层表述，缺少基于真实诊断数据的分层响应；变式4答案与例题答案标注'待教师核验'，属诚实标注而非事实错误。建议教师复核教材例题编号与课标条目后试教，并补充具体学情以细化分层。",
+        "unresolved_issue_count": 0
+      },
+      "iteration": 1,
+      "parent_version_id": "v0",
+      "rule_check_report": {
+        "checks": {
+          "curriculum_alignment_present": true,
+          "duration_within_tolerance": true,
+          "has_learning_objectives": true,
+          "has_procedure_steps": true,
+          "references_resolved": true,
+          "required_sections_present": true,
+          "task_document_consistent": true
+        },
+        "expected_duration_minutes": 45,
+        "passed": true,
+        "plan_id": "plan-4aec5d9c75dd",
+        "report_id": "rule-v1",
+        "schema_version": "paper4-rule-report-v0.1",
+        "total_duration_minutes": 45,
+        "violations": []
+      },
+      "schema_version": "paper4-plan-version-v0.1",
+      "strategy_id": "general",
+      "unresolved_critique_ids": [],
+      "version_id": "v1"
+    }
+  ]
+}

@@ -352,7 +352,12 @@ public class PlatformNavigationBridgeService {
                         rs.getInt("version_number"), true, state.roundNumber(), state.status()),
                 state.sessionId(), state.roundNumber(), state.hash(), structureHash);
         if (!saved.isEmpty()) return saved.get(0);
-        String sourceContent = db.queryForObject("SELECT content FROM platform_lesson_version WHERE id = ?", String.class, binding.sourceVersionId());
+        // F2 versions can have an immutable engine payload whose current
+        // teacher-facing projection is reconstructed on read. F4 was admitted
+        // with that projection (and its verified structure), so compare its
+        // original input with the same canonical representation rather than
+        // the legacy raw text retained in the version row.
+        String sourceContent = canonicalSourceContent(binding);
         if (!sourceContent.equals(state.original())) throw conflict("F4_SOURCE_MISMATCH", "F4 输入与已关联来源版本不一致");
         if (!current.id().equals(binding.sourceVersionId()) && db.queryForObject(
                 "SELECT COUNT(*) FROM platform_navigation_snapshot WHERE session_id = ? AND version_id = ?", Integer.class,
@@ -388,6 +393,13 @@ public class PlatformNavigationBridgeService {
         List<Binding> rows = db.query("SELECT lesson_id, source_version_id FROM platform_navigation_link WHERE session_id = ?",
                 (rs, row) -> new Binding(rs.getString("lesson_id"), rs.getString("source_version_id")), sessionId);
         return rows.isEmpty() ? null : rows.get(0);
+    }
+
+    private String canonicalSourceContent(Binding binding) {
+        return lessons.detail(binding.lessonId()).versions().stream()
+                .filter(version -> version.id().equals(binding.sourceVersionId()))
+                .findFirst().orElseThrow(() -> AppException.notFound("导航输入版本"))
+                .content();
     }
 
     private void insertBinding(String sessionId, String lessonId, String versionId) {

@@ -86,6 +86,8 @@ const label = (value: string) =>
     ACCEPTED: "已采纳建议",
     REJECTED: "已拒绝建议",
   })[value] || value;
+const sourceLabel = (value: string) =>
+  value === "F2_GENERATE" ? "设计修改生成教案" : value;
 </script>
 <template>
   <section class="v2-card issue-panel">
@@ -98,7 +100,7 @@ const label = (value: string) =>
     <article v-for="item in items" :key="item.issueId">
       <h3>{{ item.title }}</h3>
       <p>
-        {{ item.sourceModule }} · 来源决策：{{
+        {{ sourceLabel(item.sourceModule) }} · 来源决策：{{
           label(item.sourceDecision || "OPEN")
         }}
         · 处理状态：{{ label(item.resolutionStatus) }}

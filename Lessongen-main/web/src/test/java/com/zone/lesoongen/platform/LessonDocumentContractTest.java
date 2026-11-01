@@ -5,6 +5,19 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LessonDocumentContractTest {
+    @Test void optionalPresentationHintsDoNotChangeLegacyJsonShape() throws Exception {
+        var mapper = new tools.jackson.databind.ObjectMapper();
+        String legacy = """
+                {"schemaVersion":"1.1","blocks":[{"id":"p","type":"paragraph","level":null,
+                "text":"正文","ordered":null,"items":[],"tableRows":[],"teachingProcess":null,
+                "rowIds":[],"columnBindings":{}}]}
+                """;
+        var document = mapper.readValue(legacy, LessonDocument.class);
+        String serialized = mapper.writeValueAsString(document);
+        assertFalse(serialized.contains("semanticRole"));
+        assertFalse(serialized.contains("layoutGroup"));
+        assertEquals(mapper.readTree(legacy), mapper.readTree(serialized));
+    }
     @Test void historicalSchemaKeepsItsOriginalDurationAndExtraCellSemantics() {
         var rows = List.of(List.of("教学环节", "时间", "教师活动", "学生活动"),
                 List.of("讨论", "12", "提问", "回答"));

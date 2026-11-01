@@ -101,7 +101,17 @@ public class PlatformLessonService {
                        content_sha256, source_module, native_reference, created_at
                 FROM platform_lesson_version WHERE lesson_id = ? ORDER BY version_number ASC
                 """, (rs, row) -> version(rs), lessonId);
-        return new LessonDetail(matches.get(0), versions);
+        versions = versions.stream().map(version -> {
+            if (!"F2_GENERATE".equals(version.sourceModule())) return version;
+            var snapshot = documents.get(lessonId, version.id());
+            if (!"VERIFIED".equals(snapshot.bindingStatus())) return version;
+            String content = LessonDocumentProjection.project(snapshot.document()).content();
+            return new LessonVersion(version.id(), version.lessonId(), version.parentVersionId(), version.versionNumber(),
+                    content, PlatformLessonDocumentService.sha256(content), version.sourceModule(), version.nativeReference(), version.createdAt());
+        }).toList();
+        boolean hasSource = db.queryForObject("SELECT COUNT(*) FROM platform_lesson_source_document WHERE lesson_id = ?",
+                Integer.class, lessonId) > 0;
+        return new LessonDetail(matches.get(0), versions, hasSource);
     }
 
     @Transactional

@@ -1,0 +1,36 @@
+{
+  "artifacts": [
+    {
+      "artifact_id": "best-plan-json",
+      "error": "",
+      "format": "json",
+      "path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261101-123612-初中数学-初三-用因式分解法解一元二次方程-96sq1q\\best_lesson_plan.json",
+      "sha256": "c9c732effec81ac5f51f8e8ee0327fb2f39dbc53e70e4387b39ae1f5b8e8f798",
+      "status": "ok"
+    },
+    {
+      "artifact_id": "best-plan-docx",
+      "error": "",
+      "format": "docx",
+      "path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261101-123612-初中数学-初三-用因式分解法解一元二次方程-96sq1q\\best_lesson_plan.docx",
+      "sha256": "38d3c9d6f6017605dbf005a28633903b3c20f95dcd1b0a3a1e91b14d061aeadc",
+      "status": "ok"
+    },
+    {
+      "artifact_id": "run-trace",
+      "error": "",
+      "format": "trace",
+      "path": "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\var\\engine-artifacts\\20261101-123612-初中数学-初三-用因式分解法解一元二次方程-96sq1q\\trace.jsonl",
+      "sha256": "ed48de24a7aa7cca393f0dee33031f932693424ff8196a221acde6062ab89477",
+      "status": "ok"
+    }
+  ],
+  "best_version_id": "v0",
+  "last_version_id": "v0",
+  "lesson_plan_schema_version": "paper4-lesson-plan-v0.1",
+  "manifest_id": "manifest-20261101-123612-初中数学-初三-用因式分解法解一元二次方程-96sq1q",
+  "run_id": "20261101-123612-初中数学-初三-用因式分解法解一元二次方程-96sq1q",
+  "schema_version": "paper4-artifact-manifest-v0.1",
+  "template_id": "general_v0_1",
+  "template_version": "compact-reference-guide-v0.1"
+}

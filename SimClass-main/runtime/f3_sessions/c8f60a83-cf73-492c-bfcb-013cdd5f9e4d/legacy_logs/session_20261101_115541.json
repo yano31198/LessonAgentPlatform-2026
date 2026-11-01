@@ -1,0 +1,14 @@
+[
+  {
+    "turn_id": 1,
+    "timestamp": "2026-11-01T11:55:48",
+    "trigger_type": "initialization",
+    "consecutive_timeout_count": 0,
+    "autonomous_mode": true,
+    "speaker": "teacher",
+    "function": "teach",
+    "reason": "课堂刚刚开始，教学环节 1 尚未讲授，由教师先进行问候、展示 4 张图片并引导 'Can you sing? Can you dance?' 的问答与动作回应。",
+    "user_message": null,
+    "response": "Good morning, class! Nice to see you. Look at the screen—here are four quick pictures. Picture 1: singing. Picture 2: dancing. Picture 3: drawing. Picture 4: kung fu.\n\nNow listen and answer. “Can you sing?” If yes, say “Yes, I can” and show me a singing action. If no, say “No, I can’t” and shake your head. Let’s try: Can you sing?\n\nNext: “Can you dance?” Yes or no—plus a dance action. You may answer in English first; if you need help, use the sentence card. I’ll ask a few students to answer, and we’ll all do the actions together. Ready? Let’s begin with “Can you sing?”"
+  }
+]

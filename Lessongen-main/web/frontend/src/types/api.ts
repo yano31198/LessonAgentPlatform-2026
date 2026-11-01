@@ -52,6 +52,9 @@ export interface JobAccepted {
   links: JobLinks;
 }
 export interface JobSummary {
+  lessonId?: string | null;
+  versionId?: string | null;
+  versionNumber?: number | null;
   jobId: string;
   mode: JobMode;
   status: JobStatus;

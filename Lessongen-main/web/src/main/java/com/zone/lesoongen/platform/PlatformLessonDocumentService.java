@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.zone.lesoongen.application.AppException;
+import com.zone.lesoongen.application.LessonResultService;
 
 import tools.jackson.core.JacksonException;
 import tools.jackson.databind.ObjectMapper;
@@ -22,10 +23,12 @@ import tools.jackson.databind.ObjectMapper;
 public class PlatformLessonDocumentService {
     private final JdbcTemplate db;
     private final ObjectMapper mapper;
+    private final LessonResultService results;
 
-    public PlatformLessonDocumentService(JdbcTemplate db, ObjectMapper mapper) {
+    public PlatformLessonDocumentService(JdbcTemplate db, ObjectMapper mapper, LessonResultService results) {
         this.db = db;
         this.mapper = mapper;
+        this.results = results;
     }
 
     @Transactional
@@ -129,11 +132,34 @@ public class PlatformLessonDocumentService {
         boolean matches = LessonDocumentProjection.project(document).content().equals(content)
                 || ("1.0".equals(document.schemaVersion()) && LessonDocumentSupport.renderText(document).equals(content));
         String binding = "PARSED".equals(row.parseStatus()) ? (matches ? "VERIFIED" : "UNVERIFIED") : "TEXT_FALLBACK";
+        // Verify immutable stored content first; upgrade old F2 presentation only in memory.
+        String source = db.queryForObject("SELECT source_module FROM platform_lesson_version WHERE id = ?", String.class, versionId);
+        if ("F2_GENERATE".equals(source) && "VERIFIED".equals(binding)) {
+            document = generatedProjection(lessonId, versionId, document);
+            validate(document);
+            content = LessonDocumentProjection.project(document).content();
+            structureHash = structureSha256(document);
+        }
         return new VersionDocument(lessonId, row.versionId(), row.schemaVersion(),
                 document, row.parseStatus(), row.parserName(),
                 row.parserVersion(), parseWarnings(row.warningsJson()), row.createdAt(), row.updatedAt(),
                 sha256(content), structureHash, "1.0".equals(document.schemaVersion()) ? "legacy-1.0" : LessonDocumentProjection.VERSION,
                 binding, "VERIFIED".equals(binding) && document.blocks().stream().anyMatch(b -> b.teachingProcess() != null));
+    }
+
+    /** Rebuild the teacher-facing projection from immutable engine provenance when available. */
+    private LessonDocument generatedProjection(String lessonId, String versionId, LessonDocument fallback) {
+        List<String> jobs = db.query("""
+                SELECT job_id FROM platform_generated_lesson
+                WHERE lesson_id = ? AND version_id = ?
+                """, (rs, row) -> rs.getString(1), lessonId, versionId);
+        if (jobs.isEmpty()) return F2LessonDocumentMapper.teacherDocument(fallback);
+        try {
+            return F2LessonDocumentMapper.map(results.result(jobs.get(0)).bestLessonPlan());
+        } catch (AppException unavailable) {
+            // A retained lesson must remain readable if its immutable engine artifact was archived.
+            return F2LessonDocumentMapper.teacherDocument(fallback);
+        }
     }
 
     private Row mapRow(ResultSet rs) throws SQLException {

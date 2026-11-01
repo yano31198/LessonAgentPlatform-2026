@@ -20,7 +20,7 @@ function Import-DotEnv([string]$Path) {
         $line = $raw.Trim()
         if (-not $line -or $line.StartsWith('#')) { continue }
         $index = $line.IndexOf('=')
-        if ($index -lt 1) { throw "Invalid .env line: $raw" }
+        if ($index -lt 1) { throw "Invalid configuration line in $Path" }
         $name = $line.Substring(0, $index).Trim()
         $value = $line.Substring($index + 1).Trim()
         [Environment]::SetEnvironmentVariable($name, $value, 'Process')
@@ -137,14 +137,28 @@ function Start-LoggedProcess {
     Write-Host ("Started {0,-10} PID={1}" -f $Name, $process.Id)
 }
 
-Write-Host 'Applying F4 migrations...'
-Push-Location $F4Dir
-try {
-    & $F4Python -m alembic -c alembic.ini upgrade head
-    if ($LASTEXITCODE -ne 0) { throw 'F4 migration failed.' }
-} finally {
-    Pop-Location
+function Build-LatestBackend([string]$Directory) {
+    $wrapper = Join-Path $Directory 'mvnw.cmd'
+    Assert-File $wrapper 'Restore the Maven Wrapper before starting.'
+    Write-Host 'Building the latest Java source (tests were run separately)...'
+    Push-Location $Directory
+    try {
+        & $wrapper '-DskipTests' 'package' | Out-Host
+        if ($LASTEXITCODE -ne 0) {
+            throw 'Java build failed; no services were started. An old JAR will not be used.'
+        }
+    } finally {
+        Pop-Location
+    }
+    # Match this module's Maven artifact exactly; never select an arbitrary old JAR.
+    $builtJar = Join-Path $Directory 'target\Lesoongen-0.0.1-SNAPSHOT.jar'
+    Assert-File $builtJar 'The Java build did not produce the expected application JAR.'
+    return $builtJar
 }
+
+# Build before launching any service. Do not run Alembic or other database migrations.
+$jar = Build-LatestBackend $WebDir
+Write-Host 'Database migrations are disabled; the existing schema must already be compatible.'
 
 try {
 Start-LoggedProcess 'f1' $F1Python @('-m', 'uvicorn', 'platform_api:app', '--host', '127.0.0.1', '--port', '8002', '--http', 'h11') $F1Dir
@@ -152,15 +166,15 @@ Start-LoggedProcess 'f2-engine' $EnginePython @('-m', 'paper4_pipeline.web_api')
 Start-LoggedProcess 'f3' $F3Python @('-m', 'uvicorn', 'app.api.classroom_api:app', '--host', '127.0.0.1', '--port', '8003') $F3Dir
 Start-LoggedProcess 'f4' $F4Python @('-m', 'uvicorn', 'app.api:app', '--host', '127.0.0.1', '--port', '8000') $F4Dir
 
-$jar = Get-ChildItem -LiteralPath (Join-Path $WebDir 'target') -Filter '*.jar' -File -ErrorAction SilentlyContinue |
-    Where-Object { $_.Name -notmatch '\.original$' } |
-    Select-Object -First 1
-if ($jar) {
-    Start-LoggedProcess 'spring' 'java.exe' @('-jar', $jar.FullName) $WebDir
-} else {
-    Assert-File (Join-Path $WebDir 'mvnw.cmd') 'Restore Maven Wrapper or build the Spring JAR first.'
-    Start-LoggedProcess 'spring' 'cmd.exe' @('/d', '/c', 'mvnw.cmd spring-boot:run') $WebDir
-}
+# Command-line properties take precedence over imported local environment settings.
+# Hibernate validates existing tables, but cannot create or update them.
+Start-LoggedProcess 'spring' 'java.exe' @(
+    '-jar', ('"' + $jar + '"'),
+    '--spring.flyway.enabled=false',
+    '--spring.liquibase.enabled=false',
+    '--spring.jpa.hibernate.ddl-auto=validate',
+    '--spring.sql.init.mode=never'
+) $WebDir
 
 if (-not $SkipFrontend) {
     Start-LoggedProcess 'frontend' 'npm.cmd' @('run', 'dev') $FrontendDir

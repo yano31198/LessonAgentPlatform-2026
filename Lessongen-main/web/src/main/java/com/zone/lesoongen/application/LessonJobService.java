@@ -180,10 +180,31 @@ public class LessonJobService {
         } else {
             result = jobs.findProjectedByOwnerId(ownerId, request);
         }
-        return new LessonResponses.JobPage(result.getContent().stream().map(this::summary).toList(),
+        var bindings = new java.util.HashMap<String, GeneratedBinding>();
+        if (!result.isEmpty()) {
+            new org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate(db).query("""
+                    SELECT g.job_id, g.lesson_id, g.version_id, v.version_number
+                    FROM platform_generated_lesson g
+                    JOIN lesson_job j ON j.id = g.job_id AND j.best_version_id = g.adopted_revision_id
+                    JOIN platform_lesson_version v ON v.id = g.version_id AND v.lesson_id = g.lesson_id
+                    JOIN platform_lesson l ON l.id = g.lesson_id
+                    WHERE g.owner_id = :owner AND l.owner_user_id = :owner AND g.job_id IN (:jobs)
+                    """, java.util.Map.of("owner", ownerId, "jobs", result.getContent().stream().map(LessonJobSummaryView::getId).toList()),
+                    (org.springframework.jdbc.core.RowCallbackHandler) rs -> bindings.put(rs.getString("job_id"),
+                            new GeneratedBinding(rs.getString("lesson_id"), rs.getString("version_id"), rs.getInt("version_number"))));
+        }
+        return new LessonResponses.JobPage(result.getContent().stream().map(job -> {
+            var item = summary(job);
+            var binding = bindings.get(item.jobId());
+            return binding == null ? item : new LessonResponses.JobSummary(item.jobId(), item.mode(), item.status(),
+                    item.subject(), item.grade(), item.topic(), item.currentStage(), item.currentRound(), item.progressPercent(),
+                    item.createdAt(), item.finishedAt(), binding.lessonId(), binding.versionId(), binding.versionNumber());
+        }).toList(),
                 result.getNumber(), result.getSize(), result.getTotalElements(),
                 result.getTotalPages());
     }
+
+    private record GeneratedBinding(String lessonId, String versionId, int versionNumber) {}
 
     public LessonResponses.JobAccepted accepted(LessonJob job) {
         return new LessonResponses.JobAccepted(job.getId(), job.getStatus(), job.getCreatedAt(),
