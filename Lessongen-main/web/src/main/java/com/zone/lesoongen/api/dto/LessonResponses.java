@@ -30,7 +30,13 @@ public final class LessonResponses {
 
     public record JobSummary(String jobId, JobMode mode, JobStatus status, String subject,
             String grade, String topic, String currentStage, int currentRound,
-            int progressPercent, Instant createdAt, Instant finishedAt) {
+            int progressPercent, Instant createdAt, Instant finishedAt,
+            String lessonId, String versionId, Integer versionNumber) {
+        public JobSummary(String jobId, JobMode mode, JobStatus status, String subject, String grade,
+                String topic, String currentStage, int currentRound, int progressPercent, Instant createdAt, Instant finishedAt) {
+            this(jobId, mode, status, subject, grade, topic, currentStage, currentRound, progressPercent,
+                    createdAt, finishedAt, null, null, null);
+        }
     }
 
     public record JobDetail(String jobId, JobMode mode, JobStatus status, String subject,

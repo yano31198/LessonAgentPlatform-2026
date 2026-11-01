@@ -1,0 +1,14 @@
+{
+  "analysisSchemaVersion": "1.0",
+  "analysisStatus": "COMPLETED",
+  "sessionId": "645cc843-f4dd-4b56-b603-1879993b1a25",
+  "sourceVersionId": "01M6919699BSXGQ1ZKR75QE9VW",
+  "modelMode": "REAL",
+  "issues": [],
+  "actionItems": [],
+  "warnings": [
+    "analysis scope is partial because session status is FAILED",
+    "session stopReason: WORKER_EXCEPTION",
+    "no classroom events available; no issues generated"
+  ]
+}

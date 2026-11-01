@@ -18,13 +18,17 @@ class CompatibleLLMClient:
         self.extra_body = extra_body or {}
 
     def complete(self, context):
+        return self.complete_with_overrides(context)
+
+    def complete_with_overrides(self, context, request_overrides=None):
         if not self.api_key:
             raise ProviderError('MISSING_API_KEY', '真实模型未配置 LLM_API_KEY，请在服务器 .env 中配置后重试。')
         try:
+            body = {**self.extra_body, **(request_overrides or {})}
             with httpx.Client(timeout=self.timeout, transport=self.transport) as client:
                 response = client.post(self.base_url.rstrip('/') + '/chat/completions',
                     headers={'Authorization': f'Bearer {self.api_key}'},
-                    json={**self.extra_body, 'model': self.model, 'messages': [
+                    json={**body, 'model': self.model, 'messages': [
                         {'role': 'system', 'content': context.system},
                         {'role': 'user', 'content': json.dumps(context.user, ensure_ascii=False)}],
                         'response_format': {'type': 'json_object'}})
@@ -45,6 +49,19 @@ class GenericLLMSuggestionProvider:
 
     def generate(self, context):
         self.last_raw = self.client.complete(context)
+        # A long structured chapter can exhaust a deliberately conservative
+        # deployment limit before the JSON object is closed. Retry once with a
+        # bounded larger output budget and an explicit concise instruction.
+        # Never attempt to salvage or apply the truncated first response.
+        choice = ((self.last_raw or {}).get('choices') or [{}])[0]
+        if choice.get('finish_reason') == 'length' and hasattr(self.client, 'complete_with_overrides'):
+            retry_context = context.model_copy(update={'system': context.system + (
+                '\n上一次响应因长度上限被截断。请压缩表述，仅返回最多两条最重要的建议；'
+                '每条修改保持精确定位，并确保JSON完整闭合。')})
+            configured = getattr(self.client, 'extra_body', {}).get('max_tokens', 0)
+            retry_limit = max(4096, configured if isinstance(configured, int) else 0)
+            self.last_raw = self.client.complete_with_overrides(
+                retry_context, {'max_tokens': retry_limit})
         try:
             choice = self.last_raw['choices'][0]
             if choice.get('finish_reason') != 'stop' or choice['message'].get('refusal'):

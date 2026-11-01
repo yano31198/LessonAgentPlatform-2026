@@ -1,0 +1,33 @@
+[
+  {
+    "eventId": "b075b6b3-15df-42ed-a939-855b0b1eca86",
+    "sequence": 1,
+    "sessionId": "a36654d2-252e-4880-a5f7-1d7ee30f7ea3",
+    "occurredAt": "2026-11-01T04:35:21.166Z",
+    "completedAt": "2026-11-01T04:35:26.199Z",
+    "wallClockDurationMs": 5033,
+    "estimatedTeachingSeconds": null,
+    "estimated": false,
+    "trigger": {
+      "type": "INITIALIZATION",
+      "content": null
+    },
+    "managerDecision": {
+      "speaker": "teacher",
+      "function": "teach",
+      "reason": "课堂刚开始（initialization），教学环节1尚未讲授，由教师开场问候、展示图片并用 Can you sing/dance? 引出can的语境，引导学生用动作和简短回答回应。",
+      "endClass": false
+    },
+    "speaker": "teacher",
+    "roleLabel": "教师",
+    "function": "teach",
+    "content": "同学们，早上好！很高兴见到大家。今天我们的话题是“What can you do?”——你会做什么。\n\n看老师的四张图片。（依次展示）唱歌、跳舞、弹琵琶、画画。先看第一张——sing！谁来边做动作边说？大家一起试：sing, sing, I can sing.\n\n现在听我的问题：Can you sing? 会唱的同学请举手，并大声说 Yes, I can. 不会的就说 No, I can't. 我们一起来试一试。",
+    "material": {
+      "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+      "title": "教学环节 1",
+      "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed"
+    },
+    "status": "COMPLETED",
+    "error": null
+  }
+]

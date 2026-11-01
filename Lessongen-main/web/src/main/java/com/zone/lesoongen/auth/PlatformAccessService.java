@@ -92,6 +92,14 @@ public class PlatformAccessService {
         return count != null && count > 0;
     }
 
+    public java.util.Set<String> ownedNavigationSessionIds() {
+        return new java.util.HashSet<>(db.query("""
+                SELECT n.session_id FROM platform_navigation_link n
+                JOIN platform_lesson l ON l.id = n.lesson_id
+                WHERE l.owner_user_id = ?
+                """, (rs, row) -> rs.getString(1), currentUserId()));
+    }
+
     private void requireCount(String sql, String id, String label) {
         Integer count = db.queryForObject(sql, Integer.class, id, currentUserId());
         if (count == null || count == 0) notFound(label);

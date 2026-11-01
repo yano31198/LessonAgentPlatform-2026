@@ -1,0 +1,518 @@
+{
+  "schemaVersion": "2.1",
+  "executionStatus": "INTERRUPTED",
+  "analysisStatus": "COMPLETED",
+  "archiveStatus": "LOCAL",
+  "analysisRevision": 1,
+  "session": {
+    "schemaVersion": "2.0",
+    "sessionId": "a36654d2-252e-4880-a5f7-1d7ee30f7ea3",
+    "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+    "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0",
+    "status": "INTERRUPTED",
+    "modelMode": "REAL",
+    "modelProvider": "openai-compatible",
+    "modelName": "deepseek-flash",
+    "createdAt": "2026-11-01T04:35:21.166Z",
+    "startedAt": "2026-11-01T04:35:21.166Z",
+    "finishedAt": "2026-11-01T04:35:37.002Z",
+    "stopReason": "MANUAL_END",
+    "pauseReason": null,
+    "inFlightModelRequest": null,
+    "activeSeconds": 15.836,
+    "modelRequestUncertain": false,
+    "analysisTimeoutSeconds": 300.0,
+    "lastError": null,
+    "limits": {
+      "maxEvents": 40,
+      "maxWallClockSeconds": null,
+      "maxConsecutiveTimeouts": 50,
+      "timeoutSeconds": 15.0
+    },
+    "activeRoles": [
+      "teacher",
+      "deep_thinker",
+      "inquisitive_mind"
+    ],
+    "inputMode": "DIRECT",
+    "inputMaterials": [
+      {
+        "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+        "title": "教学环节 1",
+        "teachingScript": "教师活动：Greeting. Show 4 quick pictures and ask: “Can you sing? Can you dance?” Lead students to respond with Yes/No + actions.\n学生活动：Respond with actions and short answers. Some students may use Chinese or one-word responses.\n评价：Observe participation and whether students understand can in context.\n补充：1. Warm-up\n5 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Greeting. Show 4 quick pictures and ask: “Can you sing? Can you dance?” Lead students to respond with Yes/No + actions.",
+        "studentActivity": "Respond with actions and short answers. Some students may use Chinese or one-word responses.",
+        "evaluation": "Observe participation and whether students understand can in context.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Respond with actions and short answers. Some students may use Chinese or one-word responses.",
+        "evaluationControl": "Observe participation and whether students understand can in context."
+      },
+      {
+        "materialId": "r-7433bc10-ab64-4196-97c0-f31017e91fd8",
+        "title": "教学环节 2",
+        "teachingScript": "教师活动：Introduce the Class Talent Show poster. Present target phrases through pictures/actions. Model pronunciation and meaning. Ask students to match phrase cards with pictures.\n学生活动：Listen, imitate, act and match. Pair-check pronunciation.\n评价：Quick check: teacher points to a picture, students say the phrase.\n补充：2. Presentation\n8 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Introduce the Class Talent Show poster. Present target phrases through pictures/actions. Model pronunciation and meaning. Ask students to match phrase cards with pictures.",
+        "studentActivity": "Listen, imitate, act and match. Pair-check pronunciation.",
+        "evaluation": "Quick check: teacher points to a picture, students say the phrase.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-7433bc10-ab64-4196-97c0-f31017e91fd8",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Listen, imitate, act and match. Pair-check pronunciation.",
+        "evaluationControl": "Quick check: teacher points to a picture, students say the phrase."
+      },
+      {
+        "materialId": "r-c0ca0172-8c7a-476e-a7e0-7617870da8b0",
+        "title": "Model a mini dialogue",
+        "teachingScript": "教师活动：Model a mini dialogue:\nT: What can you do?\nS: I can draw cartoons.\nBoard the pattern. Briefly highlight: can + verb base form. Give two wrong examples for correction.\n学生活动：Repeat, notice the structure, correct examples such as “I can dancing.” → “I can dance.”\n评价：Use thumbs-up/down and 2 oral corrections to check form awareness.\n补充：3. Language focus\n7 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Model a mini dialogue:\nT: What can you do?\nS: I can draw cartoons.\nBoard the pattern. Briefly highlight: can + verb base form. Give two wrong examples for correction.",
+        "studentActivity": "Repeat, notice the structure, correct examples such as “I can dancing.” → “I can dance.”",
+        "evaluation": "Use thumbs-up/down and 2 oral corrections to check form awareness.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-c0ca0172-8c7a-476e-a7e0-7617870da8b0",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Repeat, notice the structure, correct examples such as “I can dancing.” → “I can dance.”",
+        "evaluationControl": "Use thumbs-up/down and 2 oral corrections to check form awareness."
+      },
+      {
+        "materialId": "r-fa05d2ab-1a05-46d2-a58e-76427cfc1f89",
+        "title": "教学环节 4",
+        "teachingScript": "教师活动：Students interview a partner using the sheet. Requirement: ask at least 2 questions and record 2 abilities. Teacher circulates and gives prompts to hesitant students.\n学生活动：Ask/answer in pairs. Stronger students may add “Can you...?” or “I can also...”. Weaker students use sentence frame cards.\n评价：Teacher checklist: question form, I can..., intelligibility, active listening.\n补充：4. Pair interview\n8 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Students interview a partner using the sheet. Requirement: ask at least 2 questions and record 2 abilities. Teacher circulates and gives prompts to hesitant students.",
+        "studentActivity": "Ask/answer in pairs. Stronger students may add “Can you...?” or “I can also...”. Weaker students use sentence frame cards.",
+        "evaluation": "Teacher checklist: question form, I can..., intelligibility, active listening.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-fa05d2ab-1a05-46d2-a58e-76427cfc1f89",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Ask/answer in pairs. Stronger students may add “Can you...?” or “I can also...”. Weaker students use sentence frame cards.",
+        "evaluationControl": "Teacher checklist: question form, I can..., intelligibility, active listening."
+      },
+      {
+        "materialId": "r-38fdb8a6-1b2d-484d-bb2d-28cf49e4dd6c",
+        "title": "教学环节 5",
+        "teachingScript": "教师活动：Four students share interview results and choose one classmate to recommend for the Talent Show. Model: “We recommend Amy. She can dance, so she can join the Talent Show.” Provide a sentence frame card: “We recommend ______. He/She can ______, so ______.”\n学生活动：Discuss and present one recommendation. Use the sentence frame to give at least one reason. Stronger groups may add a second reason: “He/She can also ______, so ______.” Possible issue: groups may choose quickly without giving reasons.\n评价：Listen for whether recommendation uses real interview information and at least one complete sentence with “He/She can ..., so ...”. Note groups that only list abilities without a reason.\n补充：5. Group task\n8 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Four students share interview results and choose one classmate to recommend for the Talent Show. Model: “We recommend Amy. She can dance, so she can join the Talent Show.” Provide a sentence frame card: “We recommend ______. He/She can ______, so ______.”",
+        "studentActivity": "Discuss and present one recommendation. Use the sentence frame to give at least one reason. Stronger groups may add a second reason: “He/She can also ______, so ______.” Possible issue: groups may choose quickly without giving reasons.",
+        "evaluation": "Listen for whether recommendation uses real interview information and at least one complete sentence with “He/She can ..., so ...”. Note groups that only list abilities without a reason.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-38fdb8a6-1b2d-484d-bb2d-28cf49e4dd6c",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Discuss and present one recommendation. Use the sentence frame to give at least one reason. Stronger groups may add a second reason: “He/She can also ______, so ______.” Possible issue: groups may choose quickly without giving reasons.",
+        "evaluationControl": "Listen for whether recommendation uses real interview information and at least one complete sentence with “He/She can ..., so ...”. Note groups that only list abilities without a reason."
+      },
+      {
+        "materialId": "r-36e858f6-8e63-4737-ad8e-e878c29fd092",
+        "title": "教学环节 6",
+        "teachingScript": "教师活动：Invite 2–3 groups to present. Class gives one star for clear English and one star for a clear reason. Finish with exit slip: students write one sentence “______ can ______, so I recommend him/her.” and hand in with the interview sheet.\n学生活动：Present, peer-assess with the two stars, write and hand in the exit slip sentence.\n评价：Collect exit slips and interview sheets; check whether each slip has a complete “can + verb” and a reason; note common language errors for next lesson.\n补充：6. Exit task\n4 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Invite 2–3 groups to present. Class gives one star for clear English and one star for a clear reason. Finish with exit slip: students write one sentence “______ can ______, so I recommend him/her.” and hand in with the interview sheet.",
+        "studentActivity": "Present, peer-assess with the two stars, write and hand in the exit slip sentence.",
+        "evaluation": "Collect exit slips and interview sheets; check whether each slip has a complete “can + verb” and a reason; note common language errors for next lesson.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-36e858f6-8e63-4737-ad8e-e878c29fd092",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Present, peer-assess with the two stars, write and hand in the exit slip sentence.",
+        "evaluationControl": "Collect exit slips and interview sheets; check whether each slip has a complete “can + verb” and a reason; note common language errors for next lesson."
+      }
+    ],
+    "materials": [
+      {
+        "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+        "title": "教学环节 1",
+        "teachingScript": "教师活动：Greeting. Show 4 quick pictures and ask: “Can you sing? Can you dance?” Lead students to respond with Yes/No + actions.\n学生活动：Respond with actions and short answers. Some students may use Chinese or one-word responses.\n评价：Observe participation and whether students understand can in context.\n补充：1. Warm-up\n5 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Greeting. Show 4 quick pictures and ask: “Can you sing? Can you dance?” Lead students to respond with Yes/No + actions.",
+        "studentActivity": "Respond with actions and short answers. Some students may use Chinese or one-word responses.",
+        "evaluation": "Observe participation and whether students understand can in context.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Respond with actions and short answers. Some students may use Chinese or one-word responses.",
+        "evaluationControl": "Observe participation and whether students understand can in context."
+      },
+      {
+        "materialId": "r-7433bc10-ab64-4196-97c0-f31017e91fd8",
+        "title": "教学环节 2",
+        "teachingScript": "教师活动：Introduce the Class Talent Show poster. Present target phrases through pictures/actions. Model pronunciation and meaning. Ask students to match phrase cards with pictures.\n学生活动：Listen, imitate, act and match. Pair-check pronunciation.\n评价：Quick check: teacher points to a picture, students say the phrase.\n补充：2. Presentation\n8 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Introduce the Class Talent Show poster. Present target phrases through pictures/actions. Model pronunciation and meaning. Ask students to match phrase cards with pictures.",
+        "studentActivity": "Listen, imitate, act and match. Pair-check pronunciation.",
+        "evaluation": "Quick check: teacher points to a picture, students say the phrase.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-7433bc10-ab64-4196-97c0-f31017e91fd8",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Listen, imitate, act and match. Pair-check pronunciation.",
+        "evaluationControl": "Quick check: teacher points to a picture, students say the phrase."
+      },
+      {
+        "materialId": "r-c0ca0172-8c7a-476e-a7e0-7617870da8b0",
+        "title": "Model a mini dialogue",
+        "teachingScript": "教师活动：Model a mini dialogue:\nT: What can you do?\nS: I can draw cartoons.\nBoard the pattern. Briefly highlight: can + verb base form. Give two wrong examples for correction.\n学生活动：Repeat, notice the structure, correct examples such as “I can dancing.” → “I can dance.”\n评价：Use thumbs-up/down and 2 oral corrections to check form awareness.\n补充：3. Language focus\n7 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Model a mini dialogue:\nT: What can you do?\nS: I can draw cartoons.\nBoard the pattern. Briefly highlight: can + verb base form. Give two wrong examples for correction.",
+        "studentActivity": "Repeat, notice the structure, correct examples such as “I can dancing.” → “I can dance.”",
+        "evaluation": "Use thumbs-up/down and 2 oral corrections to check form awareness.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-c0ca0172-8c7a-476e-a7e0-7617870da8b0",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Repeat, notice the structure, correct examples such as “I can dancing.” → “I can dance.”",
+        "evaluationControl": "Use thumbs-up/down and 2 oral corrections to check form awareness."
+      },
+      {
+        "materialId": "r-fa05d2ab-1a05-46d2-a58e-76427cfc1f89",
+        "title": "教学环节 4",
+        "teachingScript": "教师活动：Students interview a partner using the sheet. Requirement: ask at least 2 questions and record 2 abilities. Teacher circulates and gives prompts to hesitant students.\n学生活动：Ask/answer in pairs. Stronger students may add “Can you...?” or “I can also...”. Weaker students use sentence frame cards.\n评价：Teacher checklist: question form, I can..., intelligibility, active listening.\n补充：4. Pair interview\n8 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Students interview a partner using the sheet. Requirement: ask at least 2 questions and record 2 abilities. Teacher circulates and gives prompts to hesitant students.",
+        "studentActivity": "Ask/answer in pairs. Stronger students may add “Can you...?” or “I can also...”. Weaker students use sentence frame cards.",
+        "evaluation": "Teacher checklist: question form, I can..., intelligibility, active listening.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-fa05d2ab-1a05-46d2-a58e-76427cfc1f89",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Ask/answer in pairs. Stronger students may add “Can you...?” or “I can also...”. Weaker students use sentence frame cards.",
+        "evaluationControl": "Teacher checklist: question form, I can..., intelligibility, active listening."
+      },
+      {
+        "materialId": "r-38fdb8a6-1b2d-484d-bb2d-28cf49e4dd6c",
+        "title": "教学环节 5",
+        "teachingScript": "教师活动：Four students share interview results and choose one classmate to recommend for the Talent Show. Model: “We recommend Amy. She can dance, so she can join the Talent Show.” Provide a sentence frame card: “We recommend ______. He/She can ______, so ______.”\n学生活动：Discuss and present one recommendation. Use the sentence frame to give at least one reason. Stronger groups may add a second reason: “He/She can also ______, so ______.” Possible issue: groups may choose quickly without giving reasons.\n评价：Listen for whether recommendation uses real interview information and at least one complete sentence with “He/She can ..., so ...”. Note groups that only list abilities without a reason.\n补充：5. Group task\n8 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Four students share interview results and choose one classmate to recommend for the Talent Show. Model: “We recommend Amy. She can dance, so she can join the Talent Show.” Provide a sentence frame card: “We recommend ______. He/She can ______, so ______.”",
+        "studentActivity": "Discuss and present one recommendation. Use the sentence frame to give at least one reason. Stronger groups may add a second reason: “He/She can also ______, so ______.” Possible issue: groups may choose quickly without giving reasons.",
+        "evaluation": "Listen for whether recommendation uses real interview information and at least one complete sentence with “He/She can ..., so ...”. Note groups that only list abilities without a reason.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-38fdb8a6-1b2d-484d-bb2d-28cf49e4dd6c",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Discuss and present one recommendation. Use the sentence frame to give at least one reason. Stronger groups may add a second reason: “He/She can also ______, so ______.” Possible issue: groups may choose quickly without giving reasons.",
+        "evaluationControl": "Listen for whether recommendation uses real interview information and at least one complete sentence with “He/She can ..., so ...”. Note groups that only list abilities without a reason."
+      },
+      {
+        "materialId": "r-36e858f6-8e63-4737-ad8e-e878c29fd092",
+        "title": "教学环节 6",
+        "teachingScript": "教师活动：Invite 2–3 groups to present. Class gives one star for clear English and one star for a clear reason. Finish with exit slip: students write one sentence “______ can ______, so I recommend him/her.” and hand in with the interview sheet.\n学生活动：Present, peer-assess with the two stars, write and hand in the exit slip sentence.\n评价：Collect exit slips and interview sheets; check whether each slip has a complete “can + verb” and a reason; note common language errors for next lesson.\n补充：6. Exit task\n4 min",
+        "keyPoints": [],
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+        "metadata": {
+          "structureSha256": "a9dcf8f3a9f7b2259d2e1080eab01c8b78dc7dc128959a47b1b3e80ffa2c828b",
+          "documentContext": "小学英语 Unit 4 “What can you do?” 教学设计\n\nPEP 五年级上册 · 1课时 · 40分钟\n\n测试设计说明：这份教案结构完整、可真实上课，同时保留少量可改进空间，便于测试智能评价、迭代修改、课堂推演和协同共析。\n\n学科 | 英语 | 年级 | 五年级\n课题 | What can you do? | 课时 | 1课时（40分钟）\n教材版本 | PEP 人教版五年级上册 | 课型 | 听说交际课\n班级规模 | 约40人 | 授课方式 | 情境任务 + Pair work + Group work\n\n一、教材与内容分析\n\n本课围绕“能力与特长”展开，核心语言为“What can you do?”“I can ...”以及若干常见活动词组，如 sing English songs, dance, play the pipa, do kung fu, draw cartoons。教学重点不是孤立记忆词组，而是在真实交流任务中询问和表达自己会做的事情。\n\n课堂以“班级才艺节招募志愿者”为主情境，学生最终需要完成一次简短的同伴采访并形成小组推荐。\n\n二、学情分析\n\n五年级学生已经学习过 can 的基本含义，能够理解 I can ... 的简单表达，但部分学生可能把 can 后面的动词误用成第三人称或进行时形式。学生对唱歌、跳舞、画画等话题兴趣较高，适合通过动作、图片和同伴交流建立语义。\n\n班级口语水平差异较大。部分学生愿意主动表达，能主动使用“What can you do?”提问并回答，但为推荐人说明理由时多停留在“He/She can...”的单一表述；基础较弱学生容易只跟读、不主动组织句子，回答时常用单词或中文，难以独立产出完整句。当前教学安排提供句型支架，但对不同水平学生的分层口语任务仍有进一步优化空间：对基础较弱学生需提供回答句式卡与图片提示，对较高水平学生可增加说明推荐理由的语言支架。\n\n三、教学目标\n\n• 语言知识：能听懂、认读并在语境中使用 sing English songs, dance, play the pipa, do kung fu, draw cartoons。\n\n• 语言运用：能用“What can you do?”向至少两名同伴提问，并在采访单上记录其能力；被问到时能用“I can ...”完整回答至少两项自己会做的事情，语音基本清晰。\n\n• 思维与交际：能根据同伴的能力信息，为“Class Talent Show”提出一名推荐人，用“He/She can ... , so ...”说明一条简单理由；水平较高的学生可补充第二条理由。\n\n• 文化与情感：尊重同伴不同的兴趣和特长，愿意发现并肯定他人的长处。\n\n四、教学重点与难点\n\n• 重点：理解并运用“What can you do?”“I can ...”进行真实问答。\n\n• 难点：在脱离机械跟读后，根据真实信息自主组织表达并保持 can 后使用动词原形；基础较弱学生易停留于单词或中文应答，需借助回答句式卡和图片提示说出完整“I can ...”句；较高水平学生需用“He/She can ..., so ...”为推荐补充理由。\n\n五、教学资源\n\n• 活动图片卡、词组卡、人物才艺卡。\n\n• 教师课件、简短音频/节奏口令。\n\n• 每组一张“Talent Show Interview Sheet”。\n\n六、教学过程\n\n七、形成性评价设计\n\n• 词汇检查：图片—词组快速匹配与口头反应，能以“can + 动词原形”说出目标词组，正确率不低于80%。\n\n• 句型检查：Pair interview 中能用“What can you do?”向至少两名同伴提问并在采访单上记录其能力，被问到时用“I can ...”完整回答至少两项，语音基本清晰。\n\n• 任务表现：小组推荐基于真实采访信息，使用句式卡“We recommend ______. He/She can ______, so ______.”说出至少一条理由；水平较高的小组能补充第二条理由。\n\n• 同伴评价：使用“Clear English / Good teamwork / Clear reason”三项简单标准，每组展示后由同学各给一颗星并说一句具体肯定。\n\n• 退出条：学生写出“______ can ______, so I recommend him/her.”，教师检查是否含有完整的“can + 动词”和一条理由，记录典型语言错误用于下节课反馈。\n\n八、差异化支持\n\n• 基础支持：提供句型卡“What can you do?”“I can ______.”以及活动图片提示；回答困难时可先指图片再说短语，由同伴带读成完整句。\n\n• 提升任务：提供推荐句式卡“We recommend ______. He/She can ______, so ______.”，鼓励能力较强学生为推荐补充第二条理由“He/She can also ______, so ______.”。\n\n• 对不愿公开发言的学生，可先在小组内完成角色练习，再由同伴协助展示。\n\n九、作业设计\n\n• 基础：用英语写3句“I can ...”，可配图。\n\n• 应用：采访一名家人“What can you do?”，记录至少2项能力。\n\n• 拓展：为班级才艺节设计一张英文小海报，写出自己或同伴可以承担的任务。\n\n十、板书设计\n\nUnit 4  What can you do?\n\nWhat can you do?\n— I can sing English songs.\n— I can dance.\n— I can play the pipa.\n— I can do kung fu.\n— I can draw cartoons.\n\ncan + 动词原形\nClass Talent Show: We recommend ______. He/She can ______, so ______.\n\n十一、教学后反思预设\n\n• 关注学生是否从“跟读句型”真正过渡到“根据本人真实信息自主表达”。\n\n• 如果 Pair work 中大量学生只使用单词回答，下一课需要增加完整句输出要求和示范。\n\n• 小组推荐任务有真实交际价值，课后重点回看三项星级标准（Clear English / Good teamwork / Clear reason）的实施效果：同伴是否能依据标准给出具体肯定，以及是否有小组只列能力而未说理由，据以判断下节课是否需要加强“so ...”理由句的示范。",
+          "sourceType": "STRUCTURED_VERSION"
+        },
+        "teacherActivity": "Invite 2–3 groups to present. Class gives one star for clear English and one star for a clear reason. Finish with exit slip: students write one sentence “______ can ______, so I recommend him/her.” and hand in with the interview sheet.",
+        "studentActivity": "Present, peer-assess with the two stars, write and hand in the exit slip sentence.",
+        "evaluation": "Collect exit slips and interview sheets; check whether each slip has a complete “can + verb” and a reason; note common language errors for next lesson.",
+        "sourceRef": {
+          "lessonId": "01M55AP41PHCNWHNJ56Z8BWGXP",
+          "blockId": "b-d638675d-9f58-4305-8b32-15f5df3821ed",
+          "rowId": "r-36e858f6-8e63-4737-ad8e-e878c29fd092",
+          "versionId": "01M57WZ3GS85KF2H8PSV8WYZA0"
+        },
+        "studentTask": "Present, peer-assess with the two stars, write and hand in the exit slip sentence.",
+        "evaluationControl": "Collect exit slips and interview sheets; check whether each slip has a complete “can + verb” and a reason; note common language errors for next lesson."
+      }
+    ],
+    "source": {
+      "module": "STRUCTURED_VERSION",
+      "fallbackReason": null,
+      "session_id": null,
+      "lesson_plan_id": null
+    },
+    "requestKey": "e7315e06-0420-4ebd-ab9d-bab3e0ffed54",
+    "requestFingerprint": "b2cbab501c5c960a49820e043635d576c03bdd9db3a466c19a3fa97cd2b932c5"
+  },
+  "events": [
+    {
+      "eventId": "b075b6b3-15df-42ed-a939-855b0b1eca86",
+      "sequence": 1,
+      "sessionId": "a36654d2-252e-4880-a5f7-1d7ee30f7ea3",
+      "occurredAt": "2026-11-01T04:35:21.166Z",
+      "completedAt": "2026-11-01T04:35:26.199Z",
+      "wallClockDurationMs": 5033,
+      "estimatedTeachingSeconds": null,
+      "estimated": false,
+      "trigger": {
+        "type": "INITIALIZATION",
+        "content": null
+      },
+      "managerDecision": {
+        "speaker": "teacher",
+        "function": "teach",
+        "reason": "课堂刚开始（initialization），教学环节1尚未讲授，由教师开场问候、展示图片并用 Can you sing/dance? 引出can的语境，引导学生用动作和简短回答回应。",
+        "endClass": false
+      },
+      "speaker": "teacher",
+      "roleLabel": "教师",
+      "function": "teach",
+      "content": "同学们，早上好！很高兴见到大家。今天我们的话题是“What can you do?”——你会做什么。\n\n看老师的四张图片。（依次展示）唱歌、跳舞、弹琵琶、画画。先看第一张——sing！谁来边做动作边说？大家一起试：sing, sing, I can sing.\n\n现在听我的问题：Can you sing? 会唱的同学请举手，并大声说 Yes, I can. 不会的就说 No, I can't. 我们一起来试一试。",
+      "material": {
+        "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+        "title": "教学环节 1",
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed"
+      },
+      "status": "COMPLETED",
+      "error": null
+    }
+  ],
+  "statistics": {
+    "eventCount": 1,
+    "roleCounts": {
+      "teacher": 1
+    },
+    "functionCounts": {
+      "teach": 1
+    },
+    "materialCoverage": [
+      {
+        "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+        "title": "教学环节 1",
+        "covered": true
+      },
+      {
+        "materialId": "r-7433bc10-ab64-4196-97c0-f31017e91fd8",
+        "title": "教学环节 2",
+        "covered": false
+      },
+      {
+        "materialId": "r-c0ca0172-8c7a-476e-a7e0-7617870da8b0",
+        "title": "Model a mini dialogue",
+        "covered": false
+      },
+      {
+        "materialId": "r-fa05d2ab-1a05-46d2-a58e-76427cfc1f89",
+        "title": "教学环节 4",
+        "covered": false
+      },
+      {
+        "materialId": "r-38fdb8a6-1b2d-484d-bb2d-28cf49e4dd6c",
+        "title": "教学环节 5",
+        "covered": false
+      },
+      {
+        "materialId": "r-36e858f6-8e63-4737-ad8e-e878c29fd092",
+        "title": "教学环节 6",
+        "covered": false
+      }
+    ],
+    "observedWallClockSeconds": 5.033,
+    "estimatedTeachingSeconds": null
+  },
+  "summary": {
+    "title": "F3 课堂模拟简报",
+    "status": "INTERRUPTED",
+    "stopReason": "MANUAL_END",
+    "eventCount": 1,
+    "completedEventCount": 1,
+    "rolesObserved": [
+      "teacher"
+    ],
+    "materialsCovered": [
+      "教学环节 1"
+    ],
+    "lastEvent": {
+      "eventId": "b075b6b3-15df-42ed-a939-855b0b1eca86",
+      "sequence": 1,
+      "sessionId": "a36654d2-252e-4880-a5f7-1d7ee30f7ea3",
+      "occurredAt": "2026-11-01T04:35:21.166Z",
+      "completedAt": "2026-11-01T04:35:26.199Z",
+      "wallClockDurationMs": 5033,
+      "estimatedTeachingSeconds": null,
+      "estimated": false,
+      "trigger": {
+        "type": "INITIALIZATION",
+        "content": null
+      },
+      "managerDecision": {
+        "speaker": "teacher",
+        "function": "teach",
+        "reason": "课堂刚开始（initialization），教学环节1尚未讲授，由教师开场问候、展示图片并用 Can you sing/dance? 引出can的语境，引导学生用动作和简短回答回应。",
+        "endClass": false
+      },
+      "speaker": "teacher",
+      "roleLabel": "教师",
+      "function": "teach",
+      "content": "同学们，早上好！很高兴见到大家。今天我们的话题是“What can you do?”——你会做什么。\n\n看老师的四张图片。（依次展示）唱歌、跳舞、弹琵琶、画画。先看第一张——sing！谁来边做动作边说？大家一起试：sing, sing, I can sing.\n\n现在听我的问题：Can you sing? 会唱的同学请举手，并大声说 Yes, I can. 不会的就说 No, I can't. 我们一起来试一试。",
+      "material": {
+        "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+        "title": "教学环节 1",
+        "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed"
+      },
+      "status": "COMPLETED",
+      "error": null
+    },
+    "note": "wallClockDurationMs is system execution time, not estimated classroom teaching time."
+  },
+  "issues": [
+    {
+      "nativeIssueId": "ISSUE-01",
+      "category": "insufficient_explanation",
+      "severity": "LOW",
+      "title": "开场四个目标词中仅 sing 得到动作与齐说示范",
+      "problem": "教师在同一开场中展示唱歌、跳舞、弹琵琶、画画四个词，但只对 sing 给出了动作配合和全班齐说示范，随后立即进入 Can you sing? 的 Yes/No 回应。dance、pipa、draw 缺少同等的语音、动作或句型支架，若后续直接要求学生输出，学生可能只对 sing 形成较稳固的模仿，其他词的理解和表达准备不足。",
+      "evidence": [
+        {
+          "eventId": "b075b6b3-15df-42ed-a939-855b0b1eca86",
+          "sequence": 1,
+          "speaker": "teacher",
+          "contentQuote": "看老师的四张图片。（依次展示）唱歌、跳舞、弹琵琶、画画。先看第一张——sing！谁来边做动作边说？大家一起试：sing, sing, I can sing."
+        }
+      ],
+      "resolvedInSimulation": false,
+      "resolutionEvidenceEventIds": [],
+      "resolution": null,
+      "suggestedAction": "将四个目标词分组呈现，每个词都先做动作、带读并嵌入 I can... 句型，再进行 Can you...? 问答；或者本轮只聚焦 sing，其余词留到后续环节逐步呈现。",
+      "targetLessonSection": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+      "confidence": 0.74
+    },
+    {
+      "nativeIssueId": "ISSUE-02",
+      "category": "interaction_gap",
+      "severity": "LOW",
+      "title": "举手、个别大声答与全班齐试的指令混在一起",
+      "problem": "教师在同一个提问轮次中同时要求会唱的学生举手、大声说 Yes, I can.，不会的学生说 No, I can't.，最后又说“我们一起来试一试”。学生难以判断应先举手等待个别回答，还是直接全班齐答；齐答也可能掩盖不会唱学生的真实困难，影响教师获取个体反馈。",
+      "evidence": [
+        {
+          "eventId": "b075b6b3-15df-42ed-a939-855b0b1eca86",
+          "sequence": 1,
+          "speaker": "teacher",
+          "contentQuote": "现在听我的问题：Can you sing? 会唱的同学请举手，并大声说 Yes, I can. 不会的就说 No, I can't. 我们一起来试一试。"
+        }
+      ],
+      "resolvedInSimulation": false,
+      "resolutionEvidenceEventIds": [],
+      "resolution": null,
+      "suggestedAction": "拆分互动步骤：先明确请个别学生举手示范回答，再安排全班齐答或同伴问答；若需了解会/不会的分布，可先举手统计，再分别请 Yes 和 No 的学生说出完整句子。",
+      "targetLessonSection": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+      "confidence": 0.7
+    }
+  ],
+  "actionItems": [
+    {
+      "actionId": "ACTION-01",
+      "sourceIssueId": "ISSUE-01",
+      "action": "将四个目标词分组呈现，每个词都先做动作、带读并嵌入 I can... 句型，再进行 Can you...? 问答；或者本轮只聚焦 sing，其余词留到后续环节逐步呈现。",
+      "targetLessonSection": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+      "priority": "LOW"
+    },
+    {
+      "actionId": "ACTION-02",
+      "sourceIssueId": "ISSUE-02",
+      "action": "拆分互动步骤：先明确请个别学生举手示范回答，再安排全班齐答或同伴问答；若需了解会/不会的分布，可先举手统计，再分别请 Yes 和 No 的学生说出完整句子。",
+      "targetLessonSection": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+      "priority": "LOW"
+    }
+  ],
+  "analysisWarnings": [
+    "analysis scope is partial because session status is INTERRUPTED",
+    "session stopReason: MANUAL_END"
+  ],
+  "artifacts": [
+    "events.json",
+    "session.json",
+    "issue_analysis.json",
+    "action_items.md"
+  ]
+}

@@ -27,10 +27,21 @@ public record LessonDocument(String schemaVersion, List<Block> blocks) {
             List<List<String>> tableRows,
             TeachingProcess teachingProcess,
             List<String> rowIds,
-            Map<String, Integer> columnBindings) {
+            Map<String, Integer> columnBindings,
+            @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
+            String semanticRole,
+            @com.fasterxml.jackson.annotation.JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
+            String layoutGroup) {
         public Block(String id, String type, Integer level, String text, Boolean ordered,
                 List<String> items, List<List<String>> tableRows, TeachingProcess teachingProcess) {
-            this(id, type, level, text, ordered, items, tableRows, teachingProcess, List.of(), Map.of());
+            this(id, type, level, text, ordered, items, tableRows, teachingProcess,
+                    List.of(), Map.of(), null, null);
+        }
+        public Block(String id, String type, Integer level, String text, Boolean ordered,
+                List<String> items, List<List<String>> tableRows, TeachingProcess teachingProcess,
+                List<String> rowIds, Map<String, Integer> columnBindings) {
+            this(id, type, level, text, ordered, items, tableRows, teachingProcess,
+                    rowIds, columnBindings, null, null);
         }
         public Block {
             rowIds = rowIds == null ? List.of() : List.copyOf(rowIds);

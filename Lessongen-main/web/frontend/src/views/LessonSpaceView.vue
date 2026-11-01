@@ -27,6 +27,7 @@ interface Version {
   createdAt: string;
 }
 interface Detail {
+  hasSourceDocument?: boolean;
   lesson: Lesson;
   versions: Version[];
 }
@@ -145,6 +146,7 @@ const exportUrl = computed(() =>
     : "",
 );
 const sourceNames: Record<string, string> = {
+  F2_GENERATE: "设计修改生成教案",
   IMPORT_DOCX: "DOCX导入",
   IMPORT_TEXT: "文本创建",
   MANUAL: "手动修改",
@@ -229,20 +231,27 @@ async function loadDetail(id: string) {
             pdfAvailable.value = response.data.pdf === true;
         })
         .catch(() => {});
-    try {
-      const original = (
-        await axios.get<SourceDoc>(
-          `/api/platform/lessons/${encodeURIComponent(id)}/source-document`,
+    if (
+      next.hasSourceDocument === true ||
+      (next.hasSourceDocument === undefined &&
+        next.versions.some((v) =>
+          ["IMPORT_DOCX", "DOCX_IMPORT"].includes(v.sourceModule),
+        ))
+    )
+      try {
+        const original = (
+          await axios.get<SourceDoc>(
+            `/api/platform/lessons/${encodeURIComponent(id)}/source-document`,
+          )
+        ).data;
+        if (request === detailGeneration) source.value = original;
+      } catch (reason) {
+        if (
+          request === detailGeneration &&
+          !(axios.isAxiosError(reason) && reason.response?.status === 404)
         )
-      ).data;
-      if (request === detailGeneration) source.value = original;
-    } catch (reason) {
-      if (
-        request === detailGeneration &&
-        !(axios.isAxiosError(reason) && reason.response?.status === 404)
-      )
-        error.value = describe(reason);
-    }
+          error.value = describe(reason);
+      }
   } catch (reason) {
     if (request === detailGeneration) error.value = describe(reason);
   } finally {

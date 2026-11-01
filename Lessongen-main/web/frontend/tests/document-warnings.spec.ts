@@ -158,6 +158,7 @@ it("shows fallback warnings beside version downloads and keeps the original acce
       return {
         data: {
           lesson,
+          hasSourceDocument: true,
           versions: [
             {
               id: "version",

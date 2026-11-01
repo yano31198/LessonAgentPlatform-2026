@@ -86,6 +86,49 @@ def test_malformed_llm(response):
     with pytest.raises(ProviderError): GenericLLMSuggestionProvider(Fake()).generate(ctx)
 
 
+def test_truncated_structured_response_retries_once_with_larger_bounded_budget():
+    draft = {'issue': '活动证据不足', 'reason': '缺少可观察表现',
+             'pedagogical_basis': '形成性评价', 'revision': '学生说明解题依据。',
+             'revision_mode': 'append', 'edits': [], 'knowledge_ids': []}
+
+    class RetryClient:
+        extra_body = {'max_tokens': 2048}
+
+        def __init__(self): self.calls = []
+
+        def complete(self, context):
+            self.calls.append(('initial', context, None))
+            return {'choices': [{'finish_reason': 'length', 'message': {
+                'content': '{"suggestions":['}}]}
+
+        def complete_with_overrides(self, context, overrides):
+            self.calls.append(('retry', context, overrides))
+            return {'choices': [{'finish_reason': 'stop', 'message': {
+                'content': json.dumps({'suggestions': [draft]}, ensure_ascii=False)}}]}
+
+    client = RetryClient()
+    saved = GenericLLMSuggestionProvider(client).generate(context()[1])
+    assert len(saved) == 1
+    assert len(client.calls) == 2
+    assert client.calls[1][2] == {'max_tokens': 4096}
+    assert '上一次响应因长度上限被截断' in client.calls[1][1].system
+
+
+def test_truncated_response_is_still_rejected_when_bounded_retry_is_incomplete():
+    class RetryClient:
+        extra_body = {'max_tokens': 2048}
+
+        def complete(self, context):
+            return {'choices': [{'finish_reason': 'length', 'message': {'content': '{'}}]}
+
+        def complete_with_overrides(self, context, overrides):
+            return {'choices': [{'finish_reason': 'length', 'message': {'content': '{'}}]}
+
+    with pytest.raises(ProviderError) as error:
+        GenericLLMSuggestionProvider(RetryClient()).generate(context()[1])
+    assert error.value.code == 'MALFORMED_LLM_OUTPUT'
+
+
 @pytest.mark.parametrize('mode', ['timeout', 'http', 'network', 'key'])
 def test_transport_errors(mode):
     def handler(request):

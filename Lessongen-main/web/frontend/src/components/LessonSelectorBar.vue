@@ -85,6 +85,7 @@ const exportUrl = computed(() =>
     : "",
 );
 const sourceNames: Record<string, string> = {
+  F2_GENERATE: "设计修改生成教案",
   IMPORT_DOCX: "导入原稿",
   IMPORT_TEXT: "文本创建",
   MANUAL: "手动修改",

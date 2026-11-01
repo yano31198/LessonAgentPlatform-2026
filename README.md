@@ -92,6 +92,10 @@ powershell -NoProfile -File .\scripts\health-check.ps1
 powershell -NoProfile -File .\scripts\stop-all.ps1
 ```
 
+Windows 本地启动会先从当前 Java 源码重新打包；构建失败时不会启动服务或使用旧 JAR。前端使用当前源码，访问 `http://127.0.0.1:5177`。
+
+此 Windows 启动方式不运行 F4 Alembic，并通过 Java 命令行禁用 Flyway、Liquibase 和 SQL 初始化；Hibernate 只校验已有表结构。现有数据库必须已完成所需迁移，结构不兼容时启动失败，不会自动修复。登录、生成等正常操作仍会保存业务数据，这不是数据库只读模式。首次安装所需的数据库初始化不在此启动流程中执行。
+
 Linux：
 
 ```bash

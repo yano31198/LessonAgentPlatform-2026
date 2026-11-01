@@ -1,0 +1,38 @@
+﻿{
+    "f1":  {
+               "pid":  21728,
+               "startTicks":  "639291043417213096",
+               "executable":  "D:\\LessonAgentPlatform\\System-v1.2\\.venv\\Scripts\\python.exe",
+               "launchId":  "a36af42c-da32-4512-91f0-004f70219fac"
+           },
+    "f2-engine":  {
+                      "pid":  48284,
+                      "startTicks":  "639291043417585074",
+                      "executable":  "D:\\LessonAgentPlatform\\Lessongen-main\\paper4_pipeline\\.venv\\Scripts\\python.exe",
+                      "launchId":  "a36af42c-da32-4512-91f0-004f70219fac"
+                  },
+    "f3":  {
+               "pid":  27280,
+               "startTicks":  "639291043417823239",
+               "executable":  "D:\\LessonAgentPlatform\\SimClass-main\\.venv\\Scripts\\python.exe",
+               "launchId":  "a36af42c-da32-4512-91f0-004f70219fac"
+           },
+    "f4":  {
+               "pid":  36752,
+               "startTicks":  "639291043418035012",
+               "executable":  "D:\\LessonAgentPlatform\\NoviceTeacher-AI-main\\backend\\.venv\\Scripts\\python.exe",
+               "launchId":  "a36af42c-da32-4512-91f0-004f70219fac"
+           },
+    "spring":  {
+                   "pid":  38004,
+                   "startTicks":  "639291043418853729",
+                   "executable":  "C:\\Program Files\\BellSoft\\LibericaJDK-22\\bin\\java.exe",
+                   "launchId":  "a36af42c-da32-4512-91f0-004f70219fac"
+               },
+    "frontend":  {
+                     "pid":  31472,
+                     "startTicks":  "639291043419148617",
+                     "executable":  "C:\\Windows\\system32\\cmd.exe",
+                     "launchId":  "a36af42c-da32-4512-91f0-004f70219fac"
+                 }
+}

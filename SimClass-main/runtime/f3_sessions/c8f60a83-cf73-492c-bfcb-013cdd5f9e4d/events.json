@@ -1,0 +1,33 @@
+[
+  {
+    "eventId": "b8c8a4a9-f60b-40a3-8fe1-8afe9bd6927f",
+    "sequence": 1,
+    "sessionId": "c8f60a83-cf73-492c-bfcb-013cdd5f9e4d",
+    "occurredAt": "2026-11-01T03:55:41.720Z",
+    "completedAt": "2026-11-01T03:55:48.659Z",
+    "wallClockDurationMs": 6935,
+    "estimatedTeachingSeconds": null,
+    "estimated": false,
+    "trigger": {
+      "type": "INITIALIZATION",
+      "content": null
+    },
+    "managerDecision": {
+      "speaker": "teacher",
+      "function": "teach",
+      "reason": "课堂刚刚开始，教学环节 1 尚未讲授，由教师先进行问候、展示 4 张图片并引导 'Can you sing? Can you dance?' 的问答与动作回应。",
+      "endClass": false
+    },
+    "speaker": "teacher",
+    "roleLabel": "教师",
+    "function": "teach",
+    "content": "Good morning, class! Nice to see you. Look at the screen—here are four quick pictures. Picture 1: singing. Picture 2: dancing. Picture 3: drawing. Picture 4: kung fu.\n\nNow listen and answer. “Can you sing?” If yes, say “Yes, I can” and show me a singing action. If no, say “No, I can’t” and shake your head. Let’s try: Can you sing?\n\nNext: “Can you dance?” Yes or no—plus a dance action. You may answer in English first; if you need help, use the sentence card. I’ll ask a few students to answer, and we’ll all do the actions together. Ready? Let’s begin with “Can you sing?”",
+    "material": {
+      "materialId": "r-67c41eca-de97-4b68-ad5e-35b5dc5aac33",
+      "title": "教学环节 1",
+      "sourceSectionId": "b-d638675d-9f58-4305-8b32-15f5df3821ed"
+    },
+    "status": "COMPLETED",
+    "error": null
+  }
+]

@@ -14,10 +14,21 @@ from .providers.config import ExperimentConfigFactory
 from .workflow import Workflow, WorkflowError
 from .auth import AUTH_PROVIDERS
 from . import models as m
+import logging
 
 
 def create_app(session_factory=SessionLocal, config_factory=None, auth_provider=None):
     app = FastAPI(title='PedagoLoop', version='0.2.0-alpha')
+    @app.exception_handler(OperationalError)
+    async def database_not_ready(_request, error):
+        # Identity resolution happens before the workflow transaction. Do not let its
+        # schema/connection failures escape as an opaque 500, or expose SQL/credentials.
+        cause = str(error.orig).lower()
+        missing_schema = any(message in cause for message in ('no such table', 'does not exist', 'no such column'))
+        code = 'F4_SCHEMA_NOT_READY' if missing_schema else 'F4_DATABASE_UNAVAILABLE'
+        logging.getLogger(__name__).error('F4 database request failed: %s', code)
+        return JSONResponse(status_code=503, content={
+            'code': code, 'detail': '协同共析数据库暂不可用，请联系维护者；已有任务数据未更改。'})
     factory = config_factory or ExperimentConfigFactory(settings)
     auth = auth_provider or AUTH_PROVIDERS[factory.settings.auth_provider](factory.settings)
 

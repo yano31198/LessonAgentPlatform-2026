@@ -53,7 +53,11 @@ public class PlatformLessonController {
             int versionNumber, String content, String contentSha256,
             String sourceModule, String nativeReference, Instant createdAt) {}
 
-    public record LessonDetail(LessonSummary lesson, List<LessonVersion> versions) {}
+    public record LessonDetail(LessonSummary lesson, List<LessonVersion> versions, boolean hasSourceDocument) {
+        public LessonDetail(LessonSummary lesson, List<LessonVersion> versions) {
+            this(lesson, versions, false);
+        }
+    }
 
     @PostMapping
     public ResponseEntity<LessonDetail> create(@Valid @RequestBody CreateLesson request) {

@@ -1,0 +1,12 @@
+{
+  "analysisSchemaVersion": "1.0",
+  "analysisStatus": "FAILED",
+  "sessionId": "c8f60a83-cf73-492c-bfcb-013cdd5f9e4d",
+  "sourceVersionId": "01M57WZ3GS85KF2H8PSV8WYZA0",
+  "modelMode": "REAL",
+  "issues": [],
+  "actionItems": [],
+  "warnings": [
+    "Execution interrupted; explicit analysis required; no automatic model retry"
+  ]
+}

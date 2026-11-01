@@ -13,7 +13,8 @@ import QualityStatusCard from "../components/QualityStatusCard.vue";
 import ResultDownloadPanel, {
   type DownloadFile,
 } from "../components/ResultDownloadPanel.vue";
-import LessonPreview from "../components/LessonPreview.vue";
+import LessonDocumentPreview from "../components/LessonDocumentPreview.vue";
+import type { VersionDocument } from "../types/lesson-document";
 import ReviewDocumentPreview from "../components/ReviewDocumentPreview.vue";
 import DocumentDownloadNotice from "../components/DocumentDownloadNotice.vue";
 import OptimizationPanel from "../components/OptimizationPanel.vue";
@@ -63,6 +64,8 @@ interface GeneratedLessonSave {
   title: string;
 }
 const generatedLesson = ref<GeneratedLessonSave | null>(null);
+const generatedDocument = ref<VersionDocument | null>(null);
+const generatedDocumentError = ref("");
 const generationSaveBusy = ref(false);
 const generationSaveAttempted = ref(false);
 const generationSaveError = ref("");
@@ -227,9 +230,32 @@ function restoreGeneratedLesson() {
     const raw = window.localStorage.getItem(generatedLessonStorageKey());
     if (!raw) return;
     const saved = JSON.parse(raw) as GeneratedLessonSave;
-    if (saved.lessonId && saved.versionId) generatedLesson.value = saved;
+    if (saved.lessonId && saved.versionId) {
+      generatedLesson.value = saved;
+      void loadGeneratedDocument(saved);
+    }
   } catch {
     /* ignore unavailable or malformed browser storage */
+  }
+}
+async function loadGeneratedDocument(saved: GeneratedLessonSave) {
+  generatedDocumentError.value = "";
+  try {
+    const snapshot = (
+      await axios.get<VersionDocument>(
+        `/api/platform/lessons/${encodeURIComponent(saved.lessonId)}/versions/${encodeURIComponent(saved.versionId)}/document`,
+      )
+    ).data;
+    if (
+      generatedLesson.value?.lessonId === saved.lessonId &&
+      generatedLesson.value?.versionId === saved.versionId
+    )
+      generatedDocument.value = snapshot;
+  } catch (reason) {
+    generatedDocumentError.value = friendlyError(
+      reason,
+      "统一教案正文暂时无法读取，请刷新后重试。",
+    );
   }
 }
 async function saveGeneratedLesson() {
@@ -252,7 +278,9 @@ async function saveGeneratedLesson() {
         `/api/v1/lesson-jobs/${encodeURIComponent(props.jobId)}/platform-lesson`,
       )
     ).data;
-    generatedLesson.value = { ...saved, title };
+    const adopted = { ...saved, title };
+    generatedLesson.value = adopted;
+    await loadGeneratedDocument(adopted);
     try {
       window.localStorage.setItem(
         generatedLessonStorageKey(),
@@ -904,7 +932,26 @@ onBeforeUnmount(() => {
           </BaseCard>
 
           <section v-if="store.result" class="generated-result">
-            <LessonPreview :plan="store.result.bestLessonPlan" />
+            <LessonDocumentPreview
+              v-if="generatedDocument"
+              :document="generatedDocument.document"
+              :warnings="generatedDocument.warnings"
+            />
+            <p
+              v-else-if="generatedDocumentError"
+              class="sync-alert"
+              role="alert"
+            >
+              {{ generatedDocumentError }}
+              <button
+                v-if="generatedLesson"
+                type="button"
+                @click="loadGeneratedDocument(generatedLesson)"
+              >
+                重新读取
+              </button>
+            </p>
+            <p v-else role="status">正在读取已保存的统一教案正文……</p>
           </section>
         </template>
 
